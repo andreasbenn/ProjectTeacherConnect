@@ -1,3 +1,5 @@
+// Søren
+
 // fag for linjer på CBS
 class Course {
     constructor(name, student, teacher, instructor, year) {

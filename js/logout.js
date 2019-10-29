@@ -1,3 +1,5 @@
+// Søren
+
 // document.getElementById("logoutKnap").onclick = function() {
 //     location.href="login.html";
 // };

@@ -1,3 +1,5 @@
+// Søren
+
 // make constructor for class user
 class User{
     constructor(firstName, lastName, phoneNumber, email, address, studentID, password){

@@ -1,3 +1,5 @@
+// Søren
+
 class User{
   constructor(firstName,lastName, phoneNumber, email, address, studentID, password){
       this.firstName = firstName;

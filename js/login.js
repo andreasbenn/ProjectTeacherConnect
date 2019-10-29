@@ -1,3 +1,5 @@
+// Søren
+
 // Her laver jeg en function som tester om username og password eksistere i min dummydata (ddLogin.js)
 var loginKnap = document.getElementById("loginKnap");
 var currentLogIn = [];
