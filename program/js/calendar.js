@@ -1,3 +1,5 @@
+// Oliver
+
 var courseField = document.getElementById('s1');
 var teacherField = document.getElementById('s2');
 var submitBtn = document.getElementById('submitBtn');
