@@ -1,0 +1,167 @@
+body {
+    margin:0;
+    font-family: 'Verdana','sans-serif';
+}
+
+/*vw er en anden måde at angive bredden på, og står for viewport width. vh står for view port height.*/
+/*find ud af hvad flex betyder.*/
+/*find ud af hvad justify betyder.*/
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Denne margin gør at måneden og datoen rykker sig op mod hinanden.*/
+/* border box gør at den blå farve ikke overskrider width i boxen da border box angiver at værdien skal være inde for boxen.  */
+.wrapper{
+    display: flex;
+    width: 100vw;
+    height: 100vh;;
+    background-color: grey;
+    justify-content: center;
+    align-items: center;
+}
+/*align-items center sætter boksen vertikal i midten, hvor i mod at justify.content sætter den horisontalt i mitdten .*/
+
+.calendar{
+    margin:auto;
+    width: 600px;
+    background-color: white;
+    box-shadow: 1px 1px 10px 3px rgba(1,1,1,1);
+    position: fixed;
+    bottom: 15%;
+}
+/*box.shadow er sorte ude i siden .*/
+
+
+.month{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    background-color:cornflowerblue;
+    color: white;
+    padding: 40px 30px;
+}
+/*space-between gør at måned rykker sig hen i midten, og det skubber de to pille ud til siden. */
+/*display flex rykker de to pile ud mod siden, så de ikke længere lægger op af samme akse. */
+/*top-bottom 40px og left right 30px
+ */
+/*align-items trækker pillene ned i midten
+ */
+
+.weekends{
+    display: flex;
+    background-color: blue;
+    color:white;
+    padding: 7px 0;
+}
+
+
+
+.days{
+    display:flex;
+    flex-wrap: wrap;
+    font-weight: 300;
+    padding: 2px;
+}
+/*display flex får værdierne til at brede sig ud over days. Samtdigt er flex wrap et tag som får de enkelte værdier til at gå ned af aksen*/
+/* font weight gør nedsætter farven til grå i numbers.*/
+.days div{
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.4s;
+}
+/* transition gør at hover number først bliver hoveret efter 0.4 s, og først fjerner hover efter 0.4s
+/* margin-bottom siger at der skal være 10px margin fra bunden og op. Det vil sige at margin skubber teksten 10px op fra bunden.
+ */
+/* padding gør at mellemrummet mellem hvert tal bliver 10px.
+ */
+
+.weekends div,
+.days div {
+    width: 14.28%;
+    text-align: center;
+}
+/*width er 14.28% da der er 7 uge dage, og derfor er 100/7=14,28
+ */
+.days div:hover {
+    background-color: grey;
+}
+
+
+.today{
+    background-color: blue;
+    color:white;
+}
+
+.prev_date{
+    color:darkgray;
+}
+/*forklar*/
+
+#month {
+    font-size:30px;
+    font-weight: 500;
+}
+.prev,.next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+  width: 50px;
+    height: 50px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 50px;
+}
+/* display flex sætter pillen ned i midten vertikalt*/
+/*justify-content sætter pillen hen til midten horisontalt*/
+/* align content sætter symbolet i midten af vores radius.*/
+/* Symbolet til højre (next)*/
+
+div.prev:hover,
+div.next:hover{
+    background-color: grey;
+}
+/*find ud af hvorfor omvendt*/
+
+div.app{
+    width: 30vw;
+    height: 30vh;;
+    background-color: lightgray;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    position: fixed;
+    left: 35%;
+}
+
+.tid,.emne{
+    margin:20px;
+}
+
+
+
+
+/* css til vores sidebar*/
+
+#panel{
+    width: 20vw;
+    height: 35vh;
+    background-color: lightgray;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 5%;
+    bottom: 30%;
+    display: none;
+
+
+}
+
+#s1,#s2,#headline_message,#time,#headline{
+    margin: 10px;
+}
+

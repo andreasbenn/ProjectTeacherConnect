@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalender</title>
+    <link rel = "stylesheet" href="css/calendar.css">
+</head>
+<!--Onload har noget med koden fra youtube at gøre. -->
+<!--https://www.w3schools.com/jsref/event_onload.asp-->
+<body onload="renderDate()">
+
+<!-- The class name "app" does not have any relevance for our js file, and is only used in our HTML sheet, so we can use CSS styles on the div.-->
+<div class="app">
+    <!-- We have here created an select id with an onChance, the javascript function will therefor be executed, when the user clicks on one of the options.-->
+    <!--https://www.w3schools.com/jsref/event_onchange.asp-->
+    <!-- We create two parameters, 's1' and 's2' that represents course and teacher-->
+
+    <select id="s1" onchange="insertOptions('s1','s2')">
+        <!--We create the different options for the courses, and give them a value we can refer to in javascript.-->
+        <option value="Select" id="cCourse">--Course--</option>
+        <option value="Bis" id="Bis">Business information Systems</option>
+        <option value="Org" id="Org">Organisation</option>
+        <option value="Pro" id="Pro">Programmering</option>
+        <option value="Vos" id="Vos">Virksomheders Økonomiske Styring</option>
+    </select>
+
+    <br>
+    <br>
+    <!--Teacher select-->
+    <select id="s2">
+        <option value="--">--Teacher--</option>
+
+        <br>
+
+    </select>
+     <!--BIS ØVELSE-->
+
+    <!-- kan bruge dette til analyse senere hen.
+    <div class="tid">
+        <br/>
+        <input type="radio" class="user_rating" value="13.00-13.15"/>13.00-13.15
+        <br/>
+        <input type="radio" class="user_rating" value="13.15-13.30"/>13.15-13.30
+        <br/>
+        <input type="radio" class="user_rating" value="13.30-13.45"/>13.30-13.45
+    </div>
+-->
+    <div id="headline_message">
+        <br>
+        <p>Copy from PP</p>
+        <textarea type="text" rows="5" cols="30" id="additional_info" value="" placeholder="Your feedback"></textarea>
+    </div>
+
+    <br/>
+
+
+    <!-- Bis øvelse 7 cirka-->
+</div>
+
+<!-- Classes are here made to encapsulate the different divs that the calendar contains.-->
+<div class = "wrapper">
+    <!--The wrapper contains the user interface, and is only represented i the css file, for giving a user friendly display. The wrapper is wrapped around the whole program-->
+    <div class = "calendar">
+       <!-- The 'calendar' class is also represented in the css, but the only thing represented in this class is the calendar itself. The panel -->
+        <div class="month">
+            <!--This class represents the month division which is above the weekends division -->
+            <div class = "prev" onclick = "moveDate('prev')">
+                <!--This is a onclick function that uses the span element below to execute when either the prev or next button is clicked on. -->
+                <span>&#10094</span>
+                <!-- a symbol in HTML-->
+             </div>
+            <div>
+                <h2 id="month"></h2>
+                <!-- gets its innerHTML from l.93 in javascript-->
+                <p id="date_str"></p>
+                <!--is the paragraph placed under the month-->
+            </div>
+            <div class= "next" onclick="moveDate('next')">
+                <span>&#10095</span>
+                <!--next angiver den næste division i calendar-->
+                            </div>
+                        </div>
+                          <div class="weekends">
+                              <div>Sun</div>
+                              <div>Mon</div>
+                              <div>Tue</div>
+                              <div>Wed</div>
+                              <div>Thu</div>
+                              <div>Fri</div>
+                              <div>Sat</div>
+                          </div>
+        <!--The div made for the weekends-->
+                          <div class="days"></div>
+
+
+        <div id="panel">
+            <!--We create different inputs for the teachers office hours, and give them a value we can refer to in javascript, and furthermore use in our localstorage.-->
+            <h3 id = headline> Valg af Tidspunkt</h3>
+            <form name="time" onsubmit="return validateContactInformation()">
+                <!-- Radio buttons  -->
+                <input type="radio" class="time1" value="13.00-13.15"/>13.00-13.15</input>
+                <br/>
+                <br/>
+                <input type="radio" class="time1" value="13.15-13.30"/>13.15-13.30</input>
+                <br/>
+                <br/>
+                <input type="radio" class="time1" value="13.30-13.45"/>13.30-13.45</input>
+                <br/>
+                <br/>
+                <input type="radio" class="time1" value="13.45-14.00"/>13.45-14.00</input>
+                <br/>
+                <br/>
+                <input type="submit" id="submitBtn" value="Submit">
+            </form>
+            <!--We use the radio buttons inside the HTML form, so we can use or form inputs inside it. -->
+    </div>
+
+        </div>
+
+
+    </div>
+
+<script src="js/calendar.js"></script>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    </body>
+
+
+
+    </html>
