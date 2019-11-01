@@ -1,6 +1,4 @@
-// Søren
-
-// fag for linjer på CBS
+// subjects for the studies
 class Course {
     constructor(name, student, teacher, instructor, year) {
         this.name = name;
@@ -8,11 +6,11 @@ class Course {
         this.teacher = teacher;
         this.instructor = instructor;
         this.year = year;
-
+// above I have made a class under witch I have described a "recipie" for what needs to be pressent in order to forfill the class
     }
 }
+// Course 1 is a variable witch contains a object (cource). Course have fields with values in them
 
-// Course 1 er en variabel, som indeholder et object (cource). Course har fields med værdier i
 let course1 = new Course(
     "Programering og udvikling af små systemer samt databaser",
     ["Frederik" ,"Søren", "Andreas", "Oliver"],
@@ -46,7 +44,7 @@ console.log(course2);
 console.log(course3);
 console.log(course4);
 
-
+// all these variables are depicted in order for my storeCourse function to work
 var inputUniversityName = document.getElementById('inputCourseName');
 var inputName = document.getElementById('inputStudents');
 var inputStudents = document.getElementById("inputTeacher");
