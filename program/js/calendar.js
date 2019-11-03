@@ -4,10 +4,7 @@ var submitBtn = document.getElementById('submitBtn');
 var course;
 var teacher;
 var buttons = document.getElementsByClassName('day');
-
-
-
-
+var submitBtn = document.getElementById("submitBtn");
 
 // console.log course
 console.log(courseField.options[courseField.selectedIndex].value);
@@ -39,31 +36,12 @@ console.log(courseField.options[courseField.selectedIndex].value);
     course = courseField.options[courseField.selectedIndex].value;
     teacher = teacherField.options[teacherField.selectedIndex].value;
 
-
     //console.log(course);
     //console.log(teacher);
 
     //localStorage.setItem('dateOfBooking', this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear())
 
-
-
 }*/
-
-
-
-class Booking{
-    constructor(course, teacher, comment, day, hour){
-        this.course = course
-        this.teacher = teacher
-        this.comment = comment
-        this.day = day
-        this.hour = hour
-
-    }
-}
-
-
-
 
 /*
 var s1 = document.getElementById('s1');
@@ -84,20 +62,16 @@ console.log(booking)*/
 
 // constructor for app
 
-
-
 var dt = new Date();
 // to start of with we create a variable name 'dt' which use the java method 'new Date' which is used for creating an object constructor function. This variable will now be used in creating the calendar. the variable is because of the () declared to as a function
 //https://stackoverflow.com/questions/1646698/what-is-the-new-keyword-in-javascript
 
 function renderDate() {<!-- The class name "content" does not have any relevance for our js file, and is only used for creating overview of the div section. -->
 
-
     dt.setDate(1);
 // set.Date is a javascript function we use so the date is equal to the weekday. We use the parameter (1) because (0) is equal to the first day of the last month, and we want to get the first day of this month.
 // https://www.w3schools.com/jsref/jsref_setdate.asp
     var day = dt.getDay();
-
 
     // this is consoled log, so we can see how many dates from last month we have.
 console.log(dt.getDay());
@@ -125,14 +99,9 @@ console.log(dt.getDay());
 // But firstly an array of all the months.
     var months = ["January","February","March","April","May", "June","July","August","September","October","November","December"];
 
-
-
-
-
 // We here use a object constructor function, which prints the date to our paragraph in html.
 // https://www.geeksforgeeks.org/javascript-date-todatestring-function/
     document.getElementById("date_str").innerHTML = 1 + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear();
-
 
     //document.getElementById("date_str").innerHTML = this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear();
 
@@ -149,8 +118,6 @@ console.log(dt.getDay());
 
 cells = "";
 
-
-
     for(x = day; x > 0; x--){
         cells += "<div class='prev_date'>" + (prevDate - x + 1) + "</div>";
     }
@@ -159,20 +126,13 @@ cells = "";
 
 // this for loop is for all the days of the relevant month. We again use a for loop, ad break out of the loop when i is less than our equal to the last day of the month
 
-
-
-
-
     for (i = 1; i <= endDate; i++){
         if(i == today.getDate() && dt.getMonth() == today.getMonth()){
             //var newDate = "day" + i;
 
-
             cells += "<div class='day' id ='" + i + "'  value ='" + i + "' onclick='both()'>" + i  + "</div>";
 
             // cells += "<div class='day'  value ='" + i + "' onclick='dateAndBook()'>" + i  + "</div>";
-
-
 
         } else{
 
@@ -180,27 +140,18 @@ cells = "";
 
             // cells += "<div class='day' value ='" + i + "' onclick='dateAndBook()'>" + i + "</div>";
 
-
-
 // if the date is not equal to today's date, we use the conditional else statement, until we hit todays date. Then the if statement will be used. The break happens at the endDate
 
         }
-
     }
-
-
-
 
 // id skal være unikke derfor bruges class tidligere blev id brugt
 
 // here we use innerHTML to print the cells we have declared above, in the user inteface.
     document.getElementsByClassName("days")[0].innerHTML = cells;
 
-
-
 // doesnt work
    // console.log(course,teacher)
-
 
 }
 
@@ -216,7 +167,6 @@ function moveDate(para) {
     renderDate();
     // we use the renderDate function in here, because the moveDate function needs to have this reference because the other attributed from the calendar is declared inside this function. And eventhough the tuborg klamme had continued, we have not declared an onclick function in the prevDate and nextDate object constructor.
 }
-
 
 //https://www.youtube.com/watch?v=BiOXf9HHGUA
 // this function is used to remove the options = "teachers" that is not relevant, when you have clicked on one of the course options. And is used in the function under it.
@@ -247,7 +197,6 @@ function insertOptions(s1,s2){
         localStorage.setItem('s1', s1.value);
         //localStorage.setItem('s2', s2.value);
         // we here use localstorage to store our options. The only problem is that the default is the first teacher. Because it adds the first value displayed in options of s2
-
 
     }
     else if (s1.options[s1.selectedIndex].value == "Pro"){
@@ -300,35 +249,18 @@ function insertOptions(s1,s2){
     }*/
 }
 
-
-
-
-
-
-
-
-
 // this function is executed by an onclick event. When clicked on a date, the panel is shown. This is possible by chancing the default value of the panel in css to 'none'
-
-
 
 // js til local storage af alt
 
 // buttons
-
-
-
 
 //var endDate = new Date(
   //  dt.getFullYear(),
     //dt.getMonth()+1,0
 //).getDate();
 
-
 // array til value
-
-
-
 
 /*
 function dayS() {
@@ -339,14 +271,7 @@ document.getElementsByClassName('day').value = d;
 }
  */
 
-
-
-
-
-
-
-
-function savesInfo (){
+submitBtn.onclick = function(){
     // this functions is used in or checkbox, where time is selected.
     var checkbox = document.getElementsByClassName('time1');
     //we declare a variable named 'len' show we can use all the different inputs in our select form.
@@ -363,15 +288,12 @@ function savesInfo (){
         if (checkbox[i].checked) {
             rating = checkbox[i].value;
             localStorage.setItem('rating', checkbox[i].value);
-
         }
-
     }
 
 //localStorage.setItem('dateOfBooking', this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear())
     course = courseField.options[courseField.selectedIndex].value;
     teacher = teacherField.options[teacherField.selectedIndex].value;
-
 
     //console.log(course);
     //console.log(teacher);
@@ -418,13 +340,10 @@ function savesInfo (){
             opt1.innerHTML = "Jan";
             opt2.innerHTML = "Jan";
             localStorage.setItem('s2', s2.value);
-
-
-
         }
     } s4();
 
-
+saveBooking();
 
 }
 function dateAndBook() {
@@ -446,31 +365,19 @@ function dateAndBook() {
             document.getElementById("panel").style.display = "block";}
             book();
 
-
         // var todayDate = document.getElementsByClassName('day').onclick = function() {
         //    console.log(this.id);
         // };
 
         // console.log(todayDate);
         // book()
-
     }
-
 }
-
-
-
-
-
-
-
 
 function both() {
     dateAndBook();
 
-
 }
-
 
 /*
 $(document).click(function(event) {
@@ -493,4 +400,38 @@ for (n = 1; n < list.length; ++n) {
 }
 */
 
+// Constructor for a booking, we're using to make our bookings objectorientated and lets us store our information in an array.
+class Booking{
+    constructor(course, teacher, comment, day, hour, id){
+        this.course = course;
+        this.teacher = teacher;
+        this.comment = comment;
+        this.day = day;
+        this.hour = hour;
+        this.id = id;
+    }
+}
 
+// Creating an empty array if we're restarting without a LocalStorage array
+//var bookings = [];
+
+// Parses the array from LocalStorage down
+var bookings = JSON.parse(localStorage.getItem("Booking"));
+
+// var newBooking = new Booking(localStorage.getItem("s1"),localStorage.getItem("s2"), "test", localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"));
+
+//Function to get the items from LocalStorage and stores them in the array
+function saveBooking() {
+    var newestBooking = new Booking(localStorage.getItem("s1"), localStorage.getItem("s2"), "test", localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"), i);
+    bookings.push(newestBooking);
+    console.log(bookings);
+
+    // Deletes the keys "s1", "s22, "dateOfBooking" and "rating" from LocalStorage
+    localStorage.removeItem("s1");
+    localStorage.removeItem("s2");
+    localStorage.removeItem("dateOfBooking");
+    localStorage.removeItem("rating");
+
+    //Stores the array in LocalStorage with the key "Booking"
+    localStorage.setItem("Booking", JSON.stringify(bookings));
+}
