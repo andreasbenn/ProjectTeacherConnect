@@ -44,7 +44,8 @@ loginKnap.onclick = function (e) {
         if (emailInput == existingUser[i].email && passwordInput == existingUser[i].password) {
             //push userName to current local storage
             currentLogIn.push({email: emailInput});
-            document.location.href = "test.html";
+            alert("Login has been verified");
+            document.location.href = "home.html";
             var IDString = JSON.stringify(currentLogIn);
             localStorage.setItem('currentUser', IDString);
             userExists = true;

@@ -1,11 +1,3 @@
-body {
-    background-image: url("Images/notepad-background-paper.jpg");
-    background-position: center center;
-    background-size: 2000px 3000px;
-    background-repeat: no-repeat;
-    text-align:center;
-}
-
 ul {
     list-style-type: none;
     margin: 10px;

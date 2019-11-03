@@ -1,6 +1,5 @@
 var courseField = document.getElementById('s1');
 var teacherField = document.getElementById('s2');
-var submitBtn = document.getElementById('submitBtn');
 var course;
 var teacher;
 var buttons = document.getElementsByClassName('day');
@@ -130,13 +129,13 @@ cells = "";
         if(i == today.getDate() && dt.getMonth() == today.getMonth()){
             //var newDate = "day" + i;
 
-            cells += "<div class='day' id ='" + i + "'  value ='" + i + "' onclick='both()'>" + i  + "</div>";
+            cells += "<div class='day' id ='" + i + "'  value ='" + i + "' onclick='dateAndBook()'>" + i  + "</div>";
 
             // cells += "<div class='day'  value ='" + i + "' onclick='dateAndBook()'>" + i  + "</div>";
 
         } else{
 
-            cells += "<div class='day' id ='" + i + "' value ='" + i + "' onclick='both()'>" + i + "</div>";
+            cells += "<div class='day' id ='" + i + "' value ='" + i + "' onclick='dateAndBook()'>" + i + "</div>";
 
             // cells += "<div class='day' value ='" + i + "' onclick='dateAndBook()'>" + i + "</div>";
 
@@ -149,10 +148,6 @@ cells = "";
 
 // here we use innerHTML to print the cells we have declared above, in the user inteface.
     document.getElementsByClassName("days")[0].innerHTML = cells;
-
-// doesnt work
-   // console.log(course,teacher)
-
 }
 
 // this is the function that executes when the onclick prev or next is clicked on. We either multiply or substract one month COMMENT PARA!!!!!
@@ -295,11 +290,6 @@ submitBtn.onclick = function(){
     course = courseField.options[courseField.selectedIndex].value;
     teacher = teacherField.options[teacherField.selectedIndex].value;
 
-    //console.log(course);
-    //console.log(teacher);
-
-    //localStorage.setItem('dateOfBooking', this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear())
-
     function s4() {
         var s1 = document.getElementById('s1');
         var s2 = document.getElementById('s2');
@@ -341,11 +331,13 @@ submitBtn.onclick = function(){
             opt2.innerHTML = "Jan";
             localStorage.setItem('s2', s2.value);
         }
-    } s4();
+    }
 
-saveBooking();
+    s4();
+    saveBooking();
 
 }
+
 function dateAndBook() {
     // (document.getElementById("hello").textContent)
 
@@ -372,11 +364,6 @@ function dateAndBook() {
         // console.log(todayDate);
         // book()
     }
-}
-
-function both() {
-    dateAndBook();
-
 }
 
 /*
@@ -413,10 +400,10 @@ class Booking{
 }
 
 // Creating an empty array if we're restarting without a LocalStorage array
-//var bookings = [];
+var bookings = [];
 
 // Parses the array from LocalStorage down
-var bookings = JSON.parse(localStorage.getItem("Booking"));
+//var bookings = JSON.parse(localStorage.getItem("Bookings"));
 
 // var newBooking = new Booking(localStorage.getItem("s1"),localStorage.getItem("s2"), "test", localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"));
 
@@ -426,12 +413,12 @@ function saveBooking() {
     bookings.push(newestBooking);
     console.log(bookings);
 
-    // Deletes the keys "s1", "s22, "dateOfBooking" and "rating" from LocalStorage
+    // Deletes the keys "s1", "s2", "dateOfBooking" and "rating" from LocalStorage
     localStorage.removeItem("s1");
     localStorage.removeItem("s2");
     localStorage.removeItem("dateOfBooking");
     localStorage.removeItem("rating");
 
     //Stores the array in LocalStorage with the key "Booking"
-    localStorage.setItem("Booking", JSON.stringify(bookings));
+    localStorage.setItem("Bookings", JSON.stringify(bookings));
 }

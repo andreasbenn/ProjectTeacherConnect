@@ -129,7 +129,7 @@ function sortTopics () {
 
 
 
-var submitButton = document.getElementById("submitBtn");
+var submitButton = document.getElementById("submitBtn2");
 submitButton.onclick = function () {
     checkTopic();
     sortTopics();
