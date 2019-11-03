@@ -13,6 +13,7 @@ class User{
 // above I have made a class under witch I have described a "recipie" for what needs to be pressent in order to forfill the class. I'm currentley only "activating"
 // email and password as that is what i need for my login function
 
+
 var user1 = new User(
     "Søren",
     "Poulsen",
