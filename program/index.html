@@ -25,7 +25,6 @@
     </select>
 
     <br>
-    <br>
     <!--Teacher select-->
     <select id="s2">
         <option value="--">--Teacher--</option>
@@ -46,9 +45,14 @@
     </div>
 -->
     <div id="headline_message">
-        <br>
-        <p>Copy from PP</p>
-        <textarea type="text" rows="5" cols="30" id="additional_info" value="" placeholder="Your feedback"></textarea>
+        <p>Topic</p>
+        <input id="topic1" type="button" value=""/>
+        <input id="topic2" type="button" value=""/>
+        <input id="topic3" type="button" value=""/>
+        <input id="topic4" type="button" value=""/>
+        <input id="topic5" type="button" value=""/>
+        <br/>
+        <input id="Topic" type="text" value="" />
     </div>
 
     <br/>
@@ -57,9 +61,14 @@
     <!-- Bis øvelse 7 cirka-->
 </div>
 
+
+
+
 <!-- Classes are here made to encapsulate the different divs that the calendar contains.-->
 <div class = "wrapper">
+
     <!--The wrapper contains the user interface, and is only represented i the css file, for giving a user friendly display. The wrapper is wrapped around the whole program-->
+
     <div class = "calendar">
        <!-- The 'calendar' class is also represented in the css, but the only thing represented in this class is the calendar itself. The panel -->
         <div class="month">
@@ -122,6 +131,7 @@
     </div>
 
 <script src="js/calendar.js"></script>
+<script src="js/Topics.js"></script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </body>

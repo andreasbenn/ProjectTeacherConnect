@@ -16,7 +16,7 @@ body {
 .wrapper{
     display: flex;
     width: 100vw;
-    height: 100vh;;
+    height: 100vh;
     background-color: grey;
     justify-content: center;
     align-items: center;
@@ -24,12 +24,12 @@ body {
 /*align-items center sætter boksen vertikal i midten, hvor i mod at justify.content sætter den horisontalt i mitdten .*/
 
 .calendar{
-    margin:auto;
+    margin-top:50px;
     width: 600px;
     background-color: white;
     box-shadow: 1px 1px 10px 3px rgba(1,1,1,1);
-    position: fixed;
-    bottom: 15%;
+    position: relative;
+    top: 10%;
 }
 /*box.shadow er sorte ude i siden .*/
 

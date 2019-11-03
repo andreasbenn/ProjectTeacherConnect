@@ -112,7 +112,7 @@ function checkTopic () {
             id_gen();
             var topicx = new Topic(
                 document.getElementById("Topic").value,
-                1)
+                1);
 
             topicx.id = id_generator;
             console.log(topicx);
@@ -129,13 +129,12 @@ function sortTopics () {
 
 
 
-
-var submitButton = document.getElementById("submitButton");
+var submitButton = document.getElementById("submitBtn");
 submitButton.onclick = function () {
     checkTopic();
     sortTopics();
         localStorage.setItem("allTopics", JSON.stringify(allTopicsLS));
-
+localStorage.setItem("Topic", enteredTopic.value);
         console.log(JSON.parse(localStorage.getItem("allTopics")));
         //Sorterer arrayet efter popularitet.
   /*  allTopics.sort(function(a,b) {return b.popCounter - a.popCounter});
