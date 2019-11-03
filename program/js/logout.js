@@ -4,4 +4,3 @@ document.getElementById("logoutKnap").onclick = function(e) {
     window.location.href="login.html";
     alert("You have been logged out")
 }
-  alert("You have been logged out")

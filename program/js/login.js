@@ -6,32 +6,6 @@ var existingUser = JSON.parse(localStorage.getItem('User'));
 // (var attempt = 3; -- dette er ikke nødvendigt for vores kode men kunne deffinere denne til fx 3 og så nede i min attempt skrive 3 og så lave et forloop så den efter
 // hver fejlagtigt login forsøg tæller ned såden, at attempt nu er lig 2 osv.)
 
-
-
-
-//I'm using "login" because that's the ID i have givven it in HTML
-// All of the code below is what i would like to run when clicking on the login button. (verrify email etc...)
-loginKnap.onclick = function (e) {
-    var userExists = false;
-    e.preventDefault();
-    var emailInput = document.getElementById("email").value;
-    var passwordInput = document.getElementById("password").value;
-
-    for (let i = 0; i < existingUser.length; i++) {
-        if (emailInput == existingUser[i].email && passwordInput == existingUser[i].password) {
-            //push userName to current local storage
-            currentLogIn.push({email: emailInput});
-            document.location.href = "test.html";
-            var IDString = JSON.stringify(currentLogIn);
-            localStorage.setItem('currentUser', IDString);
-            userExists = true;
-            break;
-        }
-            }
-    if (!userExists) {
-        alert("Username or password is incorrect or does not exist, plaese try again")
-    }
-};
 //below i will like to create a function that gives an error if the username and password is incorrect or not equal to my dummy data from ddLogin.js
 // Ill start by making an alert function and after specifie the criterias in form of an if statement
     /*
@@ -57,3 +31,27 @@ submitKnap.onclick = function() {
     }
 }
 // linjen hvor der står 'attempt' skal jeg lige have forklaret hvorfor den skal stå der. hvis jeg sletter den virker min funktion ikke. jeg ikke noget med attempts
+
+//I'm using "login" because that's the ID i have givven it in HTML
+// All of the code below is what i would like to run when clicking on the login button. (verrify email etc...)
+loginKnap.onclick = function (e) {
+    var userExists = false;
+    e.preventDefault();
+    var emailInput = document.getElementById("email").value;
+    var passwordInput = document.getElementById("password").value;
+
+    for (let i = 0; i < existingUser.length; i++) {
+        if (emailInput == existingUser[i].email && passwordInput == existingUser[i].password) {
+            //push userName to current local storage
+            currentLogIn.push({email: emailInput});
+            document.location.href = "test.html";
+            var IDString = JSON.stringify(currentLogIn);
+            localStorage.setItem('currentUser', IDString);
+            userExists = true;
+            break;
+        }
+    }
+    if (!userExists) {
+        alert("Username or password is incorrect or does not exist, plaese try again")
+    }
+};
