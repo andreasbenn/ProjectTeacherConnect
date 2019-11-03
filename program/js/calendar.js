@@ -1,26 +1,53 @@
-// Oliver
-
 var courseField = document.getElementById('s1');
 var teacherField = document.getElementById('s2');
 var submitBtn = document.getElementById('submitBtn');
 var course;
 var teacher;
+var buttons = document.getElementsByClassName('day');
 
 
 
-submitBtn.onclick = function(){
-    course = courseField.options[courseField.selectedIndex].value
-        teacher = teacherField.options[teacherField.selectedIndex].value
 
 
-};
 // console.log course
 console.log(courseField.options[courseField.selectedIndex].value);
 console.log(teacherField.options[teacherField.selectedIndex].value);
 console.log(courseField.options[courseField.selectedIndex].value);
-var timeSelected = localStorage.getItem("rating");
+
+/*function savesInfo (){
+    // this functions is used in or checkbox, where time is selected.
+    var checkbox = document.getElementsByClassName('time1');
+    //we declare a variable named 'len' show we can use all the different inputs in our select form.
+    var len = checkbox.length;
+    var rating = "";
+    // this rating does not have anything inside its cituationstegn this variable depends on which input button that is clicked on.
+
+//var i = 0;
+// we create a for loop that counts up, and choose the checked input.
+// the input is then stored in localStorage.
+    // we dont have to use a <= sign in the for loop because we also have a submit button that also is represented as a input in or select element.
+    for (i = 0; i < len; i++) {
+        if (checkbox[i].checked) {
+            rating = checkbox[i].value;
+            localStorage.setItem('rating', checkbox[i].value);
+
+        }
+
+    }
+
+//localStorage.setItem('dateOfBooking', this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear())
+    course = courseField.options[courseField.selectedIndex].value;
+    teacher = teacherField.options[teacherField.selectedIndex].value;
 
 
+    //console.log(course);
+    //console.log(teacher);
+
+    //localStorage.setItem('dateOfBooking', this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear())
+
+
+
+}*/
 
 
 
@@ -34,6 +61,8 @@ class Booking{
 
     }
 }
+
+
 
 
 /*
@@ -97,15 +126,27 @@ console.log(dt.getDay());
     var months = ["January","February","March","April","May", "June","July","August","September","October","November","December"];
 
 
+
+
+
 // We here use a object constructor function, which prints the date to our paragraph in html.
 // https://www.geeksforgeeks.org/javascript-date-todatestring-function/
-    document.getElementById("date_str").innerHTML = dt.toDateString();
+    document.getElementById("date_str").innerHTML = 1 + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear();
+
+
+    //document.getElementById("date_str").innerHTML = this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear();
 
 // we use our dt variable new date to get the month.
     document.getElementById("month").innerHTML = months[dt.getMonth()];
 
-console.log(day);
-var value = 0;
+
+    // array til value
+
+   /* for(var d = 1; d <= endDate; d++) {
+        if (d <= 31) console.log(d);
+    }
+*/
+
 cells = "";
 
 
@@ -117,20 +158,31 @@ cells = "";
 //this for loop connects with our div class "'prev_date" it starts out by saying our previous date, which is the last day of the last month=30. Then it says - x = the days that is represented from last month. It then plus with 1 so we get 29, and the loop repeats.
 
 // this for loop is for all the days of the relevant month. We again use a for loop, ad break out of the loop when i is less than our equal to the last day of the month
+
+
+
+
+
     for (i = 1; i <= endDate; i++){
-        if(i == today.getDate() && dt.getMonth()== today.getMonth == today.getMonth()){
+        if(i == today.getDate() && dt.getMonth() == today.getMonth()){
             //var newDate = "day" + i;
 
 
-            cells += "<div class='day'   onclick='dateAndBook()'>" + i + "</div>";
+            cells += "<div class='day' id ='" + i + "'  value ='" + i + "' onclick='both()'>" + i  + "</div>";
+
+            // cells += "<div class='day'  value ='" + i + "' onclick='dateAndBook()'>" + i  + "</div>";
+
 
 
         } else{
-            cells += "<div class='day'  onclick='dateAndBook()'>" + i + "</div>";
+
+            cells += "<div class='day' id ='" + i + "' value ='" + i + "' onclick='both()'>" + i + "</div>";
+
+            // cells += "<div class='day' value ='" + i + "' onclick='dateAndBook()'>" + i + "</div>";
+
 
 
 // if the date is not equal to today's date, we use the conditional else statement, until we hit todays date. Then the if statement will be used. The break happens at the endDate
-
 
         }
 
@@ -145,11 +197,12 @@ cells = "";
     document.getElementsByClassName("days")[0].innerHTML = cells;
 
 
+
 // doesnt work
-    console.log(course,teacher)
+   // console.log(course,teacher)
+
 
 }
-
 
 // this is the function that executes when the onclick prev or next is clicked on. We either multiply or substract one month COMMENT PARA!!!!!
 function moveDate(para) {
@@ -192,7 +245,7 @@ function insertOptions(s1,s2){
         s2.options.add(opt1);
         s2.options.add(opt2);
         localStorage.setItem('s1', s1.value);
-        localStorage.setItem('s2', s2.value);
+        //localStorage.setItem('s2', s2.value);
         // we here use localstorage to store our options. The only problem is that the default is the first teacher. Because it adds the first value displayed in options of s2
 
 
@@ -207,6 +260,8 @@ function insertOptions(s1,s2){
         removeAll(s2);
         s2.options.add(opt1);
         s2.options.add(opt2);
+        localStorage.setItem('s1', s1.value);  
+        //localStorage.setItem('s2', s2.value);
 // here we just use conditional statements for all the other courses an HA (it) student has.
 
     }else if (s1.options[s1.selectedIndex].value == "Bis"){
@@ -219,6 +274,9 @@ function insertOptions(s1,s2){
         removeAll(s2);
         s2.options.add(opt1);
         s2.options.add(opt2);
+        localStorage.setItem('s1', s1.value);
+        //localStorage.setItem('s2', s2.value);
+
     }else if (s1.options[s1.selectedIndex].value == "Vos"){
         var opt1 = document.createElement('option')
         var opt2 = document.createElement('option')
@@ -229,6 +287,8 @@ function insertOptions(s1,s2){
         removeAll(s2);
         s2.options.add(opt1);
         s2.options.add(opt2);
+        localStorage.setItem('s1', s1.value);  
+        //localStorage.setItem('s2', s2.value);
     }
 
    /* else{
@@ -247,63 +307,156 @@ function insertOptions(s1,s2){
 
 
 
-// js til sidebar
-function book() {
-    document.getElementById("panel").style.display = "block";}
-    // this function is executed by an onclick event. When clicked on a date, the panel is shown. This is possible by chancing the default value of the panel in css to 'none'
 
+// this function is executed by an onclick event. When clicked on a date, the panel is shown. This is possible by chancing the default value of the panel in css to 'none'
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            function dateAndBook() {
-                book()
-
-
-
-
-            }
 
 
 // js til local storage af alt
 
 // buttons
 
-            function validateContactInformation() {
-// this functions is used in or checkbox, where time is selected.
-                var checkbox = document.getElementsByClassName('time1');
-                //we declare a variable named 'len' show we can use all the different inputs in our select form.
-                var len = checkbox.length;
-                var rating = "";
-                // this rating does not have anything inside its cituationstegn this variable depends on which input button that is clicked on.
 
 
-                //var i = 0;
+
+//var endDate = new Date(
+  //  dt.getFullYear(),
+    //dt.getMonth()+1,0
+//).getDate();
+
+
+// array til value
+
+
+
+
+/*
+function dayS() {
+    for (var d = 1; d <= endDate; d++) {
+        if (d <= 31)
+document.getElementsByClassName('day').value = d;
+    }
+}
+ */
+
+
+
+
+
+
+
+
+function savesInfo (){
+    // this functions is used in or checkbox, where time is selected.
+    var checkbox = document.getElementsByClassName('time1');
+    //we declare a variable named 'len' show we can use all the different inputs in our select form.
+    var len = checkbox.length;
+    var rating = "";
+
+    // this rating does not have anything inside its cituationstegn this variable depends on which input button that is clicked on.
+
+//var i = 0;
 // we create a for loop that counts up, and choose the checked input.
 // the input is then stored in localStorage.
-                // we dont have to use a <= sign in the for loop because we also have a submit button that also is represented as a input in or select element.
-                for (i = 0; i < len; i++) {
-                    if (checkbox[i].checked) {
-                        rating = checkbox[i].value;
-                        localStorage.setItem('rating', checkbox[i].value);
+    // we dont have to use a <= sign in the for loop because we also have a submit button that also is represented as a input in or select element.
+    for (i = 0; i < len; i++) {
+        if (checkbox[i].checked) {
+            rating = checkbox[i].value;
+            localStorage.setItem('rating', checkbox[i].value);
+
+        }
+
+    }
+
+//localStorage.setItem('dateOfBooking', this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear())
+    course = courseField.options[courseField.selectedIndex].value;
+    teacher = teacherField.options[teacherField.selectedIndex].value;
 
 
-                    }
+    //console.log(course);
+    //console.log(teacher);
 
-                }
+    //localStorage.setItem('dateOfBooking', this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear())
 
-            }
+    function s4() {
+        var s1 = document.getElementById('s1');
+        var s2 = document.getElementById('s2');
+        if (s1.options[s1.selectedIndex].value == "Org") {
+            var opt1 = document.createElement('option');
+            var opt2 = document.createElement('option');
+
+            opt1.value = "Ali";
+            opt2.value = "Tina";
+            opt1.innerHTML = "Ali";
+            opt2.innerHTML = "Tina";
+            // we here use the function declared above, so we are sure that the only thing s2 contains is the two options we have just added.
+            localStorage.setItem('s2', s2.value);
+        } else if (s1.options[s1.selectedIndex].value == "Pro") {
+            var opt1 = document.createElement('option')
+            var opt2 = document.createElement('option')
+            opt1.value = "Henrik";
+            opt2.value = "Mikkel";
+            opt1.innerHTML = "Henrik";
+            opt2.innerHTML = "Mikkel";
+            localStorage.setItem('s2', s2.value);
+// here we just use conditional statements for all the other courses an HA (it) student has.
+
+        } else if (s1.options[s1.selectedIndex].value == "Bis") {
+            var opt1 = document.createElement('option')
+            var opt2 = document.createElement('option')
+            opt1.value = "Rob";
+            opt2.value = "Till";
+            opt1.innerHTML = "Robb";
+            opt2.innerHTML = "Till";
+            localStorage.setItem('s2', s2.value);
+
+        } else if (s1.options[s1.selectedIndex].value == "Vos") {
+            var opt1 = document.createElement('option')
+            var opt2 = document.createElement('option')
+            opt1.value = "Jan";
+            opt2.value = "Jan";
+            opt1.innerHTML = "Jan";
+            opt2.innerHTML = "Jan";
+            localStorage.setItem('s2', s2.value);
+
+
+
+        }
+    } s4();
+
+
+
+}
+function dateAndBook() {
+    // (document.getElementById("hello").textContent)
+
+// mikkel
+    var buttons = document.getElementsByClassName('day');
+
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function () {
+            //console.log(this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear());
+            // local storage
+
+            var dateOfBooking = document.getElementById("date_str").innerHTML = this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear();
+            localStorage.setItem('dateOfBooking', this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear())
+
+        });
+        function book() {
+            document.getElementById("panel").style.display = "block";}
+            book();
+
+
+        // var todayDate = document.getElementsByClassName('day').onclick = function() {
+        //    console.log(this.id);
+        // };
+
+        // console.log(todayDate);
+        // book()
+
+    }
+
+}
 
 
 
@@ -312,10 +465,32 @@ function book() {
 
 
 
+function both() {
+    dateAndBook();
 
 
+}
 
 
+/*
+$(document).click(function(event) {
+    var text = $(event.target).text();
+    console.log((text))
+});*/
+/*document.addEventListener("click", myFunction);
 
+function myFunction() {
+  var todayDate = document.getElementById('hello');
+    //  document.getElementsByClassName("day")
+    console.log(todayDate)
+}*/
+
+/*
+var list = document.getElementsByClassName('day');
+var n;
+for (n = 1; n < list.length; ++n) {
+    list[n].value = '31';
+}
+*/
 
 
