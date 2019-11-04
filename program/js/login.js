@@ -2,7 +2,7 @@
 // Here I'm making a function that tests if the username and password is corect from my dummydata (ddLogin.js)
 var loginKnap = document.getElementById("loginKnap");
 var currentLogIn = [];
-var existingUser = JSON.parse(localStorage.getItem('User'));
+var existingUser = JSON.parse(localStorage.getItem('allUsers'));
 // (var attempt = 3; -- dette er ikke nødvendigt for vores kode men kunne deffinere denne til fx 3 og så nede i min attempt skrive 3 og så lave et forloop så den efter
 // hver fejlagtigt login forsøg tæller ned såden, at attempt nu er lig 2 osv.)
 
@@ -19,7 +19,7 @@ var existingUser = JSON.parse(localStorage.getItem('User'));
 }*/
 // here I'm making a simple function that alerts a user trying to create a user, with the message "This is currently not a part of this version of the program"
 // more or less the same principle as our login function
-var submitKnap = document.getElementById("submitKnap");
+/* SLETTES var submitKnap = document.getElementById("submitKnap");
 submitKnap.onclick = function() {
     alert("Not yet a part of this version of program");
     if (attempt) {
@@ -29,7 +29,11 @@ submitKnap.onclick = function() {
         document.getElementById("createRepeatPassword").disabled = true;
         document.getElementById("submitKnap").disabled = true;
     }
-}
+};
+
+function findUser () {
+
+} SLETTES*/
 // linjen hvor der står 'attempt' skal jeg lige have forklaret hvorfor den skal stå der. hvis jeg sletter den virker min funktion ikke. jeg ikke noget med attempts
 
 //I'm using "login" because that's the ID i have givven it in HTML
@@ -43,16 +47,17 @@ loginKnap.onclick = function (e) {
     for (let i = 0; i < existingUser.length; i++) {
         if (emailInput == existingUser[i].email && passwordInput == existingUser[i].password) {
             //push userName to current local storage
-            currentLogIn.push({email: emailInput});
+            currentLogIn.push(existingUser[i]);
             alert("Login has been verified");
             document.location.href = "home.html";
-            var IDString = JSON.stringify(currentLogIn);
-            localStorage.setItem('currentUser', IDString);
+            var currentUser = JSON.stringify(currentLogIn);
+            localStorage.setItem('currentUser', currentUser);
             userExists = true;
             break;
         }
     }
     if (!userExists) {
-        alert("Username or password is incorrect or does not exist, plaese try again")
+        alert("Username or password is incorrect or does not exist, please try again")
     }
 };
+

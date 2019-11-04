@@ -1,5 +1,5 @@
 class User{
-  constructor(firstName,lastName, phoneNumber, email, address, studentID, password){
+  constructor(firstName,lastName, phoneNumber, email, address, studentID, password, program ){
       this.firstName = firstName;
       this.lastName = lastName;
       this.phoneNumber = phoneNumber;
@@ -7,6 +7,7 @@ class User{
       this.address = address;
       this.studentID = studentID;
       this.password = password;
+      this.program = program;
   }
 
 }
@@ -21,7 +22,8 @@ var user1 = new User(
     "sopo19ad@student.cbs.dk",
     "Syrefabriksvej 24, 1411 København K",
     "1997",
-    "1234");
+    "1234",
+"ha-it");
 
 var user2 = new User(
     "Oliver",
@@ -30,7 +32,8 @@ var user2 = new User(
     "olmi19ab@student.cbs.dk",
     "Howitzvej 61, 2000 Frederiksberg",
     "2222222222",
-    "Oliver");
+    "Oliver",
+    "ha-fil");
 
 var user3 = new User(
     "Andreas",
@@ -39,8 +42,8 @@ var user3 = new User(
     "anbe17aj@student.cbs.dk",
     "Howitzvej 60, 2000 Frederiksberg",
     "1111111111",
-    "1234");
-
+    "1234",
+    "ha-it");
 var user4 = new User(
     'Jeppe',
     'Reuther',
@@ -48,7 +51,8 @@ var user4 = new User(
     'jere19ac@student.cbs.dk',
     'howitzvej 90, 2000 Frederiksberg',
     '1234567890',
-    '1234');
+    '1234',
+    "ha-it");
 
 
 // make new instances of Program for each program
@@ -61,8 +65,8 @@ if (localStorage.getItem('User') == null) {
 // here I'm pushing my users data to my login function sp that we can asure that only valid users can login to our site
 
 
-    var usserListString = JSON.stringify(userList)
-    localStorage.setItem("User", usserListString    )
+    var usserListString = JSON.stringify(userList);
+    localStorage.setItem("allUsers", usserListString)
 } else {
     var userList = JSON.parse(localStorage.getItem("User"))
 }
