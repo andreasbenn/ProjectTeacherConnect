@@ -129,8 +129,7 @@ function sortTopics () {
 
 
 
-var submitButton = document.getElementById("submitBtn2");
-submitButton.onclick = function () {
+function executeTopics () {
     checkTopic();
     sortTopics();
         localStorage.setItem("allTopics", JSON.stringify(allTopicsLS));
@@ -141,4 +140,6 @@ localStorage.setItem("Topic", enteredTopic.value);
     console.log(allTopics);*/
 
     };
+
+document.getElementById("submitBtn").addEventListener("click", executeTopics);
 
