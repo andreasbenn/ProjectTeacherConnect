@@ -266,7 +266,7 @@ document.getElementsByClassName('day').value = d;
 }
  */
 
-submitBtn.onclick = function(){
+function executeCalendar(){
     // this functions is used in or checkbox, where time is selected.
     var checkbox = document.getElementsByClassName('time1');
     //we declare a variable named 'len' show we can use all the different inputs in our select form.
@@ -422,3 +422,5 @@ function saveBooking() {
     //Stores the array in LocalStorage with the key "Booking"
     localStorage.setItem("Bookings", JSON.stringify(bookings));
 }
+
+document.getElementById("submitBtn").addEventListener("click", executeCalendar);
