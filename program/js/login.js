@@ -3,6 +3,12 @@
 var loginKnap = document.getElementById("loginKnap");
 var currentLogIn = [];
 var existingUser = JSON.parse(localStorage.getItem('allUsers'));
+
+//Deletes currentUser if the site was reloaded without logging out (error propagation)
+if(localStorage.getItem("currentUser") !== null){
+    localStorage.removeItem("currentUser");
+}
+
 // (var attempt = 3; -- dette er ikke nødvendigt for vores kode men kunne deffinere denne til fx 3 og så nede i min attempt skrive 3 og så lave et forloop så den efter
 // hver fejlagtigt login forsøg tæller ned såden, at attempt nu er lig 2 osv.)
 
@@ -50,8 +56,8 @@ loginKnap.onclick = function (e) {
             currentLogIn.push(existingUser[i]);
             alert("Login has been verified");
             document.location.href = "home.html";
-            var currentUser = JSON.stringify(currentLogIn);
-            localStorage.setItem('currentUser', currentUser);
+            var currentUserString = JSON.stringify(currentLogIn);
+            localStorage.setItem('currentUser', currentUserString);
             userExists = true;
             break;
         }
