@@ -389,10 +389,9 @@ for (n = 1; n < list.length; ++n) {
 
 // Constructor for a booking, we're using to make our bookings objectorientated and lets us store our information in an array.
 class Booking{
-    constructor(course, teacher, comment, topic, day, hour, id){
+    constructor(course, teacher, topic, day, hour, id){
         this.course = course;
         this.teacher = teacher;
-        this.comment = comment;
         this.topic = topic;
         this.day = day;
         this.hour = hour;
@@ -401,16 +400,22 @@ class Booking{
 }
 
 // Creating an empty array if we're restarting without a LocalStorage array
-var bookings = [];
+if(localStorage.getItem("Bookings") === null){
+    var bookings = [];
+    localStorage.setItem("Bookings", JSON.stringify(bookings));
+}
 
 // Parses the array from LocalStorage down
-//var bookings = JSON.parse(localStorage.getItem("Bookings"));
+if(localStorage.getItem("Bookings") !== null){
+    var bookings = JSON.parse(localStorage.getItem("Bookings"));
+}
+
 
 // var newBooking = new Booking(localStorage.getItem("s1"),localStorage.getItem("s2"), "test", localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"));
 
 //Function to get the items from LocalStorage and stores them in the array
 function saveBooking() {
-    var newestBooking = new Booking(localStorage.getItem("s1"), localStorage.getItem("s2"), "test", localStorage.getItem("Topic"), localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"), i);
+    var newestBooking = new Booking(localStorage.getItem("s1"), localStorage.getItem("s2"), localStorage.getItem("Topic"), localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"), i);
     bookings.push(newestBooking);
     console.log(bookings);
 
