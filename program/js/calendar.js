@@ -389,10 +389,11 @@ for (n = 1; n < list.length; ++n) {
 
 // Constructor for a booking, we're using to make our bookings objectorientated and lets us store our information in an array.
 class Booking{
-    constructor(course, teacher, comment, day, hour, id){
+    constructor(course, teacher, comment, topic, day, hour, id){
         this.course = course;
         this.teacher = teacher;
         this.comment = comment;
+        this.topic = topic;
         this.day = day;
         this.hour = hour;
         this.id = id;
@@ -409,13 +410,14 @@ var bookings = [];
 
 //Function to get the items from LocalStorage and stores them in the array
 function saveBooking() {
-    var newestBooking = new Booking(localStorage.getItem("s1"), localStorage.getItem("s2"), "test", localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"), i);
+    var newestBooking = new Booking(localStorage.getItem("s1"), localStorage.getItem("s2"), "test", localStorage.getItem("Topic"), localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"), i);
     bookings.push(newestBooking);
     console.log(bookings);
 
     // Deletes the keys "s1", "s2", "dateOfBooking" and "rating" from LocalStorage
     localStorage.removeItem("s1");
     localStorage.removeItem("s2");
+    localStorage.removeItem("Topic");
     localStorage.removeItem("dateOfBooking");
     localStorage.removeItem("rating");
 
