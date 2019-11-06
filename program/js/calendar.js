@@ -334,7 +334,7 @@ function executeCalendar(){
     }
 
     s4();
-    saveBooking();
+    createBooking();
 
 }
 
@@ -414,7 +414,7 @@ if(localStorage.getItem("Bookings") !== null){
 // var newBooking = new Booking(localStorage.getItem("s1"),localStorage.getItem("s2"), "test", localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"));
 
 //Function to get the items from LocalStorage and stores them in the array
-function saveBooking() {
+function createBooking() {
     var newestBooking = new Booking(localStorage.getItem("s1"), localStorage.getItem("s2"), localStorage.getItem("Topic"), localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"), i);
     bookings.push(newestBooking);
     console.log(bookings);

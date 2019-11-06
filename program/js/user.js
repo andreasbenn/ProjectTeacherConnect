@@ -26,16 +26,19 @@ function storeUsers(){
 // calls the function storeUsers to initiate the storing
 storeUsers();
 
+var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
 // Show user on My Profile
-function displayUser(user) {
-    document.getElementById("userFirstName").innerHTML = user.firstName;
-    document.getElementById("userLastName").innerHTML = user.lastName;
-    document.getElementById("userPhoneNumber").innerHTML = user.phoneNumber;
-    document.getElementById("userEmail").innerHTML = user.email;
-    document.getElementById("userAddress").innerHTML = user.address;
-    document.getElementById("userStudentID").innerHTML = user.studentID;
+function displayUser() {
+    document.getElementById("userFirstName").innerHTML = currentUser[0].firstName;
+    document.getElementById("userLastName").innerHTML = currentUser[0].lastName;
+    document.getElementById("userPhoneNumber").innerHTML = currentUser[0].phoneNumber;
+    document.getElementById("userEmail").innerHTML = currentUser[0].email;
+    document.getElementById("userAddress").innerHTML = currentUser[0].address;
+    document.getElementById("userStudentID").innerHTML = currentUser[0].studentID;
+    document.getElementById("userProgram").innerHTML = currentUser[0].program;
 }
-displayUser(user3);
+displayUser();
 
 var testID = "day" +
     1;
