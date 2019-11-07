@@ -124,7 +124,7 @@ if (localStorage.getItem('User') == null) {
         "Howitzvej 62, 2000 Frederiksberg",
         "3333333333",
         "1234")
-
+)
 
     var usserListString = JSON.stringify(userList)
     localStorage.setItem("User", usserListString    )
