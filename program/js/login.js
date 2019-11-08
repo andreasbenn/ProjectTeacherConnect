@@ -2,11 +2,11 @@
 // Here I'm making a function that tests if the username and password is corect from my dummydata (ddLogin.js)
 var loginButton = document.getElementById("loginButton");
 var currentLogIn = [];
-var existingUser = JSON.parse(localStorage.getItem('allUsers'));
+var existingStudent = JSON.parse(localStorage.getItem('allStudents'));
 
 //Deletes currentUser if the site was reloaded without logging out (error propagation)
-if(localStorage.getItem("currentUser") !== null){
-    localStorage.removeItem("currentUser");
+if(localStorage.getItem("currentStudent") !== null){
+    localStorage.removeItem("currentStudent");
 }
 
 // I'm using "login" because that's the ID i have given it in HTML
@@ -15,25 +15,25 @@ if(localStorage.getItem("currentUser") !== null){
 // then we create a for loop that runs if the emailInput and passwordInput is = currentUser which is defined in the top.
 // If it's true we break the function. If not we check if it's wrong and if that is "true" we alert "Username or password is incorrect or does not exist, please try again"
 loginButton.onclick = function loginFunction (e) {
-    var userExists = false;
+    var studentExists = false;
     e.preventDefault();
     var emailInput = document.getElementById("email").value;
     var passwordInput = document.getElementById("password").value;
 
-    for (let i = 0; i < existingUser.length; i++) {
-        if (emailInput == existingUser[i].email && passwordInput == existingUser[i].password) {
+    for (let i = 0; i < existingStudent.length; i++) {
+        if (emailInput == existingStudent[i].email && passwordInput == existingStudent[i].password) {
             //push userName to current local storage
-            currentLogIn.push(existingUser[i]);
+            currentLogIn.push(existingStudent[i]);
             alert("Login has been verified");
             document.location.href = "home.html";
-            var currentUserString = JSON.stringify(currentLogIn);
-            localStorage.setItem('currentUser', currentUserString);
-            userExists = true;
+            var currentStudentString = JSON.stringify(currentLogIn);
+            localStorage.setItem('currentStudent', currentStudentString);
+            studentExists = true;
             break;
         }
 
     }
-    if (!userExists) {
+    if (!StudentExists) {
         alert("Username or password is incorrect or does not exist, please try again")
     }
 
