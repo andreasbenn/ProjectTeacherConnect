@@ -8,7 +8,7 @@ class Topic{
 }
 // variable refering to the text-field
 var enteredTopic = document.getElementById("Topic");
-var courseField = document.getElementById('s1');
+var courseField = document.getElementById("s1");
 // variable finding the selected course
 
 
@@ -113,9 +113,11 @@ function courseTopics() {
       currentCourseTopics.push(currentTopic);
     }
 }}
+
 document.getElementById("s1").onchange = function(){
     courseTopics();
     displayValue();
+    insertOptions('s1','s2');
 };
 
 /*DisplayValue is a function that sets the first 5 index in allTopicsLS to the 5 different buttons, and also makes sure that

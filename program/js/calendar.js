@@ -243,7 +243,6 @@ function insertOptions(s1,s2){
         s2.options.add(opt1);
     }*/
 }
-
 // this function is executed by an onclick event. When clicked on a date, the panel is shown. This is possible by chancing the default value of the panel in css to 'none'
 
 // js til local storage af alt
