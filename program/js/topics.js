@@ -1,6 +1,18 @@
 // variable refering to the text-field
 var enteredTopic = document.getElementById("Topic");
 var courseField = document.getElementById("s1");
+var programList = JSON.parse(localStorage.getItem("allPrograms"));
+var courseList = JSON.parse(localStorage.getItem("allCourses"));
+var topicList = JSON.parse(localStorage.getItem("allTopics"));
+var teacherList = JSON.parse(localStorage.getItem("allTeachers"));
+var studentList = JSON.parse(localStorage.getItem("allStudents"));
+var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+/*function courseTopics() {
+    for (i= 0; i < courseList.length; i++){
+    if(courseField.options[courseField.selectedIndex].value == courseList[i].courseValue){
+      currentCourseTopics.push(courseList[i].topics);
+    }
+}}*/
 // variable finding the selected course
 
 
@@ -21,23 +33,23 @@ This will only happen the 1st time the webpage is used. Next time, the topics
  */
 //allTopicsLS is here set to the topics in local storage. Here it also gathers the updated popCounter from localstorage.
 
-var currentCourseTopics = "";
+var currentCourseTopics = [];
 
+function courseTopics () {
 
-function courseTopics() {
+}
+
+courseField.onchange = function(){
     currentCourseTopics = [];
-    for (i= 0; i < courseList.length; i++){
-    if(courseField.options[courseField.selectedIndex].value == courseList[i].courseValue){
-      currentCourseTopics.push(courseList[i].topics);
+    console.log(courseList.length);
+    for(i=0; i<courseList.length; i++) {
+        if(courseField.options[courseField.selectedIndex].value == courseList[i].courseValue){
+            currentCourseTopics = courseList[i].topics;
+        }
     }
-}}
-
-document.getElementById("s1").onchange = function(){
-    courseTopics();
     displayValue();
     insertOptions('s1','s2');
 };
-
 /*DisplayValue is a function that sets the first 5 index in allTopicsLS to the 5 different buttons, and also makes sure that
 the topic in the index is written in the topic
  */
@@ -46,14 +58,10 @@ function displayValue() {
     var topic1Button = document.getElementById("topic1");
     var topic2Button = document.getElementById("topic2");
     var topic3Button = document.getElementById("topic3");
-    var topic4Button = document.getElementById("topic4");
-    var topic5Button = document.getElementById("topic5");
     //Changes the value of the buttons to the first 5 index's in the allTopicsLS array
     topic1Button.value = currentCourseTopics[0].topic;
     topic2Button.value = currentCourseTopics[1].topic;
     topic3Button.value = currentCourseTopics[2].topic;
-    topic4Button.value = currentCourseTopics[3].topic;
-    topic5Button.value = currentCourseTopics[4].topic;
     //Onclick funtion that changes the text-field to the button
     topic1Button.onclick = function () {
         enteredTopic.value = currentCourseTopics[0].topic;
@@ -64,13 +72,6 @@ function displayValue() {
     topic3Button.onclick = function () {
         enteredTopic.value = currentCourseTopics[2].topic;
     };
-    topic4Button.onclick = function () {
-        enteredTopic.value = currentCourseTopics[3].topic;
-    };
-    topic5Button.onclick = function () {
-        enteredTopic.value = currentCourseTopics[4].topic;
-    };
-
 }
 
 
@@ -80,11 +81,11 @@ And if the topic written in the text-field is equal to one of the topics in the 
  */
 function checkTopic () {
     var boolean = false;
-    for (i= 0; i < allTopicsLS.length; i++) {
+    for (i= 0; i < currentCourseTopics.length; i++) {
         console.log("Antal gange loopet kører:" + i);
-        if (enteredTopic.value == allTopicsLS[i].topic) {
+        if (enteredTopic.value == currentCourseTopics[i].topic) {
             alert("Du har valgt en af de topics der eksisterer");
-            allTopicsLS[i].popCounter++;
+            currentCourseTopics[i].popCounter++;
             boolean = true;
             break;
         }
@@ -103,7 +104,7 @@ function checkTopic () {
             topicx.course = courseField.options[courseField.selectedIndex].value;
             topicx.id = id_generator;
             console.log(topicx);
-            allTopicsLS.push(topicx);
+            currentCourseTopics.push(topicx);
         }
     }
 
