@@ -11,22 +11,24 @@
 <div class="login-page">
     <div class="form">
 
-            <p>Sign in with your CBS student mail bellow</p>
+        <p>Sign in with your CBS student mail bellow</p>
         </form>
         <form class="login-form">
             <input type="text" placeholder="CBS email" id="email"/>
             <input type="password" placeholder="password" id="password"/>
-            <input type="button" value="login" name="login" id="loginKnap"/>
+            <input type="button" value="login" name="login" id="loginKnap" onclick="loginFunction" />
+            <!--       I'm adding an onclick so that our loginFunction works with the eventlistener. our event listener triggers this button and runs our loginfunction-->
+
             <br/><br/><br/>
-            <p>Don't have an acount? Create one below</p>
-        <form class="register-form">
-            <input type="text" placeholder="Name" id="createName"/>
-            <input type="text" placeholder="Username" id="createUserName"/>
-            <input type="password" placeholder="Password" id="createPassword"/>
-            <input type="password" placeholder="Repeat password" id="createRepeatPassword"/>
-            <input type="button" value="submit" name="submit" id="submitKnap"/>
-            <!-- dette har vi snakekt om, at vi skal have med men den skal alerte med, at det ikke skal være en mulighed pt.
-             da vi ikke kan gemme den i vores program uden database - pt alerter den emd at det ikke er en del af denne version -->
+            <!--            <p>Don't have an acount? Create one below</p>-->
+            <!--        <form class="register-form">-->
+            <!--            <input type="text" placeholder="Name" id="createName"/>-->
+            <!--            <input type="text" placeholder="Username" id="createUserName"/>-->
+            <!--            <input type="password" placeholder="Password" id="createPassword"/>-->
+            <!--            <input type="password" placeholder="Repeat password" id="createRepeatPassword"/>-->
+            <!--            <input type="button" value="submit" name="submit" id="submitKnap"/>-->
+            <!--            Dette har vi snakekt om, at vi skal have med men den skal alerte med, at det ikke skal være en mulighed pt.
+                         da vi ikke kan gemme den i vores program uden database - pt alerter den emd at det ikke er en del af denne version -->
 
         </form>
         </form>
