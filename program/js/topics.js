@@ -1,11 +1,3 @@
-class Topic{
-    constructor(topic, popCounter, course, id){
-        this.topic = topic;
-        this.popCounter = popCounter;
-        this.course = course;
-        this.id =id;
-    }
-}
 // variable refering to the text-field
 var enteredTopic = document.getElementById("Topic");
 var courseField = document.getElementById("s1");
@@ -21,96 +13,22 @@ function id_gen () {
     id_generator ++;
     return id_generator;
 }
-// Created 5 preset topics as variables
-var topic1 = new Topic(
-    "Maksimeringsprincippet",
-    0,
-    "Vos",
-    1
-);
-var topic2 = new Topic(
-    "Elasticitet",
-    0,
-    "Vos",
-    2
-);
-
-var topic3 = new Topic(
-    "Isokvanter og MRTS",
-    0,
-    "Vos",
-    3,
-);
-var topic4 = new Topic(
-    "MR=MC",
-    0,
-    "Vos",
-    4,
-    );
-var topic5 = new Topic(
-    "Fuldkommen konkurrence",
-    0,
-        "Vos",
-        5,
-);
-var topic6 = new Topic (
-    "Classes",
-    0,
-    "Pro",
-    6,
-);
-var topic7 = new Topic (
-    "Functions",
-    0,
-    "Pro",
-    7,
-);
-var topic8 = new Topic(
-    "Debugging",
-    0,
-    "Pro",
-    8,
-);
-var topic9 = new Topic (
-    "Scoping",
-    0,
-    "Pro",
-    9,
-);
-var topic10 = new Topic (
-    "Arrays",
-    0,
-    "Pro",
-    10,
-);
-
-//Puts the 5 preset topics into the hardcoded Topic.
-var hardTopics = [topic1,topic2,topic3,topic4,topic5, topic6, topic7, topic8, topic9, topic10];
 
 
 /*This function checks if allTopics is in local Storage.
 If it isn't in local storage it sets all Topics to the hardTopics variable.
 This will only happen the 1st time the webpage is used. Next time, the topics
  */
-function checkLocalStorage (){
-
-    if (localStorage.getItem("allTopics") == null){
-        localStorage.setItem("allTopics", JSON.stringify(hardTopics));
-    }
-
-}
-checkLocalStorage();
 //allTopicsLS is here set to the topics in local storage. Here it also gathers the updated popCounter from localstorage.
-var allTopicsLS = JSON.parse(localStorage.getItem("allTopics"));
 
-var currentCourseTopics = [];
+var currentCourseTopics = "";
+
 
 function courseTopics() {
     currentCourseTopics = [];
-    for (i= 0; i < allTopicsLS.length; i++){
-        var currentTopic = allTopicsLS[i];
-    if(courseField.options[courseField.selectedIndex].value == allTopicsLS[i].course){
-      currentCourseTopics.push(currentTopic);
+    for (i= 0; i < courseList.length; i++){
+    if(courseField.options[courseField.selectedIndex].value == courseList[i].courseValue){
+      currentCourseTopics.push(courseList[i].topics);
     }
 }}
 
