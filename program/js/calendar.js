@@ -389,12 +389,13 @@ for (n = 1; n < list.length; ++n) {
 
 // Constructor for a booking, we're using to make our bookings objectorientated and lets us store our information in an array.
 class Booking{
-    constructor(course, teacher, topic, day, hour, id){
+    constructor(course, teacher, topic, day, hour, studentID, id){
         this.course = course;
         this.teacher = teacher;
         this.topic = topic;
         this.day = day;
         this.hour = hour;
+        this.studentID = studentID;
         this.id = id;
     }
 }
@@ -410,12 +411,12 @@ if(localStorage.getItem("Bookings") !== null){
     var bookings = JSON.parse(localStorage.getItem("Bookings"));
 }
 
-
+var currentUser = JSON.parse(localStorage.getItem("currentUser"));
 // var newBooking = new Booking(localStorage.getItem("s1"),localStorage.getItem("s2"), "test", localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"));
 
 //Function to get the items from LocalStorage and stores them in the array
 function createBooking() {
-    var newestBooking = new Booking(localStorage.getItem("s1"), localStorage.getItem("s2"), localStorage.getItem("Topic"), localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"), i);
+    var newestBooking = new Booking(localStorage.getItem("s1"), localStorage.getItem("s2"), localStorage.getItem("Topic"), localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"), currentUser[0].studentID, i);
     bookings.push(newestBooking);
     console.log(bookings);
 
@@ -431,3 +432,4 @@ function createBooking() {
 }
 
 document.getElementById("submitBtn").addEventListener("click", executeCalendar);
+

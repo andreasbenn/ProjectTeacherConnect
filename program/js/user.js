@@ -1,34 +1,7 @@
-// Andreas
-
-class User{
-    constructor(firstName, lastName, phoneNumber, email, address, studentID){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-        this.address = address;
-        this.studentID = studentID;
-    }
-}
-
-// make new instances of Program for each program
-var user1 = new User("Andreas","Bennecke", "27593610", "anbe17aj@student.cbs.dk", "Howitzvej 60, 2000 Frederiksberg", "1111111111");
-var user2 = new User("Oliver", "Michelsen", "12345678", "olivermichelsen@test.dk", "Howitzvej 61, 2000 Frederiksberg", "2222222222");
-var user3 = new User("Søren", "Poulsen", "87654321", "SørenPoulsen@test.com", "Howitzvej 62, 2000 Frederiksberg", "3333333333")
-
-// saves users to local storage
-function storeUsers(){
-    localStorage.setItem("user1", JSON.stringify(user1))
-    localStorage.setItem("user2", JSON.stringify(user2))
-    localStorage.setItem("user3", JSON.stringify(user3))
-}
-
-// calls the function storeUsers to initiate the storing
-storeUsers();
-
+// Gets currentUser from localStorage down so we can use the information in functions
 var currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-// Show user on My Profile
+// Show user on My Profile. Reason why we have currentUser[0] is because the currentUser is an array, and the first index is 0.s
 function displayUser() {
     document.getElementById("userFirstName").innerHTML = currentUser[0].firstName;
     document.getElementById("userLastName").innerHTML = currentUser[0].lastName;
@@ -38,8 +11,40 @@ function displayUser() {
     document.getElementById("userStudentID").innerHTML = currentUser[0].studentID;
     document.getElementById("userProgram").innerHTML = currentUser[0].program;
 }
+// Calls the function 'displayUser' so it's being executed.
 displayUser();
 
-var testID = "day" +
-    1;
-var html ='<li id="' + testID + '">'
+// Creates a var 'bookings' that gets/saves all the bookings from localStorage, so we can use the information.
+var bookings = JSON.parse(localStorage.getItem("Bookings"));
+
+// Here we create an empty array to use in our function below. This array will be the array that will be used to show bookings on My Page.
+currentUserBookings = [];
+
+// Here we make a for loop that goes through every index of array 'bookings'. It checks if the individual bookings studentIDs
+// matches the currently logged ins studentID. If it is, it will push that index into 'currentUserBookings' array.
+function currentIDBookings(){
+    for(i = 0; i < bookings.length; i++){
+        if(bookings[i].studentID == currentUser[0].studentID) {
+            currentUserBookings.push(bookings[i]);
+        }
+    }
+}
+
+// Calls the function currentIDBookings so it's being executed.
+currentIDBookings();
+
+// Creates empty string booking so we can use it to "push" HTML code in into it.
+booking = "";
+
+// For loop that runs through all the indexes of array currentUserBookings
+// It adds a string with HTML syntax to the empty string 'booking' with values from that index' (course, teacher, topic, day, hour)
+// This allows us to dynamically create <div> tags for each booking the logged in user has, and adds values to each for it to be shown on the site.
+for(i = 0; i < currentUserBookings.length; i++){
+
+    booking += "<div class='bookings' id ='" + "booking" + i +  "' + style='border: 1px solid gray'>" + "<b>" + 'Course: ' + "</b>" + currentUserBookings[i].course + "<br/>" + "<b>" +'Teacher: ' + "</b>" + currentUserBookings[i].teacher + "<br/>" + "<b>" + 'Topic: ' + "</b>" + currentUserBookings[i].topic + "<br/>" + "<b>" + 'Day: ' + "</b>" + currentUserBookings[i].day + "<br/>" + "<b>" + 'Hour: ' + "</b>" + currentUserBookings[i].hour + "<br/>"+ "<br/>" + "</div>";
+
+}
+
+// We have created an empty class in HTML 'bookings', which we here fill in with the string 'booking'
+// which now has a <div> for each booking registered. This allows us to show each individual booking in HTML from the class 'bookings'.
+document.getElementsByClassName("bookings")[0].innerHTML = booking;
