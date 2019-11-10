@@ -61,3 +61,4 @@ __Authors__
 - Søren Poulsen
 - Oliver Langkjær Michelsen
 - Andreas Emanuel Bennecke
+- Jeppe Hornshøj Reuther
