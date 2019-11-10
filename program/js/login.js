@@ -8,6 +8,7 @@ var existingStudent = JSON.parse(localStorage.getItem('allStudents'));
 if(localStorage.getItem("currentStudent") !== null){
     localStorage.removeItem("currentStudent");
 }
+console.log("Hej");
 
 // I'm using "login" because that's the ID i have given it in HTML
 // All of the code below is what i would like to run when clicking on the login button. (verify email etc...)
