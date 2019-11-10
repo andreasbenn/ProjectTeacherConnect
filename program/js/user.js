@@ -1,15 +1,15 @@
 // Gets currentUser from localStorage down so we can use the information in functions
-var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+var currentStudentArray = JSON.parse(localStorage.getItem("currentStudent"));
+var currentStudent = currentStudentArray[0];
 
 // Show user on My Profile. Reason why we have currentUser[0] is because the currentUser is an array, and the first index is 0.s
 function displayUser() {
-    document.getElementById("userFirstName").innerHTML = currentUser[0].firstName;
-    document.getElementById("userLastName").innerHTML = currentUser[0].lastName;
-    document.getElementById("userPhoneNumber").innerHTML = currentUser[0].phoneNumber;
-    document.getElementById("userEmail").innerHTML = currentUser[0].email;
-    document.getElementById("userAddress").innerHTML = currentUser[0].address;
-    document.getElementById("userStudentID").innerHTML = currentUser[0].studentID;
-    document.getElementById("userProgram").innerHTML = currentUser[0].program;
+    document.getElementById("userFullName").innerHTML = currentStudent.fullName;
+    document.getElementById("userPhoneNumber").innerHTML = currentStudent.phoneNumber;
+    document.getElementById("userEmail").innerHTML = currentStudent.email;
+    document.getElementById("userAddress").innerHTML = currentStudent.address;
+    document.getElementById("userStudentID").innerHTML = currentStudent.studentID;
+    document.getElementById("userProgram").innerHTML = currentStudent.program;
 }
 // Calls the function 'displayUser' so it's being executed.
 displayUser();
@@ -18,14 +18,14 @@ displayUser();
 var bookings = JSON.parse(localStorage.getItem("Bookings"));
 
 // Here we create an empty array to use in our function below. This array will be the array that will be used to show bookings on My Page.
-currentUserBookings = [];
+currentStudentBookings = [];
 
 // Here we make a for loop that goes through every index of array 'bookings'. It checks if the individual bookings studentIDs
-// matches the currently logged ins studentID. If it is, it will push that index into 'currentUserBookings' array.
+// matches the currently logged ins studentID. If it is, it will push that index into 'currentStudentBookings' array.
 function currentIDBookings(){
     for(i = 0; i < bookings.length; i++){
-        if(bookings[i].studentID == currentUser[0].studentID) {
-            currentUserBookings.push(bookings[i]);
+        if(bookings[i].studentID == currentStudent.studentID) {
+            currentStudentBookings.push(bookings[i]);
         }
     }
 }
@@ -36,12 +36,12 @@ currentIDBookings();
 // Creates empty string booking so we can use it to "push" HTML code in into it.
 booking = "";
 
-// For loop that runs through all the indexes of array currentUserBookings
+// For loop that runs through all the indexes of array currentStudentBookings
 // It adds a string with HTML syntax to the empty string 'booking' with values from that index' (course, teacher, topic, day, hour)
 // This allows us to dynamically create <div> tags for each booking the logged in user has, and adds values to each for it to be shown on the site.
-for(i = 0; i < currentUserBookings.length; i++){
+for(i = 0; i < currentStudentBookings.length; i++){
 
-    booking += "<div class='bookings' id ='" + "booking" + i +  "' + style='border: 1px solid gray'>" + "<b>" + 'Course: ' + "</b>" + currentUserBookings[i].course + "<br/>" + "<b>" +'Teacher: ' + "</b>" + currentUserBookings[i].teacher + "<br/>" + "<b>" + 'Topic: ' + "</b>" + currentUserBookings[i].topic + "<br/>" + "<b>" + 'Day: ' + "</b>" + currentUserBookings[i].day + "<br/>" + "<b>" + 'Hour: ' + "</b>" + currentUserBookings[i].hour + "<br/>"+ "<br/>" + "</div>";
+    booking += "<div class='bookings' id ='" + "booking" + i +  "' + style='border: 1px solid gray'>" + "<b>" + 'Course: ' + "</b>" + currentStudentBookings[i].course + "<br/>" + "<b>" +'Teacher: ' + "</b>" + currentStudentBookings[i].teacher + "<br/>" + "<b>" + 'Topic: ' + "</b>" + currentStudentBookings[i].topic + "<br/>" + "<b>" + 'Day: ' + "</b>" + currentStudentBookings[i].day + "<br/>" + "<b>" + 'Hour: ' + "</b>" + currentStudentBookings[i].hour + "<br/>"+ "<br/>" + "</div>";
 
 }
 

@@ -15,33 +15,28 @@
     </ul>
 
 </head>
+
 <!--Onload har noget med koden fra youtube at gøre. -->
 <!--https://www.w3schools.com/jsref/event_onload.asp-->
 <body onload="renderDate()">
 
 <!-- The class name "app" does not have any relevance for our js file, and is only used in our HTML sheet, so we can use CSS styles on the div.-->
 <div class="app">
+
     <!-- We have here created an select id with an onChance, the javascript function will therefor be executed, when the user clicks on one of the options.-->
     <!--https://www.w3schools.com/jsref/event_onchange.asp-->
     <!-- We create two parameters, 's1' and 's2' that represents course and teacher-->
 
-    <select id="s1">
-        <!--We create the different options for the courses, and give them a value we can refer to in javascript.-->
-        <option value="Select" id="Course">--Course--</option>
-        <option value="Bis" id="Bis">Business information Systems</option>
-        <option value="Ind" id="Ind">Organisation</option>
-        <option value="Pro" id="Pro">Programmering</option>
-        <option value="Vos1" id="Vos1">Virksomheders Økonomiske Styring</option>
-    </select>
+    <!-- This is an empty class, which we in our javaScript file push a select tag into, and options -->
+    <div class="coursesMenu">
 
-    <br>
-    <!--Teacher select-->
-    <select id="s2">
-        <option value="--">--Teacher--</option>
+    </div>
 
-        <br>
+    <!-- This is an empty class, which we in our javaScript file push a select tag into, and options -->
+    <div class="teachersMenu">
 
-    </select>
+    </div>
+
      <!--BIS ØVELSE-->
 
     <!-- kan bruge dette til analyse senere hen.
@@ -106,10 +101,9 @@
         <!--The div made for the weekends-->
                           <div class="days"></div>
 
-
         <div id="panel">
             <!--We create different inputs for the teachers office hours, and give them a value we can refer to in javascript, and furthermore use in our localstorage.-->
-            <h3 id = headline> Valg af Tidspunkt</h3>
+            <h3 id = headline>Valg af Tidspunkt</h3>
             <form name="time">
                 <!-- Radio buttons  -->
                 <input type="radio" class="time1" value="13.00-13.15"/>13.00-13.15</input>
@@ -133,7 +127,7 @@
 
     </div>
 
-    </body>
+</body>
 
 <script src="js/dataForAllSites.js"></script>
 <script src="js/topics.js"></script>
@@ -141,6 +135,4 @@
 <script src="js/logout.js"></script>
 <script src="js/ddLogin.js"></script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    </html>
+</html>

@@ -1,14 +1,22 @@
-var courseField = document.getElementById('s1');
-var teacherField = document.getElementById('s2');
-var course;
-var teacher;
+
+
+//var course;
+//var teacher;
+var programList = JSON.parse(localStorage.getItem("allPrograms"));
+var courseList = JSON.parse(localStorage.getItem("allCourses"));
+var topicList = JSON.parse(localStorage.getItem("allTopics"));
+var teacherList = JSON.parse(localStorage.getItem("allTeachers"));
+var studentList = JSON.parse(localStorage.getItem("allStudents"));
+var currentStudentArray = JSON.parse(localStorage.getItem("currentStudent"));
+var currentStudent = currentStudentArray[0];
+var currentProgram = JSON.parse(localStorage.getItem("currentProgram"));
+
 var buttons = document.getElementsByClassName('day');
 var submitBtn = document.getElementById("submitBtn");
-
 // console.log course
-console.log(courseField.options[courseField.selectedIndex].value);
-console.log(teacherField.options[teacherField.selectedIndex].value);
-console.log(courseField.options[courseField.selectedIndex].value);
+//console.log(courseField.options[courseField.selectedIndex].value);
+//console.log(teacherField.options[teacherField.selectedIndex].value);
+//console.log(courseField.options[courseField.selectedIndex].value);
 
 /*function savesInfo (){
     // this functions is used in or checkbox, where time is selected.
@@ -128,7 +136,6 @@ cells = "";
     for (i = 1; i <= endDate; i++){
         if(i == today.getDate() && dt.getMonth() == today.getMonth()){
             //var newDate = "day" + i;
-
             cells += "<div class='day' id ='" + i + "'  value ='" + i + "' onclick='dateAndBook()'>" + i  + "</div>";
 
             // cells += "<div class='day'  value ='" + i + "' onclick='dateAndBook()'>" + i  + "</div>";
@@ -165,19 +172,108 @@ function moveDate(para) {
 
 //https://www.youtube.com/watch?v=BiOXf9HHGUA
 // this function is used to remove the options = "teachers" that is not relevant, when you have clicked on one of the course options. And is used in the function under it.
-function removeAll(s2) {
+/*function removeTeachers(s2) {
     for(var i = s2.options.length - 1; i >= 0; i--){
         // the for loop goes will because of the s2.options.length always be 2 because, there always will be two teachers to each course.
         s2.remove(i);
     }
-}
+}*/
 
 //Dynamic selector
-function insertOptions(s1,s2){
-    var s1 = document.getElementById('s1');
-    var s2 = document.getElementById('s2');
+/*This function creates a for loop, that checks which program the student is
+attached to. The courses of this program will then be shown in the dropdown menu.
+ */
 
-    if (s1.options[s1.selectedIndex].value == "Org"){
+// -------------- //
+
+// This function creates a list of courses based on the logged in students program. It then adds them to the dropdown menu.
+
+course = "";
+
+function setCourses(){
+    course += "<select id='s1'>";
+    course += "<option value=\"\" disabled selected> Select course</option>"
+for (i= 0; i < currentProgram.programCourses.length; i++) {
+
+        course += "<option class='courses' value = '"+currentProgram.programCourses[i].courseValue+"' id ='" + "course" + i + "' >" + currentProgram.programCourses[i].courseName + "</option>";
+        //course += "<option class='courses' id ='" + "course" + i + "' >" + currentProgram.programCourses[i].courseName + "</option>";
+        //Dropdown menu == programList[i].programCourses
+    }
+    course += "</select>"
+    document.getElementsByClassName("coursesMenu")[0].innerHTML = course;
+}
+setCourses();
+
+// -------------- //
+
+// This is an EventListener which waits on a change on the first dropdown menu which specifies the chosen course. It then calls functions for the teachers, which is made below.
+// These functions finds the teachers for that specific course, and adds them to localStorage, and also makes a new dropdown menu for the user to chose the teacher he/she wants to get help from.
+
+selectedCourse = "";
+// s1 is the courseField (dropdown menu)
+var courseField = document.getElementById("s1");
+
+courseField.addEventListener("change", function () {
+    localStorage.setItem("selectedCourse", (courseField.options[courseField.selectedIndex].value));
+    selectedCourse = localStorage.getItem("selectedCourse");
+    localStorage.setItem("selectedTeacher", "");
+    courseTeachers();
+    setTeachers();
+})
+
+// -------------- //
+
+var selectedCourseTeachers = [];
+function courseTeachers() {
+    for (i = 0; i < courseList.length; i++) {
+        if (selectedCourse == courseList[i].courseValue) {
+            selectedCourseTeachers = courseList[i].teachers;
+            localStorage.setItem("selectedCourseTeachers", JSON.stringify(courseList[i].teachers))
+        }
+    }
+}
+
+// -------------- //
+
+var teacher2 = "";
+
+teacher2 += "<select class='teachers2' id='s2'>";
+
+teacher2 += "</select>"
+
+document.getElementsByClassName("teachersMenu")[0].innerHTML = teacher2;
+
+function setTeachers(){
+    var teacher = "";
+    teacher += "<select id='s2'>";
+    teacher += "<option value=\"\" disabled selected> Select teacher</option>"
+    for (i= 0; i < selectedCourseTeachers.length; i++) {
+
+        teacher += "<option class='teachers' value = '"+ selectedCourseTeachers[i].teacherID +"' id ='" + "teacher" + i + "' >" + selectedCourseTeachers[i].teacherName + "</option>";
+    }
+    teacher += "</select>"
+    teacher2 = teacher;
+    document.getElementsByClassName("teachers2")[0].innerHTML = teacher2;
+}
+
+// -------------- //
+
+// This is an EventListener that waits on change on the teacherField (dropdown menu), and if there is a function, it finds the new value, and saves the new value to localStorage.
+
+var selectedTeacher = "";
+// s2 is the teacherField (dropdown menu)
+var teacherField = document.getElementById("s2");
+
+teacherField.addEventListener("change", function () {
+    localStorage.setItem("selectedTeacher", (teacherField.options[teacherField.selectedIndex].innerHTML));
+    selectedTeacher = localStorage.getItem("selectedTeacher");
+})
+
+// -------------- //
+
+// Old code which does the same as above, but more hardcoded and not objectorientated.
+
+  /*  if (courseField.options[courseField.selectedIndex].value == "Ind"){
         var opt1 = document.createElement('option');
         var opt2 = document.createElement('option');
 
@@ -204,7 +300,7 @@ function insertOptions(s1,s2){
         removeAll(s2);
         s2.options.add(opt1);
         s2.options.add(opt2);
-        localStorage.setItem('s1', s1.value);  
+        localStorage.setItem('s1', s1.value);
         //localStorage.setItem('s2', s2.value);
 // here we just use conditional statements for all the other courses an HA (it) student has.
 
@@ -231,7 +327,7 @@ function insertOptions(s1,s2){
         removeAll(s2);
         s2.options.add(opt1);
         s2.options.add(opt2);
-        localStorage.setItem('s1', s1.value);  
+        localStorage.setItem('s1', s1.value);
         //localStorage.setItem('s2', s2.value);
     }
 
@@ -241,8 +337,8 @@ function insertOptions(s1,s2){
         opt1.innerHTML = "--"
         removeAll(s2);
         s2.options.add(opt1);
-    }*/
-}
+    }
+}*/
 // this function is executed by an onclick event. When clicked on a date, the panel is shown. This is possible by chancing the default value of the panel in css to 'none'
 
 // js til local storage af alt
@@ -265,6 +361,8 @@ document.getElementsByClassName('day').value = d;
 }
  */
 
+//
+
 function executeCalendar(){
     // this functions is used in or checkbox, where time is selected.
     var checkbox = document.getElementsByClassName('time1');
@@ -284,8 +382,16 @@ function executeCalendar(){
             localStorage.setItem('rating', checkbox[i].value);
         }
     }
+    createBooking();
 
 //localStorage.setItem('dateOfBooking', this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear())
+
+
+
+    // Commented out because it is no longer in use, as we moved to a more object orientated solution.
+
+    /*
+
     course = courseField.options[courseField.selectedIndex].value;
     teacher = teacherField.options[teacherField.selectedIndex].value;
 
@@ -329,13 +435,13 @@ function executeCalendar(){
             opt1.innerHTML = "Jan";
             opt2.innerHTML = "Jan";
             localStorage.setItem('s2', s2.value);
-        }
+            */
     }
 
-    s4();
-    createBooking();
 
-}
+
+
+
 
 function dateAndBook() {
     // (document.getElementById("hello").textContent)
@@ -395,7 +501,7 @@ class Booking{
         this.day = day;
         this.hour = hour;
         this.studentID = studentID;
-        this.id = id;
+        //this.id = id;
     }
 }
 
@@ -409,20 +515,18 @@ if(localStorage.getItem("Bookings") === null){
 if(localStorage.getItem("Bookings") !== null){
     var bookings = JSON.parse(localStorage.getItem("Bookings"));
 }
-
-var currentUser = JSON.parse(localStorage.getItem("currentUser"));
 // var newBooking = new Booking(localStorage.getItem("s1"),localStorage.getItem("s2"), "test", localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"));
 
 //Function to get the items from LocalStorage and stores them in the array
 function createBooking() {
-    var newestBooking = new Booking(localStorage.getItem("s1"), localStorage.getItem("s2"), localStorage.getItem("Topic"), localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"), currentUser[0].studentID, i);
+    var newestBooking = new Booking(localStorage.getItem("selectedCourse"), localStorage.getItem("selectedTeacher"), "Venter på Jeppe", localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"), currentStudent.studentID);
     bookings.push(newestBooking);
     console.log(bookings);
 
     // Deletes the keys "s1", "s2", "dateOfBooking" and "rating" from LocalStorage
-    localStorage.removeItem("s1");
-    localStorage.removeItem("s2");
-    localStorage.removeItem("Topic");
+    localStorage.removeItem("selectedCourse");
+    localStorage.removeItem("selectedTeacher");
+    //localStorage.removeItem("Topic");
     localStorage.removeItem("dateOfBooking");
     localStorage.removeItem("rating");
 
