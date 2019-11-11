@@ -39,7 +39,11 @@ function courseTopics () {
  function findCurrentTopics() {
      console.log(courseList.length);
      for(i=0; i<courseList.length; i++) {
-         if(selectedCourse == courseList[i].courseValue){
+         if( currentCourseTopics == null && selectedCourse == courseList[i].courseValue){
+             currentCourseTopics.push(courseList[i].topics);
+         }
+         else if( currentCourseTopics != null && selectedCourse == courseList[i].courseValue){
+             currentCourseTopics = [];
              currentCourseTopics.push(courseList[i].topics);
  }
     }
@@ -86,6 +90,7 @@ function checkTopic () {
                     && currentCourseTopics[0][i].id == courseList[j].topics[h].id) {
                     alert("Du har valgt en af de topics der eksisterer");
                     courseList[j].topics[h].popCounter++;
+
                    localStorage.setItem("allCourses",JSON.stringify(courseList));
                     boolean = true;
 
@@ -104,14 +109,18 @@ function checkTopic () {
             alert("Du har valgt en af de topics der ikke eksisterer");
             id_gen();
             var topicx = new Topic(
-                document.getElementById(Topic).value,
+                document.getElementById("Topic").value,
                 1,
                     );
             topicx.course = selectedCourse;
             topicx.id = id_generator;
             console.log(topicx);
-            topicList.push(topicx);
-            localStorage.setItem("allTopics",topicList);
+            for (i = 0; i<courseList.length; i++){
+                if (courseList[i].courseValue == selectedCourse){
+                    courseList[i].topics.push(topicx);
+                }
+            }
+
         }
     }
 
@@ -122,9 +131,10 @@ If the result is negative b is sorted before a, and if the result is positive, a
 It then pushes the sorted array into localstorage with JSON.stringify, and then parses it down again.
  */
 function sortTopics () {
-    currentCourseTopics.sort(function(a,b) {return b.popCounter - a.popCounter});
-    localStorage.setItem("allTopics", JSON.stringify(allTopicsLS));
-   JSON.parse(localStorage.getItem("allTopics"));
+    for (i = 0; i<courseList.length; i++){
+    courseList[i].topics.sort(function(a,b) {return b.popCounter - a.popCounter});
+    }
+    localStorage.setItem("allCourses", JSON.stringify(courseList));
 }
 
 
@@ -134,10 +144,7 @@ This function executes the checkTopic function and the sort Topics function
  */
 function executeTopics () {
     checkTopic();
-   // sortTopics();
-       // localStorage.setItem("allTopics", JSON.stringify(allTopicsLS));
-    //   console.log(JSON.parse(localStorage.getItem("allTopics")));
-localStorage.setItem("Topic", enteredTopic.value);
+   sortTopics();
     };
 
 document.getElementById("submitBtn").addEventListener("click", executeTopics);

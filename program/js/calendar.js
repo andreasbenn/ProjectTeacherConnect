@@ -267,6 +267,7 @@ var teacherField = document.getElementById("s2");
 teacherField.addEventListener("change", function () {
     localStorage.setItem("selectedTeacher", (teacherField.options[teacherField.selectedIndex].innerHTML));
     selectedTeacher = localStorage.getItem("selectedTeacher");
+    findCurrentTopics();
 })
 
 // -------------- //
