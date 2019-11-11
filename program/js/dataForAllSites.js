@@ -478,7 +478,7 @@ function programCourses () {
 function courseStudents (){
     for (i= 0; i < studentList.length; i++){
         for(j= 0; j <courseList.length; j++){
-            if(studentList[i].program == courseList[j].courseProgram){
+            if(studentList[i].program == courseList[j].courseProgram && localStorage.getItem("allCourses") == null){
                 courseList[j].students.push(studentList[i])
             }
         }
@@ -505,7 +505,7 @@ function programStudents() {
 function courseTopics () {
     for (i = 0; i < topicList.length; i++) {
         for (j = 0; j < courseList.length; j++) {
-            if(topicList[i].course == courseList[j].courseValue) {
+            if(topicList[i].course == courseList[j].courseValue && localStorage.getItem("allCourses") == null) {
                 courseList[j].topics.push(topicList[i]);
             }
         }
@@ -518,7 +518,7 @@ function courseTopics () {
 function courseTeachers() {
     for (i = 0; i < teacherList.length; i++) {
         for (j = 0; j < courseList.length; j++) {
-            if (teacherList[i].course == courseList[j].courseValue){
+            if (teacherList[i].course == courseList[j].courseValue && localStorage.getItem("allCourses") == null){
                 courseList[j].teachers.push(teacherList[i]);
             }
         }

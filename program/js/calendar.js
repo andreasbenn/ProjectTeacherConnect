@@ -195,7 +195,7 @@ function setCourses(){
     course += "<option value=\"\" disabled selected> Select course</option>"
 for (i= 0; i < currentProgram.programCourses.length; i++) {
 
-        course += "<option class='courses' value = '"+currentProgram.programCourses[i].courseValue+"' id ='" + "course" + i + "' >" + currentProgram.programCourses[i].courseName + "</option>";
+        course += "<option class='courses' value = '"+currentProgram.programCourses[i].courseValue+"' id ='" + "course" + currentProgram.programCourses[i].courseID + "' >" + currentProgram.programCourses[i].courseName + "</option>";
         //course += "<option class='courses' id ='" + "course" + i + "' >" + currentProgram.programCourses[i].courseName + "</option>";
         //Dropdown menu == programList[i].programCourses
     }
@@ -238,7 +238,7 @@ function courseTeachers() {
 var teacher2 = "";
 
 teacher2 += "<select class='teachers2' id='s2'>";
-
+teacher2 += "<option value=\"\" disabled selected> Select teacher</option>"
 teacher2 += "</select>"
 
 document.getElementsByClassName("teachersMenu")[0].innerHTML = teacher2;
@@ -249,7 +249,7 @@ function setTeachers(){
     teacher += "<option value=\"\" disabled selected> Select teacher</option>"
     for (i= 0; i < selectedCourseTeachers.length; i++) {
 
-        teacher += "<option class='teachers' value = '"+ selectedCourseTeachers[i].teacherID +"' id ='" + "teacher" + i + "' >" + selectedCourseTeachers[i].teacherName + "</option>";
+        teacher += "<option class='teachers' value = '"+ selectedCourseTeachers[i].teacherName +"' id ='" + "teacher" + selectedCourseTeachers[i].teacherID + "' >" + selectedCourseTeachers[i].teacherName + "</option>";
     }
     teacher += "</select>"
     teacher2 = teacher;
