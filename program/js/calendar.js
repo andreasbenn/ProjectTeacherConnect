@@ -516,11 +516,16 @@ if(localStorage.getItem("Bookings") === null){
 if(localStorage.getItem("Bookings") !== null){
     var bookings = JSON.parse(localStorage.getItem("Bookings"));
 }
+
 // var newBooking = new Booking(localStorage.getItem("s1"),localStorage.getItem("s2"), "test", localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"));
 
 //Function to get the items from LocalStorage and stores them in the array
+
 function createBooking() {
-    var newestBooking = new Booking(localStorage.getItem("selectedCourse"), localStorage.getItem("selectedTeacher"), "Venter på Jeppe", localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"), currentStudent.studentID);
+
+    var selectedTopic = document.getElementById("Topic").value;
+
+    var newestBooking = new Booking(localStorage.getItem("selectedCourse"), localStorage.getItem("selectedTeacher"), selectedTopic, localStorage.getItem("dateOfBooking"), localStorage.getItem("rating"), currentStudent.studentID);
     bookings.push(newestBooking);
     console.log(bookings);
 

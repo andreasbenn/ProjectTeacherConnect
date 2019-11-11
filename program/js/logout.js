@@ -5,7 +5,6 @@ document.getElementById("logoutBtn").onclick = function(e) {
     localStorage.removeItem('selectedCourseTeachers');
     localStorage.removeItem('allStudents');
     localStorage.removeItem('allPrograms');
-    localStorage.removeItem('allCourses');
     localStorage.removeItem('allTopics');
     localStorage.removeItem('allTeachers');
     localStorage.removeItem('objectOrientated');

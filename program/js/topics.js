@@ -149,3 +149,10 @@ function executeTopics () {
 
 document.getElementById("submitBtn").addEventListener("click", executeTopics);
 
+/*
+function saveTopic () {
+    var selectedTopic = document.getElementById("Topic").valueOf();
+    localStorage.setItem("selectedTopic", selectedTopic);
+}
+
+document.getElementById("Topic").addEventListener("input", saveTopic); */
