@@ -1,6 +1,15 @@
+// This is a logout function.
+// We have a button in our HTML, with the ID 'logoutBtn'.
+// We add an .onclick function to this button, by using the DOM, document.getElementById("id name").
+// This function will clear all the irrelevant information in localStorage to reverse back to our login page, which will only contain certain information.
+// ('allStudents' and 'allCourses' (which keeps the popularity counter with topics) and 'Bookings').
+
 document.getElementById("logoutBtn").onclick = function(e) {
-    e.preventDefault() // denne er blevet brugt for at siden ikke reloader som default hvilket gør at vi ved klik på knappen vil blive viderført tilbage til det ønskede site
-    localStorage.removeItem('currentStudent'); // bruger remove item "currentUser" for kun og logge den nuverende bruger ud så vi ikke sletter alt local storage
+    // This preventDefault method is used so the click on the button will not refresh the current site, but simply run the code and move the user to the login page.
+    e.preventDefault()
+
+    // Removes keys from localStorage that we no longer need.
+    localStorage.removeItem('currentStudent');
     localStorage.removeItem('currentProgram');
     localStorage.removeItem('selectedCourseTeachers');
     localStorage.removeItem('allStudents');
@@ -8,6 +17,10 @@ document.getElementById("logoutBtn").onclick = function(e) {
     localStorage.removeItem('allTopics');
     localStorage.removeItem('allTeachers');
     localStorage.removeItem('objectOrientated');
+
+    // Simple alert with message for the user to be notified that he or she has been logged out.
     alert("You have been logged out");
+
+    // Here we use the window.location object, which allows us to redirect the user to a specific site, in this case the login page after he or she has logged out.
     window.location.href="login.html";
 }
