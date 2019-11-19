@@ -168,7 +168,7 @@ function moveDate(para) {
     }
     renderDate();
     // we use the renderDate function in here, because the moveDate function needs to have this reference because the other attributed from the calendar is declared inside this function. And eventhough the tuborg klamme had continued, we have not declared an onclick function in the prevDate and nextDate object constructor.
-}
+};
 
 //https://www.youtube.com/watch?v=BiOXf9HHGUA
 // this function is used to remove the options = "teachers" that is not relevant, when you have clicked on one of the course options. And is used in the function under it.
@@ -187,43 +187,52 @@ attached to. The courses of this program will then be shown in the dropdown menu
 // -------------- //
 
 // This function creates a list of courses based on the logged in students program. It then adds them to the dropdown menu.
-
 course = "";
-
 function setCourses(){
+    //We use the addition assignment operator to add the strings to the variable "course". The first string consists of the HTML element select with an id. the second string consists of the element option.
+    //We use a disabled attribute inside the option element, to specify that the element is disabled.
     course += "<select id='s1'>";
-    course += "<option value=\"\" disabled selected> Select course</option>"
+    course += "<option value=\"\" disabled selected>Select course</option>";
+    //This for loop is initialized by 'i=0', the for loop checks if our counter 'i'
+    // is less than the array 'programCourses' length. As long as this condition is true,
+    // our counter 'i' increases by 1, after every iteration of the for loop.
 for (i= 0; i < currentProgram.programCourses.length; i++) {
-
+    //We add another string to the variable "course", which contains a new option element. In the 1st iteration of the for loop, the value of the 1st option is set to the 'courseValue' of the 1st index in the array 'programCourses'
+    //The id is set to the 'courseID' of the 1st index in the array "programCourses". We set the innerHTML to the 'courseName' of the 1st index in the array 'programCourses'
         course += "<option class='courses' value = '"+currentProgram.programCourses[i].courseValue+"' id ='" + "course" + currentProgram.programCourses[i].courseID + "' >" + currentProgram.programCourses[i].courseName + "</option>";
-        //course += "<option class='courses' id ='" + "course" + i + "' >" + currentProgram.programCourses[i].courseName + "</option>";
-        //Dropdown menu == programList[i].programCourses
     }
-    course += "</select>"
+//After the last iteration of the for loop we add a string which ends the HTML element.
+    course += "</select>";
+//We set the class 'coursesMenu' JEG VED IKKE HVORFOR VI SKAL SKRIVE INDEX 0.
     document.getElementsByClassName("coursesMenu")[0].innerHTML = course;
 }
 setCourses();
 
 // -------------- //
 
-// This is an EventListener which waits on a change on the first dropdown menu which specifies the chosen course. It then calls functions for the teachers, which is made below.
+
 // These functions finds the teachers for that specific course, and adds them to localStorage, and also makes a new dropdown menu for the user to chose the teacher he/she wants to get help from.
 
 selectedCourse = "";
-// s1 is the courseField (dropdown menu)
+// We set the variable 'courseField' to the dropdown menu we created in our 'setCourses' function.
 var courseField = document.getElementById("s1");
-
+// This is an addEventListener which waits on a change on the first dropdown menu which specifies the chosen course. It then calls functions for the teachers, which is made below.
 courseField.addEventListener("change", function () {
+    //We push the value of the selected course in the 'courseField' to local Storage as 'selectedCourse'.
+    //Afterwards we set our empty variable 'selectedCourse', to the 'selectedCourse' from localStorage
     localStorage.setItem("selectedCourse", (courseField.options[courseField.selectedIndex].value));
     selectedCourse = localStorage.getItem("selectedCourse");
     localStorage.setItem("selectedTeacher", "");
     courseTeachers();
     setTeachers();
-})
+});
 
 // -------------- //
 
 var selectedCourseTeachers = [];
+//This for loop iterates through the 'courseValue' in our 'courseList' array.
+// If the 'courseValue' of the index in the 'courseList' is equal to the 'selectedCourse', we set our 'selectedCourseTeachers' to the teachers in that index.
+//We also push the array into localstorage by using JSON.stringify to serialize the data.
 function courseTeachers() {
     for (i = 0; i < courseList.length; i++) {
         if (selectedCourse == courseList[i].courseValue) {
@@ -237,22 +246,30 @@ function courseTeachers() {
 
 var teacher2 = "";
 
+//We create the variable teacher2 outside the function and use the addition assignment operator to create a visible dropdown menu
+//but without any teachers in it, before course is selected.
 teacher2 += "<select class='teachers2' id='s2'>";
+//We use a disabled attribute inside the option element, to specify that the element is disabled.
 teacher2 += "<option value=\"\" disabled selected> Select teacher</option>"
-teacher2 += "</select>"
+teacher2 += "</select>";
 
 document.getElementsByClassName("teachersMenu")[0].innerHTML = teacher2;
 
 function setTeachers(){
+    //We create a new variable inside the function.
     var teacher = "";
+    //We use a disabled attribute inside the option element, to specify that the element is disabled.
     teacher += "<select id='s2'>";
-    teacher += "<option value=\"\" disabled selected> Select teacher</option>"
+    teacher += "<option value=\"\" disabled selected> Select teacher</option>";
+    // We create a similar for loop, as the for loop in our selectedCourse function, but the value, id and the innerHTML is changed to fit the selectedCourseTeachers instead.
     for (i= 0; i < selectedCourseTeachers.length; i++) {
 
         teacher += "<option class='teachers' value = '"+ selectedCourseTeachers[i].teacherName +"' id ='" + "teacher" + selectedCourseTeachers[i].teacherID + "' >" + selectedCourseTeachers[i].teacherName + "</option>";
     }
-    teacher += "</select>"
+    teacher += "</select>";
+    //We set the variable outside setTeachers, to the variable inside the function setTeachers.
     teacher2 = teacher;
+    //We set the class 'coursesMenu' JEG VED IKKE HVORFOR VI SKAL SKRIVE INDEX 0.
     document.getElementsByClassName("teachers2")[0].innerHTML = teacher2;
 }
 
@@ -263,12 +280,12 @@ function setTeachers(){
 var selectedTeacher = "";
 // s2 is the teacherField (dropdown menu)
 var teacherField = document.getElementById("s2");
-
+// This addEventListener pushes the selectedTeacher in the dropdown menu to localStorage and runs our function findCurrentTopics.
 teacherField.addEventListener("change", function () {
     localStorage.setItem("selectedTeacher", (teacherField.options[teacherField.selectedIndex].innerHTML));
     selectedTeacher = localStorage.getItem("selectedTeacher");
     findCurrentTopics();
-})
+});
 
 // -------------- //
 
