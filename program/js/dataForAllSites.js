@@ -7,7 +7,10 @@ var currentStudentArray = JSON.parse(localStorage.getItem("currentStudent"));
 var currentStudent = currentStudentArray[0];
 
 // -------------- //
-
+// @author: Andreas Emanuel Bennecke
+// @author: Oliver Langkjær Michelsen
+// @author: Jeppe Hornshøj Reuther
+// @author: Søren Poulsen
 
 // Beneath we have made a class under which we have described the constructors that needs to be present in order to for fill the class.
 // We then use the keyword "this" so that the value of this later on will become our object. We do that so we can use the object in later functions as keywords
@@ -21,9 +24,6 @@ class Program {
     };
 }
 
-// -------------- //
-
-
 class Course {
     constructor(courseID, courseName, courseValue, courseProgram, topics, teachers,  students){
         this.courseID = courseID;
@@ -36,8 +36,6 @@ class Course {
     }
 }
 
-// -------------- //
-
 class Topic{
     constructor(topic, popCounter, course, id){
         this.topic = topic;
@@ -48,6 +46,9 @@ class Topic{
 }
 
 // -------------- //
+// @author: Andreas Emanuel Bennecke
+// @author: Oliver Langkjær Michelsen
+// @author: Jeppe Hornshøj Reuther
 
 class Teacher {
     constructor(teacherID, teacherName, email, course){
@@ -60,6 +61,9 @@ class Teacher {
 }
 
 // -------------- //
+// @author: Andreas Emanuel Bennecke
+// @author: Oliver Langkjær Michelsen
+// @author: Jeppe Hornshøj Reuther
 
 // Beneath we create a function that should store our variables "programs" which we have made via usage of our constructors in our Program class.
 // We are using an if statement as we only wish to run the code if local storage is null (empty).
@@ -77,6 +81,9 @@ function programStorage () {
 }
 
 // -------------- //
+// @author: Andreas Emanuel Bennecke
+// @author: Oliver Langkjær Michelsen
+// @author: Jeppe Hornshøj Reuther
 
 // In the following storage functions (CourseStorage, topicStorage and teacherStorage) We use the exact same if statement as we use in our storeProgram function
 // The only difference between the different storage functions are the classes that they are build upon and which data we wish to push.
@@ -99,12 +106,13 @@ function courseStorage () {
 }
 
 // -------------- //
+// @author: Andreas Emanuel Bennecke
+// @author: Oliver Langkjær Michelsen
+// @author: Jeppe Hornshøj Reuther
 
 // function is build upon same terms as depicted in line 64-69 in this file "dataForAllSites.js"
 function topicStorage() {
     if(localStorage.getItem("allTopics")== null) {
-
-
 
         topicList.push(
             new Topic("Maksimeringsprincippet", 0, "Vos1", 1),
@@ -139,6 +147,9 @@ function topicStorage() {
 }
 
 // -------------- //
+// @author: Andreas Emanuel Bennecke
+// @author: Oliver Langkjær Michelsen
+// @author: Jeppe Hornshøj Reuther
 
 // function is build upon same terms as depicted in line 64-69 in this file "dataForAllSites.js"
 function teacherStorage (){
@@ -164,6 +175,7 @@ function teacherStorage (){
 }
 
 // -------------- //
+// @author: Jeppe Hornshøj Reuther
 
 // Beneath we ensure that we run the functions above by creating a functions that runs all functions called "allStorage" Then we call "allStorage" to run the function
 function allStorage() {
@@ -175,6 +187,9 @@ function allStorage() {
 allStorage();
 
 // -------------- //
+// @author: Andreas Emanuel Bennecke
+// @author: Oliver Langkjær Michelsen
+// @author: Jeppe Hornshøj Reuther
 
 // The functions we have created below serves the purpose of storing or variables under specific objects. fx. we want to ensure that the right topics
 // are connected to the rightful courses. The same goes for students and teachers. We need to ensure that they are connected to the correct course and program.
@@ -197,8 +212,9 @@ function programCourses () {
 }
 
 // -------------- //
-
-
+// @author: Andreas Emanuel Bennecke
+// @author: Oliver Langkjær Michelsen
+// @author: Jeppe Hornshøj Reuther
 
 // Here we do the same thing as above but with a little tweak. Here we have added that if 'i' and 'j' is equal to one another and allCourse is null (empty)
 // then we push. The reason for this is to ensure that when we open our program we run all of the functions to store the data.
@@ -217,6 +233,9 @@ function courseStudents (){
 }
 
 // -------------- //
+// @author: Andreas Emanuel Bennecke
+// @author: Oliver Langkjær Michelsen
+// @author: Jeppe Hornshøj Reuther
 
 // The function below is build on the same principles as the functions above but this particular function pushes studentList to programList
 function programStudents() {
@@ -232,6 +251,9 @@ function programStudents() {
 }
 
 // -------------- //
+// @author: Andreas Emanuel Bennecke
+// @author: Oliver Langkjær Michelsen
+// @author: Jeppe Hornshøj Reuther
 
 // The function below is build on the same principles as the functions above but this particular function pushes topicList to courseList
 function courseTopics () {
@@ -246,6 +268,9 @@ function courseTopics () {
 }
 
 // -------------- //
+// @author: Andreas Emanuel Bennecke
+// @author: Oliver Langkjær Michelsen
+// @author: Jeppe Hornshøj Reuther
 
 // The function below is build on the same principles as the functions above but this particular function pushes teacherList to courseList
 function courseTeachers() {
@@ -260,6 +285,9 @@ function courseTeachers() {
 }
 
 // -------------- //
+// @author: Andreas Emanuel Bennecke
+// @author: Oliver Langkjær Michelsen
+// @author: Jeppe Hornshøj Reuther
 
 // Here we have made a function that sets the object connected to the written keyword and turns it into a string
 // so that we can use the strings to push into our arrays
@@ -291,7 +319,3 @@ for (i = 0; i < programList.length; i++){
         localStorage.setItem("currentProgram",JSON.stringify(programList[i]))
     }
 }
-
-
-
-

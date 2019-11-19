@@ -1,3 +1,6 @@
+// -------------- //
+// @author: Andreas Emanuel Bennecke
+
 // We use the method JSON.parse, which parses down the JSON string with key 'currentStudent' from localStorage, and turns it back into an object (var in this case).
 var currentStudentArray = JSON.parse(localStorage.getItem("currentStudent"));
 // Here we set 'currentStudent' as the first index (index 0) in the 'currentStudentArray', as this index has the object of the current user.
@@ -5,6 +8,7 @@ var currentStudentArray = JSON.parse(localStorage.getItem("currentStudent"));
 var currentStudent = currentStudentArray[0];
 
 // -------------- //
+// @author: Andreas Emanuel Bennecke
 
 // We use this function to show the information based on the object 'currentStudent' in our HTML.
 // To do that we use DOM, with the method document.getElementById("id name").
@@ -21,6 +25,7 @@ function displayUser() {
 displayUser();
 
 // -------------- //
+// @author: Andreas Emanuel Bennecke
 
 // Defining variable bookings (an array) and setting the value by parsing down key 'Bookings' from localStorage.
 var bookings = JSON.parse(localStorage.getItem("Bookings"));
@@ -31,6 +36,10 @@ currentStudentBookings = [];
 // Here we make a for loop that goes through every index of array 'bookings'.
 // It then through an if statement checks if the individual bookings studentIDs matches the currently logged ins studentID (statement inside the parenthesis).
 // If the statement is true, it will push that index into 'currentStudentBookings' array.
+
+// -------------- //
+// @author: Andreas Emanuel Bennecke
+
 function currentIDBookings(){
     for(i = 0; i < bookings.length; i++){
         if(bookings[i].studentID == currentStudent.studentID) {
@@ -43,6 +52,7 @@ function currentIDBookings(){
 currentIDBookings();
 
 // -------------- //
+// @author: Andreas Emanuel Bennecke
 
 // Here we create an empty string 'booking' so we can use it to "push" HTML code in into it with method +++++ (add comment from Oliver with correct name for push)
 booking = "";
