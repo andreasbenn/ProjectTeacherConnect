@@ -1,5 +1,8 @@
 var studentList = [];
 
+// -------------- //
+// @author: Søren Poulsen
+
 class Student{
     constructor(fullName, phoneNumber, email, address, studentID, password, program ){
         this.fullName = fullName;
@@ -13,6 +16,7 @@ class Student{
 }
 
 // -------------- //
+// @author: Søren Poulsen
 
 function studentStorage (){
     if (localStorage.getItem('allStudents') == null) {
