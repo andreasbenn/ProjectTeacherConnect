@@ -19,7 +19,8 @@ var submitBtn = document.getElementById("submitBtn");
 
 // -------------- //
 
-/*function savesInfo (){
+/*
+function savesInfo (){
     // This functions is used in or checkbox, where time is selected.
     var checkbox = document.getElementsByClassName('time1');
     // We declare a variable named 'len' show we can use all the different inputs in our select form.
@@ -49,7 +50,8 @@ var submitBtn = document.getElementById("submitBtn");
 
     //localStorage.setItem('dateOfBooking', this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear())
 
-}*/
+}
+*/
 
 /*
 var s1 = document.getElementById('s1');
@@ -59,21 +61,23 @@ console.log(s1.value)
 var course = s1.value
 var teacher = s2.value
 var booking = {course, teacher}
-console.log(booking)*/
+console.log(booking)
+*/
 
 /*
 console.log(s2)
 var option =  s2.options[0]
 console.log(option)
 var booking = {s1}
-console.log(booking)*/
+console.log(booking)
+*/
 
 // -------------- //
 // @author: Oliver Langkjær Michelsen
 
 var dt = new Date();
 // To start of with we create a variable name 'dt' which use the java method 'new Date' which is used for creating an object constructor function. This variable will now be used in creating the calendar. the variable is because of the () declared to as a function
-//https://stackoverflow.com/questions/1646698/what-is-the-new-keyword-in-javascript
+// https://stackoverflow.com/questions/1646698/what-is-the-new-keyword-in-javascript
 
 function renderDate() {<!-- The class name "content" does not have any relevance for our js file, and is only used for creating overview of the div section. -->
 
