@@ -18,61 +18,6 @@ var buttons = document.getElementsByClassName('day');
 var submitBtn = document.getElementById("submitBtn");
 
 // -------------- //
-
-/*
-function savesInfo (){
-    // This functions is used in or checkbox, where time is selected.
-    var checkbox = document.getElementsByClassName('time1');
-    // We declare a variable named 'len' show we can use all the different inputs in our select form.
-    var len = checkbox.length;
-    var rating = "";
-    // This rating does not have anything inside its cituationstegn this variable depends on which input button that is clicked on.
-
-//var i = 0;
-// We create a for loop that counts up, and choose the checked input.
-// The input is then stored in localStorage.
-    // we dont have to use a <= sign in the for loop because we also have a submit button that also is represented as a input in or select element.
-    for (i = 0; i < len; i++) {
-        if (checkbox[i].checked) {
-            rating = checkbox[i].value;
-            localStorage.setItem('rating', checkbox[i].value);
-
-        }
-
-    }
-
-//localStorage.setItem('dateOfBooking', this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear())
-    course = courseField.options[courseField.selectedIndex].value;
-    teacher = teacherField.options[teacherField.selectedIndex].value;
-
-    //console.log(course);
-    //console.log(teacher);
-
-    //localStorage.setItem('dateOfBooking', this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear())
-
-}
-*/
-
-/*
-var s1 = document.getElementById('s1');
-var s2 = document.getElementById('s2');
-console.log(s1.value)
-
-var course = s1.value
-var teacher = s2.value
-var booking = {course, teacher}
-console.log(booking)
-*/
-
-/*
-console.log(s2)
-var option =  s2.options[0]
-console.log(option)
-var booking = {s1}
-console.log(booking)
-*/
-
-// -------------- //
 // @author: Oliver Langkjær Michelsen
 
 var dt = new Date();
@@ -141,20 +86,16 @@ cells = "";
             //var newDate = "day" + i;
             cells += "<div class='day' id ='" + i + "'  value ='" + i + "' onclick='dateAndBook()'>" + i  + "</div>";
 
-            // cells += "<div class='day'  value ='" + i + "' onclick='dateAndBook()'>" + i  + "</div>";
-
         } else{
 
             cells += "<div class='day' id ='" + i + "' value ='" + i + "' onclick='dateAndBook()'>" + i + "</div>";
-
-            // cells += "<div class='day' value ='" + i + "' onclick='dateAndBook()'>" + i + "</div>";
 
 // If the date is not equal to today's date, we use the conditional else statement, until we hit todays date. Then the if statement will be used. The break happens at the endDate
 
         }
     }
 
-// Here we use innerHTML to print the cells we have declared above, in the user inteface.
+// Here we use innerHTML to print the cells we have declared above, in the user interface.
     document.getElementsByClassName("days")[0].innerHTML = cells;
 }
 
@@ -171,21 +112,8 @@ function moveDate(para) {
         dt.setMonth(dt.getMonth() + 1);
     }
     renderDate();
-<<<<<<< HEAD
-    // we use the renderDate function in here, because the moveDate function needs to have this reference because the other attributed from the calendar is declared inside this function. And eventhough the tuborg klamme had continued, we have not declared an onclick function in the prevDate and nextDate object constructor.
-=======
     // We use the renderDate function in here, because the moveDate function needs to have this reference because the other attributed from the calendar is declared inside this function. And eventhough the tuborg klamme had continued, we have not declared an onclick function in the prevDate and nextDate object constructor.
->>>>>>> 9f855e568059d9753ea9f576bdfa4f120cc66ecf
 };
-
-// https://www.youtube.com/watch?v=BiOXf9HHGUA
-// This function is used to remove the options = "teachers" that is not relevant, when you have clicked on one of the course options. And is used in the function under it.
-/*function removeTeachers(s2) {
-    for(var i = s2.options.length - 1; i >= 0; i--){
-        // the for loop goes will because of the s2.options.length always be 2 because, there always will be two teachers to each course.
-        s2.remove(i);
-    }
-}*/
 
 // -------------- //
 // @author: Andreas Emanuel Bennecke
@@ -194,24 +122,6 @@ function moveDate(para) {
 
 // This function creates a list of courses based on the logged in students program. It then adds them to the dropdown menu.
 course = "";
-<<<<<<< HEAD
-function setCourses(){
-    //We use the addition assignment operator to add the strings to the variable "course". The first string consists of the HTML element select with an id. the second string consists of the element option.
-    //We use a disabled attribute inside the option element, to specify that the element is disabled.
-    course += "<select id='s1'>";
-    course += "<option value=\"\" disabled selected>Select course</option>";
-    //This for loop is initialized by 'i=0', the for loop checks if our counter 'i'
-    // is less than the array 'programCourses' length. As long as this condition is true,
-    // our counter 'i' increases by 1, after every iteration of the for loop.
-for (i= 0; i < currentProgram.programCourses.length; i++) {
-    //We add another string to the variable "course", which contains a new option element. In the 1st iteration of the for loop, the value of the 1st option is set to the 'courseValue' of the 1st index in the array 'programCourses'
-    //The id is set to the 'courseID' of the 1st index in the array "programCourses". We set the innerHTML to the 'courseName' of the 1st index in the array 'programCourses'
-        course += "<option class='courses' value = '"+currentProgram.programCourses[i].courseValue+"' id ='" + "course" + currentProgram.programCourses[i].courseID + "' >" + currentProgram.programCourses[i].courseName + "</option>";
-    }
-//After the last iteration of the for loop we add a string which ends the HTML element.
-    course += "</select>";
-//We set the class 'coursesMenu' JEG VED IKKE HVORFOR VI SKAL SKRIVE INDEX 0.
-=======
 
 // Dynamic selector
 // This function creates a for loop, that checks which program the student is
@@ -237,8 +147,7 @@ for (i= 0; i < currentProgram.programCourses.length; i++) {
 // After the last iteration of the for loop we add a string which ends the HTML element.
     course += "</select>";
 
-// We set the class 'coursesMenu' JEG VED IKKE HVORFOR VI SKAL SKRIVE INDEX 0.
->>>>>>> 9f855e568059d9753ea9f576bdfa4f120cc66ecf
+// We set the HTML class 'coursesMenu'.
     document.getElementsByClassName("coursesMenu")[0].innerHTML = course;
 }
 setCourses();
@@ -248,18 +157,6 @@ setCourses();
 // @author: Oliver Langkjær Michelsen
 // @author: Jeppe Hornshøj Reuther
 
-<<<<<<< HEAD
-
-// These functions finds the teachers for that specific course, and adds them to localStorage, and also makes a new dropdown menu for the user to chose the teacher he/she wants to get help from.
-
-selectedCourse = "";
-// We set the variable 'courseField' to the dropdown menu we created in our 'setCourses' function.
-var courseField = document.getElementById("s1");
-// This is an addEventListener which waits on a change on the first dropdown menu which specifies the chosen course. It then calls functions for the teachers, which is made below.
-courseField.addEventListener("change", function () {
-    //We push the value of the selected course in the 'courseField' to local Storage as 'selectedCourse'.
-    //Afterwards we set our empty variable 'selectedCourse', to the 'selectedCourse' from localStorage
-=======
 // These functions finds the teachers for that specific course, and adds them to localStorage, and also makes a new dropdown menu for the user to chose the teacher he/she wants to get help from.
 
 selectedCourse = "";
@@ -272,7 +169,6 @@ courseField.addEventListener("change", function () {
 
     // We push the value of the selected course in the 'courseField' to local Storage as 'selectedCourse'.
     // Afterwards we set our empty variable 'selectedCourse', to the 'selectedCourse' from localStorage
->>>>>>> 9f855e568059d9753ea9f576bdfa4f120cc66ecf
     localStorage.setItem("selectedCourse", (courseField.options[courseField.selectedIndex].value));
 
     selectedCourse = localStorage.getItem("selectedCourse");
@@ -288,16 +184,10 @@ courseField.addEventListener("change", function () {
 // @author: Jeppe Hornshøj Reuther
 
 var selectedCourseTeachers = [];
-<<<<<<< HEAD
-//This for loop iterates through the 'courseValue' in our 'courseList' array.
-// If the 'courseValue' of the index in the 'courseList' is equal to the 'selectedCourse', we set our 'selectedCourseTeachers' to the teachers in that index.
-//We also push the array into localstorage by using JSON.stringify to serialize the data.
-=======
 
 // This for loop iterates through the 'courseValue' in our 'courseList' array.
 // If the 'courseValue' of the index in the 'courseList' is equal to the 'selectedCourse', we set our 'selectedCourseTeachers' to the teachers in that index.
 // We also push the array into localstorage by using JSON.stringify to serialize the data.
->>>>>>> 9f855e568059d9753ea9f576bdfa4f120cc66ecf
 function courseTeachers() {
     for (i = 0; i < courseList.length; i++) {
         if (selectedCourse == courseList[i].courseValue) {
@@ -312,39 +202,22 @@ function courseTeachers() {
 
 var teacher2 = "";
 
-<<<<<<< HEAD
-//We create the variable teacher2 outside the function and use the addition assignment operator to create a visible dropdown menu
-//but without any teachers in it, before course is selected.
-teacher2 += "<select class='teachers2' id='s2'>";
-//We use a disabled attribute inside the option element, to specify that the element is disabled.
-=======
 // We create the variable teacher2 outside the function and use the addition assignment operator to create a visible dropdown menu
 // but without any teachers in it, before course is selected.
 teacher2 += "<select class='teachers2' id='s2'>";
 
 // We use a disabled attribute inside the option element, to specify that the element is disabled.
->>>>>>> 9f855e568059d9753ea9f576bdfa4f120cc66ecf
 teacher2 += "<option value=\"\" disabled selected> Select teacher</option>"
 teacher2 += "</select>";
 
 document.getElementsByClassName("teachersMenu")[0].innerHTML = teacher2;
 
 function setTeachers(){
-<<<<<<< HEAD
-    //We create a new variable inside the function.
-    var teacher = "";
-    //We use a disabled attribute inside the option element, to specify that the element is disabled.
-    teacher += "<select id='s2'>";
-    teacher += "<option value=\"\" disabled selected> Select teacher</option>";
-    // We create a similar for loop, as the for loop in our selectedCourse function, but the value, id and the innerHTML is changed to fit the selectedCourseTeachers instead.
-    for (i= 0; i < selectedCourseTeachers.length; i++) {
-=======
     // We create a new variable inside the function.
     var teacher = "";
 
     // We use a disabled attribute inside the option element, to specify that the element is disabled.
     teacher += "<select id='s2'>";
->>>>>>> 9f855e568059d9753ea9f576bdfa4f120cc66ecf
 
     teacher += "<option value=\"\" disabled selected> Select teacher</option>";
 
@@ -352,20 +225,13 @@ function setTeachers(){
     for (i= 0; i < selectedCourseTeachers.length; i++) {
         teacher += "<option class='teachers' value = '"+ selectedCourseTeachers[i].teacherName +"' id ='" + "teacher" + selectedCourseTeachers[i].teacherID + "' >" + selectedCourseTeachers[i].teacherName + "</option>";
     }
-<<<<<<< HEAD
-    teacher += "</select>";
-    //We set the variable outside setTeachers, to the variable inside the function setTeachers.
-    teacher2 = teacher;
-    //We set the class 'coursesMenu' JEG VED IKKE HVORFOR VI SKAL SKRIVE INDEX 0.
-=======
 
     teacher += "</select>";
     // We set the variable outside setTeachers, to the variable inside the function setTeachers.
 
     teacher2 = teacher;
-    // We set the class 'coursesMenu' JEG VED IKKE HVORFOR VI SKAL SKRIVE INDEX 0.
+    // We set the HTML class 'coursesMenu'.
 
->>>>>>> 9f855e568059d9753ea9f576bdfa4f120cc66ecf
     document.getElementsByClassName("teachers2")[0].innerHTML = teacher2;
 }
 
@@ -378,10 +244,7 @@ var selectedTeacher = "";
 
 // s2 is the teacherField (dropdown menu)
 var teacherField = document.getElementById("s2");
-<<<<<<< HEAD
-=======
 
->>>>>>> 9f855e568059d9753ea9f576bdfa4f120cc66ecf
 // This addEventListener pushes the selectedTeacher in the dropdown menu to localStorage and runs our function findCurrentTopics.
 teacherField.addEventListener("change", function () {
     localStorage.setItem("selectedTeacher", (teacherField.options[teacherField.selectedIndex].innerHTML));
@@ -389,101 +252,6 @@ teacherField.addEventListener("change", function () {
 
     findCurrentTopics();
 });
-
-// -------------- //
-// @author: Oliver Langkjær Michelsen
-
-// Old code which does the same as above, but more hardcoded and not objectorientated.
-
-  /*  if (courseField.options[courseField.selectedIndex].value == "Ind"){
-        var opt1 = document.createElement('option');
-        var opt2 = document.createElement('option');
-
-        opt1.value = "Ali";
-        opt2.value = "Tina";
-        opt1.innerHTML = "Ali";
-        opt2.innerHTML = "Tina";
-        removeAll(s2);
-        // We here use the function declared above, so we are sure that the only thing s2 contains is the two options we have just added.
-        s2.options.add(opt1);
-        s2.options.add(opt2);
-        localStorage.setItem('s1', s1.value);
-        //localStorage.setItem('s2', s2.value);
-        // We here use localstorage to store our options. The only problem is that the default is the first teacher. Because it adds the first value displayed in options of s2
-
-    }
-    else if (s1.options[s1.selectedIndex].value == "Pro"){
-        var opt1 = document.createElement('option')
-        var opt2 = document.createElement('option')
-        opt1.value = "Henrik";
-        opt2.value = "Mikkel";
-        opt1.innerHTML = "Henrik";
-        opt2.innerHTML = "Mikkel";
-        removeAll(s2);
-        s2.options.add(opt1);
-        s2.options.add(opt2);
-        localStorage.setItem('s1', s1.value);
-        //localStorage.setItem('s2', s2.value);
-// Here we just use conditional statements for all the other courses an HA (it) student has.
-
-    }else if (s1.options[s1.selectedIndex].value == "Bis"){
-        var opt1 = document.createElement('option')
-        var opt2 = document.createElement('option')
-        opt1.value = "Rob";
-        opt2.value = "Till";
-        opt1.innerHTML = "Robb";
-        opt2.innerHTML = "Till";
-        removeAll(s2);
-        s2.options.add(opt1);
-        s2.options.add(opt2);
-        localStorage.setItem('s1', s1.value);
-        //localStorage.setItem('s2', s2.value);
-
-    }else if (s1.options[s1.selectedIndex].value == "Vos"){
-        var opt1 = document.createElement('option')
-        var opt2 = document.createElement('option')
-        opt1.value = "Jan";
-        opt2.value = "Jan";
-        opt1.innerHTML = "Jan";
-        opt2.innerHTML = "Jan";
-        removeAll(s2);
-        s2.options.add(opt1);
-        s2.options.add(opt2);
-        localStorage.setItem('s1', s1.value);
-        //localStorage.setItem('s2', s2.value);
-    }
-
-   /* else{
-        var opt1 = document.createElement('option')
-        opt1.value = "--"
-        opt1.innerHTML = "--"
-        removeAll(s2);
-        s2.options.add(opt1);
-    }
-}*/
-// This function is executed by an onclick event. When clicked on a date, the panel is shown. This is possible by chancing the default value of the panel in css to 'none'
-
-// js til local storage af alt
-
-// buttons
-
-//var endDate = new Date(
-  //  dt.getFullYear(),
-    //dt.getMonth()+1,0
-//).getDate();
-
-// array til value
-
-/*
-function dayS() {
-    for (var d = 1; d <= endDate; d++) {
-        if (d <= 31)
-document.getElementsByClassName('day').value = d;
-    }
-}
- */
-
-//
 
 // -------------- //
 // @author: Oliver Langkjær Michelsen
@@ -510,59 +278,6 @@ function executeCalendar(){
         }
     }
     createBooking();
-
-//localStorage.setItem('dateOfBooking', this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear())
-
-
-    // Commented out because it is no longer in use, as we moved to a more object orientated solution.
-
-    /*
-
-    course = courseField.options[courseField.selectedIndex].value;
-    teacher = teacherField.options[teacherField.selectedIndex].value;
-
-    function s4() {
-        var s1 = document.getElementById('s1');
-        var s2 = document.getElementById('s2');
-        if (s1.options[s1.selectedIndex].value == "Org") {
-            var opt1 = document.createElement('option');
-            var opt2 = document.createElement('option');
-
-            opt1.value = "Ali";
-            opt2.value = "Tina";
-            opt1.innerHTML = "Ali";
-            opt2.innerHTML = "Tina";
-            // we here use the function declared above, so we are sure that the only thing s2 contains is the two options we have just added.
-            localStorage.setItem('s2', s2.value);
-        } else if (s1.options[s1.selectedIndex].value == "Pro") {
-            var opt1 = document.createElement('option')
-            var opt2 = document.createElement('option')
-            opt1.value = "Henrik";
-            opt2.value = "Mikkel";
-            opt1.innerHTML = "Henrik";
-            opt2.innerHTML = "Mikkel";
-            localStorage.setItem('s2', s2.value);
-
-// Here we just use conditional statements for all the other courses an HA (it) student has.
-
-        } else if (s1.options[s1.selectedIndex].value == "Bis") {
-            var opt1 = document.createElement('option')
-            var opt2 = document.createElement('option')
-            opt1.value = "Rob";
-            opt2.value = "Till";
-            opt1.innerHTML = "Robb";
-            opt2.innerHTML = "Till";
-            localStorage.setItem('s2', s2.value);
-
-        } else if (s1.options[s1.selectedIndex].value == "Vos") {
-            var opt1 = document.createElement('option')
-            var opt2 = document.createElement('option')
-            opt1.value = "Jan";
-            opt2.value = "Jan";
-            opt1.innerHTML = "Jan";
-            opt2.innerHTML = "Jan";
-            localStorage.setItem('s2', s2.value);
-            */
     }
 
 // -------------- //
@@ -594,27 +309,6 @@ function dateAndBook() {
         // book()
     }
 }
-
-/*
-$(document).click(function(event) {
-    var text = $(event.target).text();
-    console.log((text))
-});*/
-/*document.addEventListener("click", myFunction);
-
-function myFunction() {
-  var todayDate = document.getElementById('hello');
-    //  document.getElementsByClassName("day")
-    console.log(todayDate)
-}*/
-
-/*
-var list = document.getElementsByClassName('day');
-var n;
-for (n = 1; n < list.length; ++n) {
-    list[n].value = '31';
-}
-*/
 
 // -------------- //
 // @author: Andreas Emanuel Bennecke
@@ -667,3 +361,234 @@ function createBooking() {
 
 document.getElementById("submitBtn").addEventListener("click", executeCalendar);
 
+// ----- OLD CODE WE NO LONGER USE ----- //
+// ----- OLD CODE WE NO LONGER USE ----- //
+// ----- OLD CODE WE NO LONGER USE ----- //
+
+/*
+function savesInfo (){
+    // This functions is used in or checkbox, where time is selected.
+    var checkbox = document.getElementsByClassName('time1');
+    // We declare a variable named 'len' show we can use all the different inputs in our select form.
+    var len = checkbox.length;
+    var rating = "";
+    // This rating does not have anything inside its quotation mark this variable depends on which input button that is clicked on.
+
+//var i = 0;
+// We create a for loop that counts up, and choose the checked input.
+// The input is then stored in localStorage.
+    // we dont have to use a <= sign in the for loop because we also have a submit button that also is represented as a input in or select element.
+    for (i = 0; i < len; i++) {
+        if (checkbox[i].checked) {
+            rating = checkbox[i].value;
+            localStorage.setItem('rating', checkbox[i].value);
+
+        }
+
+    }
+
+//localStorage.setItem('dateOfBooking', this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear())
+    course = courseField.options[courseField.selectedIndex].value;
+    teacher = teacherField.options[teacherField.selectedIndex].value;
+
+    //console.log(course);
+    //console.log(teacher);
+
+    //localStorage.setItem('dateOfBooking', this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear())
+
+}
+*/
+
+/*
+var s1 = document.getElementById('s1');
+var s2 = document.getElementById('s2');
+console.log(s1.value)
+
+var course = s1.value
+var teacher = s2.value
+var booking = {course, teacher}
+console.log(booking)
+*/
+
+/*
+console.log(s2)
+var option =  s2.options[0]
+console.log(option)
+var booking = {s1}
+console.log(booking)
+*/
+
+// -------------- //
+
+
+// @author: Oliver Langkjær Michelsen
+
+// Old code which does the same as above, but more hardcoded and not objectorientated.
+
+/*  if (courseField.options[courseField.selectedIndex].value == "Ind"){
+      var opt1 = document.createElement('option');
+      var opt2 = document.createElement('option');
+
+      opt1.value = "Ali";
+      opt2.value = "Tina";
+      opt1.innerHTML = "Ali";
+      opt2.innerHTML = "Tina";
+      removeAll(s2);
+      // We here use the function declared above, so we are sure that the only thing s2 contains is the two options we have just added.
+      s2.options.add(opt1);
+      s2.options.add(opt2);
+      localStorage.setItem('s1', s1.value);
+      //localStorage.setItem('s2', s2.value);
+      // We here use localstorage to store our options. The only problem is that the default is the first teacher. Because it adds the first value displayed in options of s2
+
+  }
+  else if (s1.options[s1.selectedIndex].value == "Pro"){
+      var opt1 = document.createElement('option')
+      var opt2 = document.createElement('option')
+      opt1.value = "Henrik";
+      opt2.value = "Mikkel";
+      opt1.innerHTML = "Henrik";
+      opt2.innerHTML = "Mikkel";
+      removeAll(s2);
+      s2.options.add(opt1);
+      s2.options.add(opt2);
+      localStorage.setItem('s1', s1.value);
+      //localStorage.setItem('s2', s2.value);
+// Here we just use conditional statements for all the other courses an HA (it) student has.
+
+  }else if (s1.options[s1.selectedIndex].value == "Bis"){
+      var opt1 = document.createElement('option')
+      var opt2 = document.createElement('option')
+      opt1.value = "Rob";
+      opt2.value = "Till";
+      opt1.innerHTML = "Robb";
+      opt2.innerHTML = "Till";
+      removeAll(s2);
+      s2.options.add(opt1);
+      s2.options.add(opt2);
+      localStorage.setItem('s1', s1.value);
+      //localStorage.setItem('s2', s2.value);
+
+  }else if (s1.options[s1.selectedIndex].value == "Vos"){
+      var opt1 = document.createElement('option')
+      var opt2 = document.createElement('option')
+      opt1.value = "Jan";
+      opt2.value = "Jan";
+      opt1.innerHTML = "Jan";
+      opt2.innerHTML = "Jan";
+      removeAll(s2);
+      s2.options.add(opt1);
+      s2.options.add(opt2);
+      localStorage.setItem('s1', s1.value);
+      //localStorage.setItem('s2', s2.value);
+  }
+
+ /* else{
+      var opt1 = document.createElement('option')
+      opt1.value = "--"
+      opt1.innerHTML = "--"
+      removeAll(s2);
+      s2.options.add(opt1);
+  }
+}*/
+// This function is executed by an onclick event. When clicked on a date, the panel is shown. This is possible by chancing the default value of the panel in css to 'none'
+
+// js til local storage af alt
+
+// buttons
+
+//var endDate = new Date(
+//  dt.getFullYear(),
+//dt.getMonth()+1,0
+//).getDate();
+
+// array til value
+
+/*
+function dayS() {
+    for (var d = 1; d <= endDate; d++) {
+        if (d <= 31)
+document.getElementsByClassName('day').value = d;
+    }
+}
+ */
+
+//
+
+// -------------- //
+
+//localStorage.setItem('dateOfBooking', this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear())
+
+
+// Commented out because it is no longer in use, as we moved to a more object orientated solution.
+
+/*
+
+course = courseField.options[courseField.selectedIndex].value;
+teacher = teacherField.options[teacherField.selectedIndex].value;
+
+function s4() {
+    var s1 = document.getElementById('s1');
+    var s2 = document.getElementById('s2');
+    if (s1.options[s1.selectedIndex].value == "Org") {
+        var opt1 = document.createElement('option');
+        var opt2 = document.createElement('option');
+
+        opt1.value = "Ali";
+        opt2.value = "Tina";
+        opt1.innerHTML = "Ali";
+        opt2.innerHTML = "Tina";
+        // we here use the function declared above, so we are sure that the only thing s2 contains is the two options we have just added.
+        localStorage.setItem('s2', s2.value);
+    } else if (s1.options[s1.selectedIndex].value == "Pro") {
+        var opt1 = document.createElement('option')
+        var opt2 = document.createElement('option')
+        opt1.value = "Henrik";
+        opt2.value = "Mikkel";
+        opt1.innerHTML = "Henrik";
+        opt2.innerHTML = "Mikkel";
+        localStorage.setItem('s2', s2.value);
+
+// Here we just use conditional statements for all the other courses an HA (it) student has.
+
+    } else if (s1.options[s1.selectedIndex].value == "Bis") {
+        var opt1 = document.createElement('option')
+        var opt2 = document.createElement('option')
+        opt1.value = "Rob";
+        opt2.value = "Till";
+        opt1.innerHTML = "Robb";
+        opt2.innerHTML = "Till";
+        localStorage.setItem('s2', s2.value);
+
+    } else if (s1.options[s1.selectedIndex].value == "Vos") {
+        var opt1 = document.createElement('option')
+        var opt2 = document.createElement('option')
+        opt1.value = "Jan";
+        opt2.value = "Jan";
+        opt1.innerHTML = "Jan";
+        opt2.innerHTML = "Jan";
+        localStorage.setItem('s2', s2.value);
+        */
+
+// -------------- //
+
+/*
+$(document).click(function(event) {
+    var text = $(event.target).text();
+    console.log((text))
+});*/
+/*document.addEventListener("click", myFunction);
+
+function myFunction() {
+  var todayDate = document.getElementById('hello');
+    //  document.getElementsByClassName("day")
+    console.log(todayDate)
+}*/
+
+/*
+var list = document.getElementsByClassName('day');
+var n;
+for (n = 1; n < list.length; ++n) {
+    list[n].value = '31';
+}
+*/
