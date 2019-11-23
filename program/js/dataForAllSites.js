@@ -91,8 +91,8 @@ function courseStorage () {
         new Course(6, "Organisationsteori", "Org", "HA(fil)", [], [], [],),
         new Course(7, "Økonomiens teori og idehistorie", "Øko", "HA(fil)", [], [], [],),
         new Course(8, "Filosofisk metode 1: Politisk og økonomisk filosofi", "Fil", "HA(fil)", [], [], [],));
-        //localStorage.setItem("allCourses", JSON.stringify(courseList));
-    }
+    //localStorage.setItem("allCourses", JSON.stringify(courseList));
+}
     else {
         courseList = JSON.parse(localStorage.getItem("allCourses"));
     }
