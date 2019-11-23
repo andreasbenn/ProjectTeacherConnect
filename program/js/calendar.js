@@ -3,8 +3,6 @@
 // @author: Oliver Langkjær Michelsen
 // @author: Jeppe Hornshøj Reuther
 
-//var course;
-//var teacher;
 var programList = JSON.parse(localStorage.getItem("allPrograms"));
 var courseList = JSON.parse(localStorage.getItem("allCourses"));
 var topicList = JSON.parse(localStorage.getItem("allTopics"));
@@ -315,14 +313,13 @@ function dateAndBook() {
 
 // Constructor for a booking, we're using to make our bookings objectorientated and lets us store our information in an array.
 class Booking{
-    constructor(course, teacher, topic, day, hour, studentID, id){
+    constructor(course, teacher, topic, day, hour, studentID){
         this.course = course;
         this.teacher = teacher;
         this.topic = topic;
         this.day = day;
         this.hour = hour;
         this.studentID = studentID;
-        //this.id = id;
     }
 }
 
