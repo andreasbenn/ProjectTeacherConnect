@@ -1,14 +1,19 @@
-// Her laver jeg en function som tester om username og password eksistere i min dummydata (ddLogin.js)
 // Here I'm making a function that tests if the username and password is corect from my dummydata (ddLogin.js)
 var loginButton = document.getElementById("loginButton");
 var currentLogIn = [];
 var existingStudent = JSON.parse(localStorage.getItem('allStudents'));
 
-//Deletes currentUser if the site was reloaded without logging out (error propagation)
+// -------------- //
+// @author: Søren Poulsen
+
+// Deletes currentUser if the site was reloaded without logging out (error propagation)
 if(localStorage.getItem("currentStudent") !== null){
     localStorage.removeItem("currentStudent");
 }
-console.log("Hej");
+
+// -------------- //
+// @author: Søren Poulsen
+// @modified: Andreas Emanuel Bennecke
 
 // I'm using "login" because that's the ID i have given it in HTML
 // All of the code below is what i would like to run when clicking on the login button. (verify email etc...)
@@ -23,7 +28,8 @@ loginButton.onclick = function loginFunction (e) {
 
     for (let i = 0; i < existingStudent.length; i++) {
         if (emailInput == existingStudent[i].email && passwordInput == existingStudent[i].password) {
-            //push userName to current local storage
+
+            //Push userName to current local storage
             currentLogIn.push(existingStudent[i]);
             alert("Login has been verified");
             document.location.href = "home.html";
@@ -32,15 +38,16 @@ loginButton.onclick = function loginFunction (e) {
             studentExists = true;
             break;
         }
-
     }
-    if (!StudentExists) {
+    if (studentExists == false){
         alert("Username or password is incorrect or does not exist, please try again")
     }
+}
 
-};
+// -------------- //
+// @author: Søren Poulsen
 
-// first we create a variable so that my event listener later on can get the id from password in HTML
+// First we create a variable so that my eventListener later on can get the ID from password in HTML
 // Then we add an eventListener and that should run a function (event)
 // If the event is the enter key (keyCode 13) then it should click the button that we have described in HTML
 // In HTML we have declared that it should run our loginFunction onclick
@@ -54,8 +61,11 @@ input.addEventListener("keydown",function(event) {
     }
 });
 
-//below i will like to create a function that gives an error if the username and password is incorrect or not equal to my dummy data from ddLogin.js
-// Ill start by making an alert function and after specifying the criterias in form of an if statement
+// -------------- //
+// @author: Søren Poulsen
+
+// Below i will like to create a function that gives an error if the username and password is incorrect or not equal to my dummy data from ddLogin.js
+// I'll start by making an alert function and after specifying the criterias in form of an if statement
 /*
 else if (attempt) //attempt is undefined as we don't have that in our site as of jet
      {
@@ -64,9 +74,12 @@ else if (attempt) //attempt is undefined as we don't have that in our site as of
     document.getElementById("loginButton").disabled = true;
     return false;
      }
-}*/
-// here I'm making a simple function that alerts a user trying to create a user, with the message "This is currently not a part of this version of the program"
+}
+*/
+
+// Here I'm making a simple function that alerts a user trying to create a user, with the message "This is currently not a part of this version of the program"
 // more or less the same principle as our login function
+
 /* GETTING DELETED var submitButton = document.getElementById("submitButton");
 submitButton.onclick = function() {
     alert("Not yet a part of this version of program");
@@ -78,10 +91,7 @@ submitButton.onclick = function() {
         document.getElementById("submitButton").disabled = true;
     }
 };
-
-function findUser () {
-
-} GETTING DELETED */
+ */
 
 
 

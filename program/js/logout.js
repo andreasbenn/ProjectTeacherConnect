@@ -4,6 +4,8 @@
 // This function will clear all the irrelevant information in localStorage to reverse back to our login page, which will only contain certain information.
 // ('allStudents' and 'allCourses' (which keeps the popularity counter with topics) and 'Bookings').
 
+// @author: Andreas Emanuel Bennecke
+
 document.getElementById("logoutBtn").onclick = function(e) {
     // This preventDefault method is used so the click on the button will not refresh the current site, but simply run the code and move the user to the login page.
     e.preventDefault()
