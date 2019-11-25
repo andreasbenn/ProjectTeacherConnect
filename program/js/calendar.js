@@ -255,8 +255,8 @@ teacherField.addEventListener("change", function () {
 // @author: Oliver Langkjær Michelsen
 
 // This functions is used in or checkbox, where time is selected.
-function executeCalendar(){
-
+function executeCalendar(e){
+    e.preventDefault()
     var checkbox = document.getElementsByClassName('time1');
 
     // We declare a variable named 'len' show we can use all the different inputs in our select form.
@@ -276,6 +276,7 @@ function executeCalendar(){
         }
     }
     createBooking();
+    document.location.href = "myPage.html";
     }
 
 // -------------- //
@@ -354,6 +355,7 @@ function createBooking() {
 
     //Stores the array in LocalStorage with the key "Booking"
     localStorage.setItem("Bookings", JSON.stringify(bookings));
+
 }
 
 document.getElementById("submitBtn").addEventListener("click", executeCalendar);
