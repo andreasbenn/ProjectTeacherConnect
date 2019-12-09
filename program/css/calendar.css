@@ -1,18 +1,18 @@
-body {
-    margin:0;
-    font-family: 'Verdana','sans-serif';
-}
 
-/*vw er en anden måde at angive bredden på, og står for viewport width. vh står for view port height.*/
-/*find ud af hvad flex betyder.*/
-/*find ud af hvad justify betyder.*/
+/* the * Selector, selects all the elements in the css sheet, and sets the margin to 0: This is done so the margin is the same in the calendar HTML file.*/
+/* If the margin did not exist, the HTML file, would because of an indifferent margin have different height and width, in different elements.
+/* the box sizing, sets the border and padding to the same width and height. https://www.w3schools.com/cssref/css3_pr_box-sizing.asp*/
 
 *{
     margin: 0;
     box-sizing: border-box;
 }
-/* Denne margin gør at måneden og datoen rykker sig op mod hinanden.*/
-/* border box gør at den blå farve ikke overskrider width i boxen da border box angiver at værdien skal være inde for boxen.  */
+
+
+/*display flex sets all the elements that is placed inside the wrapper in the middle vertically. That is because we use the default setting column. */
+/* width and height is set to 100. That means that the viewport height and width is the whole document. Except the navbar, set in the header.*/
+/*align-items centers the elements in the middle vertically, and justify-content sets the elements horizontal in the middle.*/
+/* */
 .wrapper{
     display: flex;
     width: 100vw;
@@ -21,19 +21,22 @@ body {
     justify-content: center;
     align-items: center;
 }
-/*align-items center sætter boksen vertikal i midten, hvor i mod at justify.content sætter den horisontalt i mitdten .*/
 
+/* The box-shadow makes the black lines around the calendar.  */
+/* We sets the position relative. This means that the position is relative to the other elements in the HTML. */
+/* the 10% is 10% from the relative position. */
 .calendar{
-    margin-top:50px;
     width: 600px;
     background-color: white;
     box-shadow: 1px 1px 10px 3px rgba(1,1,1,1);
     position: relative;
     top: 10%;
 }
-/*box.shadow er sorte ude i siden .*/
 
-
+/* space-between sets the month in the midle of the table.
+/*display flex pushes the two arrows to each side, so they not longer are placed vertically equal. */
+/*top-bottom 40px og left right 30px.*/
+/*align-items sets the arrows in the middle vertically.*/
 .month{
     display: flex;
     justify-content: space-between;
@@ -44,13 +47,9 @@ body {
     color: white;
     padding: 40px 30px;
 }
-/*space-between gør at måned rykker sig hen i midten, og det skubber de to pille ud til siden. */
-/*display flex rykker de to pile ud mod siden, så de ikke længere lægger op af samme akse. */
-/*top-bottom 40px og left right 30px
- */
-/*align-items trækker pillene ned i midten
- */
 
+
+/*display flex, flexes the days of the weekend horizontally.*/
 .weekends{
     display: flex;
     background-color: blue;
@@ -59,74 +58,66 @@ body {
 }
 
 
-
+/*flex wrap wraps the days over the multiple divs, that is created in javascript. */
 .days{
     display:flex;
     flex-wrap: wrap;
-    font-weight: 300;
     padding: 2px;
 }
-/*display flex får værdierne til at brede sig ud over days. Samtdigt er flex wrap et tag som får de enkelte værdier til at gå ned af aksen*/
-/* font weight gør nedsætter farven til grå i numbers.*/
+
+/* the property transition hovers over the divs.
+/* margin-bottom gives a 10px margin in the bottom.*/
+/* padding makes the padding 10px around the divs.*/
 .days div{
     margin-bottom: 10px;
     padding: 10px;
     text-align: center;
     transition: all 0.4s;
 }
-/* transition gør at hover number først bliver hoveret efter 0.4 s, og først fjerner hover efter 0.4s
-/* margin-bottom siger at der skal være 10px margin fra bunden og op. Det vil sige at margin skubber teksten 10px op fra bunden.
- */
-/* padding gør at mellemrummet mellem hvert tal bliver 10px.
- */
 
+/*width is 100/7=14,28 because there is 7 days a week.*/
 .weekends div,
 .days div {
     width: 14.28%;
     text-align: center;
 }
-/*width er 14.28% da der er 7 uge dage, og derfor er 100/7=14,28
- */
+
+/*hover with a grey color*/
 .days div:hover {
     background-color: grey;
 }
 
-
-.today{
-    background-color: blue;
-    color:white;
-}
-
-.prev_date{
-    color:darkgray;
-}
-/*forklar*/
-
+/* sets the font of the month to 30px.*/
+/* font weight is the thickness of the div.*/
 #month {
     font-size:30px;
     font-weight: 500;
 }
+
+/* display flex sets the arrow in the middle vertically.*/
+/*justify-content sets the arrow in the middle horizontally.*/
+/* align items sets the arrow in the middle of our radius.*/
+/* border radius makes a circle around the arrow*/
+/* Symbolet til højre (next)*/
 .prev,.next{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 23px;
-  width: 50px;
+    width: 50px;
     height: 50px;
     background-color: rgba(0,0,0,0.1);
     border-radius: 50px;
 }
-/* display flex sætter pillen ned i midten vertikalt*/
-/*justify-content sætter pillen hen til midten horisontalt*/
-/* align content sætter symbolet i midten af vores radius.*/
-/* Symbolet til højre (next)*/
+
+
 
 div.prev:hover,
 div.next:hover{
     background-color: grey;
 }
-/*find ud af hvorfor omvendt*/
 
+/* This div is the div above the calendar, with the course and the teacher.*/
 div.app{
     width: 30vw;
     height: 30vh;;
@@ -134,18 +125,13 @@ div.app{
     justify-content: center;
     align-items: center;
     margin-right: 20px;
+    margin-top: 10px;
     position: fixed;
     left: 35%;
 }
 
-.tid,.emne{
-    margin:20px;
-}
 
 
-
-
-/* css til vores sidebar*/
 
 #panel{
     width: 20vw;
@@ -157,11 +143,13 @@ div.app{
     right: 5%;
     bottom: 30%;
     display: none;
-
-
+    margin: 10px
 }
+/* The display is none, so when the the div day is clicked the block will be displayed*/
+
+
 
 #s1,#s2,#headline_message,#time,#headline{
     margin: 10px;
 }
-
+/* this margin*/

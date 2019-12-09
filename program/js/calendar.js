@@ -139,7 +139,10 @@ for (i= 0; i < currentProgram.programCourses.length; i++) {
 
     // We add another string to the variable "course", which contains a new option element. In the 1st iteration of the for loop, the value of the 1st option is set to the 'courseValue' of the 1st index in the array 'programCourses'
     // The id is set to the 'courseID' of the 1st index in the array "programCourses". We set the innerHTML to the 'courseName' of the 1st index in the array 'programCourses'
-        course += "<option class='courses' value = '"+currentProgram.programCourses[i].courseValue+"' id ='" + "course" + currentProgram.programCourses[i].courseID + "' >" + currentProgram.programCourses[i].courseName + "</option>";
+        course += "<option class='courses' value = '"+
+            currentProgram.programCourses[i].courseValue+"' id ='" + "course" +
+            currentProgram.programCourses[i].courseID + "' >" +
+            currentProgram.programCourses[i].courseName + "</option>";
     }
 
 // After the last iteration of the for loop we add a string which ends the HTML element.
