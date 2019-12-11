@@ -1,4 +1,4 @@
-// Here I'm making a function that tests if the username and password is corect from my dummydata (ddLogin.js)
+// Here I'm making a function that tests if the username and password is corect from my dummydata (dataForLogin.js)
 var loginButton = document.getElementById("loginButton");
 var currentLogIn = [];
 var existingStudent = JSON.parse(localStorage.getItem('allStudents'));
@@ -64,7 +64,7 @@ input.addEventListener("keydown",function(event) {
 // -------------- //
 // @author: Søren Poulsen
 
-// Below i will like to create a function that gives an error if the username and password is incorrect or not equal to my dummy data from ddLogin.js
+// Below i will like to create a function that gives an error if the username and password is incorrect or not equal to my dummy data from dataForLogin.js
 // I'll start by making an alert function and after specifying the criterias in form of an if statement
 /*
 else if (attempt) //attempt is undefined as we don't have that in our site as of jet

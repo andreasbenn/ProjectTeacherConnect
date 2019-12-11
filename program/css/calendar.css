@@ -87,6 +87,10 @@
     background-color: grey;
 }
 
+.prev_date{
+    color:darkgray;
+}
+
 /* sets the font of the month to 30px.*/
 /* font weight is the thickness of the div.*/
 #month {
