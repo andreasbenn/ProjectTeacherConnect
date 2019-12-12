@@ -172,7 +172,7 @@ selectedCourse = "";
 var courseField = document.getElementById("s1");
 
 // This is an addEventListener which waits on a change on the first dropdown menu which specifies the chosen course. It then calls functions for the teachers, which is made below.
-// https://www.w3schools.com/jsref/met_element_addeventlistener.asp
+// ("How to trigger", s.d.)
 courseField.addEventListener("change", function () {
 
     // We push the value of the selected course in the 'courseField' to local Storage as 'selectedCourse'.
@@ -266,7 +266,7 @@ teacherField.addEventListener("change", function () {
 
 // This functions is used in or checkbox, where time is selected.
 function executeCalendar(e){
-    // https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+    // ("Event.preventDefault", s.d.)
     e.preventDefault()
     var checkbox = document.getElementsByClassName('time1');
 
@@ -411,7 +411,7 @@ function savesInfo (){
 
 /*
 
-// https://www.youtube.com/watch?v=BiOXf9HHGUA
+// (Iltechs, 2019)
 var s1 = document.getElementById('s1');
 var s2 = document.getElementById('s2');
 console.log(s1.value)
