@@ -1,3 +1,15 @@
+commit d31ba3e6dda8e74dfa73b7d800252f6e250f9ef7
+Author: andreasbenn <anbe17aj@student.cbs.dk>
+Date:   Thu Dec 12 08:35:09 2019 +0100
+
+    Fixed sources
+
+commit 75fea74f0bc5dff0145ffb9f06b4d91bcfb0401a
+Author: andreasbenn <anbe17aj@student.cbs.dk>
+Date:   Thu Dec 12 06:28:40 2019 +0100
+
+    Added new gitlog
+
 commit 8aabfa01d30041b5bdd0d7b8039c79679d42f7da
 Author: Søren Poulsen <patrone@Srens-MacBook-Pro.local>
 Date:   Thu Dec 12 06:24:58 2019 +0100
