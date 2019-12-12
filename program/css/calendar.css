@@ -102,7 +102,7 @@
 /*justify-content sets the arrow in the middle horizontally.*/
 /* align items sets the arrow in the middle of our radius.*/
 /* border radius makes a circle around the arrow*/
-/* Symbolet til højre (next)*/
+/* back and forth */
 .prev,.next{
     display: flex;
     justify-content: center;
@@ -113,8 +113,6 @@
     background-color: rgba(0,0,0,0.1);
     border-radius: 50px;
 }
-
-
 
 div.prev:hover,
 div.next:hover{
@@ -134,9 +132,6 @@ div.app{
     left: 35%;
 }
 
-
-
-
 #panel{
     width: 20vw;
     height: 35vh;
@@ -150,8 +145,6 @@ div.app{
     margin: 10px
 }
 /* The display is none, so when the the div day is clicked the block will be displayed*/
-
-
 
 #s1,#s2,#headline_message,#time,#headline{
     margin: 10px;

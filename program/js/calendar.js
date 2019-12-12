@@ -17,9 +17,12 @@ var submitBtn = document.getElementById("submitBtn");
 
 // -------------- //
 // @author: Oliver Langkjær Michelsen
+// Inspiration for calendar - it is important to know that the calendar is made with inspiration from the following youtube video.
+// The calendar represented in the video is a calendar and not a date picker. The code beyond the functions regarding 'date' methods, is purely created by the developers and not found in this video. (inspiration goes up till line #118)
+// https://www.youtube.com/watch?v=B6a068z8Rkk
 
 var dt = new Date();
-// To start of with we create a variable name 'dt' which use the java method 'new Date' which is used for creating an object constructor function. This variable will now be used in creating the calendar. the variable is because of the () declared to as a function
+// To start of with we create a variable name 'dt' which use the javascript method 'new Date' which is used for creating an object constructor function. This variable will now be used in creating the calendar. the variable is because of the () declared to as a function
 // https://stackoverflow.com/questions/1646698/what-is-the-new-keyword-in-javascript
 
 function renderDate() {<!-- The class name "content" does not have any relevance for our js file, and is only used for creating overview of the div section. -->
@@ -166,6 +169,7 @@ selectedCourse = "";
 var courseField = document.getElementById("s1");
 
 // This is an addEventListener which waits on a change on the first dropdown menu which specifies the chosen course. It then calls functions for the teachers, which is made below.
+// https://www.w3schools.com/jsref/met_element_addeventlistener.asp
 courseField.addEventListener("change", function () {
 
     // We push the value of the selected course in the 'courseField' to local Storage as 'selectedCourse'.
@@ -259,6 +263,7 @@ teacherField.addEventListener("change", function () {
 
 // This functions is used in or checkbox, where time is selected.
 function executeCalendar(e){
+    // https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
     e.preventDefault()
     var checkbox = document.getElementsByClassName('time1');
 
@@ -363,9 +368,9 @@ function createBooking() {
 
 document.getElementById("submitBtn").addEventListener("click", executeCalendar);
 
-// ----- OLD CODE WE NO LONGER USE ----- //
-// ----- OLD CODE WE NO LONGER USE ----- //
-// ----- OLD CODE WE NO LONGER USE ----- //
+// ----- OLD CODE WE NO LONGER USE DEPRECATED ----- //
+// ----- OLD CODE WE NO LONGER USE DEPRECATED ----- //
+// ----- OLD CODE WE NO LONGER USE DEPRECATED ----- //
 
 /*
 function savesInfo (){
@@ -402,6 +407,8 @@ function savesInfo (){
 */
 
 /*
+
+// https://www.youtube.com/watch?v=BiOXf9HHGUA
 var s1 = document.getElementById('s1');
 var s2 = document.getElementById('s2');
 console.log(s1.value)
@@ -575,6 +582,7 @@ function s4() {
 // -------------- //
 
 /*
+//tried but didn't work
 $(document).click(function(event) {
     var text = $(event.target).text();
     console.log((text))

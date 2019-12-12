@@ -32,6 +32,7 @@ loginButton.onclick = function loginFunction (e) {
             //Push userName to current local storage
             currentLogIn.push(existingStudent[i]);
             alert("Login has been verified");
+            // https://www.w3schools.com/howto/howto_js_redirect_webpage.asp
             document.location.href = "home.html";
             var currentStudentString = JSON.stringify(currentLogIn);
             localStorage.setItem('currentStudent', currentStudentString);
@@ -92,8 +93,3 @@ submitButton.onclick = function() {
     }
 };
  */
-
-
-
-
-

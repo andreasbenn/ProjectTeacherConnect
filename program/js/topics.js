@@ -7,12 +7,7 @@ var topicList = JSON.parse(localStorage.getItem("allTopics"));
 var teacherList = JSON.parse(localStorage.getItem("allTeachers"));
 var studentList = JSON.parse(localStorage.getItem("allStudents"));
 var selectedCourse = localStorage.getItem("selectedCourse");
-/*function courseTopics() {
-    for (i= 0; i < courseList.length; i++){
-    if(courseField.options[courseField.selectedIndex].value == courseList[i].courseValue){
-      currentCourseTopics.push(courseList[i].topics);
-    }
-}}*/
+
 // variable finding the selected course
 
 // -------------- //
@@ -91,10 +86,10 @@ function checkTopic () {
     for (i= 0; i < currentCourseTopics[0].length; i++) {
         for (j = 0; j < courseList.length; j++) {
             for(h = 0; h < courseList[j].topics.length; h++) {
-                console.log("Antal gange loopet kører:" + i);
+                console.log("The loop runs:" + i + " times");
                 if (enteredTopic.value == currentCourseTopics[0][i].topic
                     && currentCourseTopics[0][i].id == courseList[j].topics[h].id) {
-                    alert("Du har valgt en af de topics der eksisterer");
+                    alert("You have chosen one of the topics that is already stored");
                     courseList[j].topics[h].popCounter++;
 
                    localStorage.setItem("allCourses",JSON.stringify(courseList));
@@ -111,7 +106,7 @@ function checkTopic () {
     // The popularity is set to 1, and the id generator function runs so that new topic gets a unique id.
 
         if (boolean === false) {
-            alert("Du har valgt en af de topics der ikke eksisterer");
+            alert("You have chosen one of the topics that is not currently stored");
             id_gen();
             var topicx = new Topic(
                 document.getElementById("Topic").value,
