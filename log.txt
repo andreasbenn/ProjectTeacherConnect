@@ -1,0 +1,664 @@
+commit 6fad59cf9fba8b05bb0f41a8e808f4abf4bbb5c1
+Author: andreasbenn <anbe17aj@student.cbs.dk>
+Date:   Thu Dec 12 01:21:25 2019 +0100
+
+    removed really unused code and added some sources
+
+commit 724ecabf63629bf1d4edaa622e1d2723d7c4ec84
+Merge: 590b826 ac808c4
+Author: andreasbenn <anbe17aj@student.cbs.dk>
+Date:   Thu Dec 12 00:40:50 2019 +0100
+
+    Merge branch 'master' of https://github.com/andreasbenn/ProjectTeacherConnect
+
+commit 590b8265997016216f9cf55b4eefc11ab308b024
+Author: andreasbenn <anbe17aj@student.cbs.dk>
+Date:   Thu Dec 12 00:40:38 2019 +0100
+
+    added git log
+
+commit ac808c48f715603386f7e69087bde8bf199b4712
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Thu Dec 12 00:31:50 2019 +0100
+
+    Update README.md
+
+commit 6cc2b20a4706954b3a16ce9663115b6c9dce3957
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Thu Dec 12 00:31:28 2019 +0100
+
+    Update README.md
+
+commit be22e06bc27ae5b5c50ea0cb2994ccfaa53edda7
+Merge: 12d778c e373db3
+Author: andreasbenn <anbe17aj@student.cbs.dk>
+Date:   Thu Dec 12 00:29:35 2019 +0100
+
+    Merge branch 'master' of https://github.com/andreasbenn/ProjectTeacherConnect
+
+commit 12d778c3b57924c43be614064d00cc3790909c1e
+Author: andreasbenn <anbe17aj@student.cbs.dk>
+Date:   Thu Dec 12 00:29:17 2019 +0100
+
+    Moved unused js files to one file, and fixed css
+
+commit e373db32f0f3a53784c6631272c2320955d5ea7b
+Merge: 6fc928a fd3d358
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Mon Dec 9 04:50:41 2019 -0800
+
+    Merge pull request #30 from andreasbenn/css
+    
+    Tilføjet ny css
+
+commit fd3d35843c20faac6b3226816e75a3ec925f1bc0
+Author: andreasbenn <anbe17aj@student.cbs.dk>
+Date:   Mon Dec 9 13:49:38 2019 +0100
+
+    Tilføjet ny css
+
+commit 6fc928a80ea6c92852f42146096dd2a5c3dbc7e9
+Author: andreasbenn <anbe17aj@student.cbs.dk>
+Date:   Mon Nov 25 12:04:08 2019 +0100
+
+    After submit now refs to My Page
+
+commit d925971bc21f0fcfbb9552ec03d4809836866166
+Author: Andreasbenn <anbe17aj@student.cbs.dk>
+Date:   Sat Nov 23 11:30:28 2019 +0100
+
+    Deleted unused HTML files
+
+commit 9afd259572c238abae43b5dc7553abad1467a2d0
+Author: Andreasbenn <anbe17aj@student.cbs.dk>
+Date:   Sat Nov 23 10:08:34 2019 +0100
+
+    fixed bookings
+
+commit 22f618628f3d0f531f965279a475fe6bdd177db4
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Sat Nov 23 09:59:45 2019 +0100
+
+    Update dataForAllSites.js
+
+commit f8134f96585c2c40c24c076f5aa01e7e2859789e
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Sat Nov 23 09:58:50 2019 +0100
+
+    Update calendar.js
+    
+    fixed duplicated code and moved old code to bottom
+
+commit 5b13829e57e31aab44f94d6f040ef81c26ff61cf
+Merge: c518396 9f855e5
+Author: Reuther <jere19ac@student.cbs.dk>
+Date:   Sat Nov 23 09:16:17 2019 +0100
+
+    hej
+
+commit c518396fac5be3a4cb12c44cb7ef6c34220e70a9
+Author: Reuther <jere19ac@student.cbs.dk>
+Date:   Sat Nov 23 09:08:36 2019 +0100
+
+    added checkCurrentStudent
+
+commit 9f855e568059d9753ea9f576bdfa4f120cc66ecf
+Merge: bd88d54 efe0d12
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Tue Nov 19 11:58:32 2019 +0100
+
+    Merge pull request #29 from andreasbenn/small
+    
+    Small changes
+
+commit efe0d12353bd72b3f7b137d44b06747534c8d0e7
+Author: Andreasbenn <anbe17aj@student.cbs.dk>
+Date:   Tue Nov 19 11:58:03 2019 +0100
+
+    Small changes
+
+commit bd88d54069eb3bf948a964e876b5814592ec9499
+Merge: 43ec71c 224fd56
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Tue Nov 19 11:51:35 2019 +0100
+
+    Merge pull request #28 from andreasbenn/author
+    
+    Added authors and cleaned up code
+
+commit 224fd5620c62d9cd06d7d5b784febe1563a70ab1
+Author: Andreasbenn <anbe17aj@student.cbs.dk>
+Date:   Tue Nov 19 11:46:03 2019 +0100
+
+    Added authors and cleaned up code
+
+commit 43ec71c90ee2586eedf0663b92f19ef86e6169a2
+Merge: 381bde1 714a92e
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Tue Nov 19 09:52:30 2019 +0100
+
+    Merge pull request #27 from andreasbenn/herje
+    
+    Update calendar.js
+
+commit 714a92e90c4209f97d11dcde66d8582e35eeffea
+Author: Reuther <55132011+Reuther@users.noreply.github.com>
+Date:   Sun Nov 17 17:43:21 2019 +0100
+
+    Update calendar.js
+
+commit bf54e8b2c0c2ed0ab99921b88fca2d57fd93a323
+Author: Reuther <jere19ac@student.cbs.dk>
+Date:   Sun Nov 17 17:36:31 2019 +0100
+
+    comments in calendar
+
+commit 1d61cee76dbae6f1656d60361b0b7311f2adb2da
+Merge: f28f588 381bde1
+Author: Reuther <jere19ac@student.cbs.dk>
+Date:   Sun Nov 17 17:35:47 2019 +0100
+
+    Merge branch 'master' of https://github.com/andreasbenn/ProjectTeacherConnect
+
+commit f28f5884c5d4e4a804e63833aae0911e75ac8187
+Author: Reuther <jere19ac@student.cbs.dk>
+Date:   Sun Nov 17 17:29:10 2019 +0100
+
+     added comments to calendar- ANDREAS- check line 272 and line 206
+
+commit 381bde1e9d75cc1707cb8f9a62539a09e9a5d7bf
+Merge: 1c2b088 98e0582
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Sun Nov 17 16:42:26 2019 +0100
+
+    Merge pull request #26 from andreasbenn/andreas
+    
+    added comments to user and logout
+
+commit 98e05826ce02741328f46600e1d649be05f7f7eb
+Author: Andreasbenn <anbe17aj@student.cbs.dk>
+Date:   Sun Nov 17 16:41:26 2019 +0100
+
+    added comments to user and logout
+
+commit 1c2b0887af377b62532ef860b5e7e9b3e8706f13
+Merge: f73e157 24dfa81
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Sun Nov 17 16:21:23 2019 +0100
+
+    Merge pull request #25 from andreasbenn/jeppe
+    
+    Added comments to dataForAllSites
+
+commit 24dfa812035fbeecbe29761a2fa75cdb330eaad5
+Author: Reuther <jere19ac@student.cbs.dk>
+Date:   Sun Nov 17 16:15:26 2019 +0100
+
+    Added comments to dataForAllSites
+
+commit f73e157c3c79b3e559e9ceb613018263de5e151c
+Merge: de78baa ab63a9b
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Mon Nov 11 14:51:24 2019 +0100
+
+    Merge pull request #24 from andreasbenn/stable
+    
+    Fixed courseList multiply
+
+commit ab63a9bb193c0dc6c00408175088db2d4baa0dc9
+Author: Reuther <jere19ac@student.cbs.dk>
+Date:   Mon Nov 11 14:49:55 2019 +0100
+
+    Fixed courseList multiply
+
+commit de78baafc275787a640d4b68976de71c5ba92d73
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Mon Nov 11 14:09:45 2019 +0100
+
+    Booking virker
+
+commit d7631401eb025909936485a4e8cd78adc159c035
+Merge: f3ce950 4f6c24f
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Mon Nov 11 12:17:29 2019 +0100
+
+    Merge pull request #23 from andreasbenn/stab
+    
+    Topics virker + for loop i et for loop i et for loop
+
+commit 4f6c24f50b70aee641067a3cc3d1484f0691fed3
+Author: Reuther <jere19ac@student.cbs.dk>
+Date:   Mon Nov 11 11:32:31 2019 +0100
+
+    Topics virker + for loop i et for loop i et for loop
+
+commit f3ce950543e1eee36024f7c1e6f66a0ceabd2f38
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Sun Nov 10 15:39:41 2019 +0100
+
+    Update README.md
+
+commit 5af8f3e1eab51012d2da2e423d2f6a6231c039c7
+Merge: 2f42fbf 5c492f1
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Sun Nov 10 15:37:05 2019 +0100
+
+    Merge pull request #22 from andreasbenn/stable
+    
+    Changed a lot to make it object orientated + fixed bookings
+
+commit 5c492f1834b72cf6e7e8b0901e93793106d1a8e1
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Sun Nov 10 15:35:37 2019 +0100
+
+    Changed a lot to make it object orientated + fixed bookings
+
+commit 2f42fbf76629f7643cfd558b23af99cd9d75bfea
+Merge: f53cba8 511bce4
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Fri Nov 8 19:58:41 2019 +0100
+
+    Merge pull request #21 from andreasbenn/stab
+    
+    Topics now objectorientated
+
+commit 511bce4140d5f7fe3fec4334f779b696e9d54409
+Author: Reuther <jere19ac@student.cbs.dk>
+Date:   Fri Nov 8 19:56:31 2019 +0100
+
+    Topics now objectorientated
+
+commit f53cba8044d0996b78e8ea93c7fcf4dcca65dd13
+Merge: 8c92fa1 381f248
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Fri Nov 8 18:43:20 2019 +0100
+
+    Merge pull request #20 from andreasbenn/stable
+    
+    Changed dataForAllSites and Topics
+
+commit 381f2486c6bf319a607774c7127c55cd3c979118
+Author: Reuther <jere19ac@student.cbs.dk>
+Date:   Fri Nov 8 18:40:47 2019 +0100
+
+    Changed dataForAllSites and Topics
+
+commit 8c92fa1a16365001cbb8a7d5d695044cacf36a66
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Fri Nov 8 18:25:02 2019 +0100
+
+    fixed logout
+
+commit df50fc59beda45d740cd1a4d131a21274bb3060a
+Merge: a6f8178 da9698a
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Fri Nov 8 18:21:56 2019 +0100
+
+    Merge pull request #19 from andreasbenn/stable
+    
+    fået login og logou til og spille sammen med seneste opdatering
+
+commit da9698aa192d270d9b88192574995abb0635bfd9
+Author: Søren Poulsen <patrone@Srens-MacBook-Pro.local>
+Date:   Fri Nov 8 18:19:15 2019 +0100
+
+    fået login og logou til og spille sammen med seneste opdatering
+
+commit a6f81788bd271992d272c02cd8b49ea08683d6f7
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Fri Nov 8 18:00:17 2019 +0100
+
+    Jeppe
+
+commit b48c14f8b27aa6bd8bae27410970f5ceb8bfd3be
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Fri Nov 8 15:55:04 2019 +0100
+
+    Fixed calendar with new topics
+
+commit 01a0364a89536206248873438186c0f34be803de
+Merge: 3a3cd8f 1151027
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Fri Nov 8 13:27:37 2019 +0100
+
+    Merge pull request #18 from andreasbenn/stab
+    
+    Merge pull request #17 from andreasbenn/master
+
+commit 11510272f3e0bcf6fd7d8bcbfc4247f78d6659de
+Merge: 4be7b95 3a3cd8f
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Fri Nov 8 12:56:52 2019 +0100
+
+    Merge pull request #17 from andreasbenn/master
+    
+    changed topics.js
+
+commit 3a3cd8f288b85b7743b8ca2bb6d6f0475dacc0cb
+Author: Reuther <jere19ac@student.cbs.dk>
+Date:   Fri Nov 8 12:51:12 2019 +0100
+
+    changed topics.js
+
+commit 4be7b95ab204ec080637850b278bf60b0ac90385
+Merge: bf66e6d d9b17b1
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Fri Nov 8 12:04:16 2019 +0100
+
+    Merge pull request #16 from andreasbenn/stab
+    
+    Danish comments/code -> english
+
+commit d9b17b113ee9f8dca187411a15a4f2a5b83034f5
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Fri Nov 8 12:03:23 2019 +0100
+
+    Danish comments/code -> english
+
+commit bf66e6d94c44120a0ae6234b0553a3cddc2731e0
+Merge: 6a9dfd8 7ed789c
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Fri Nov 8 11:54:47 2019 +0100
+
+    Merge pull request #15 from andreasbenn/stab
+    
+    enter function + comments
+
+commit 7ed789c592f3c46593b89f8d87593a3b6ce0ab6c
+Author: Søren Poulsen <patrone@Srens-MacBook-Pro.local>
+Date:   Fri Nov 8 11:53:18 2019 +0100
+
+    enter function + comments
+
+commit 6a9dfd87f5003ac7657d511b40abc36e4918b1cf
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Fri Nov 8 11:30:07 2019 +0100
+
+    Update myPage.html
+
+commit b5ddc7df426c266d88d6acd3ee08cb4f0ad90295
+Merge: b78228b 2023b7c
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Fri Nov 8 11:28:38 2019 +0100
+
+    Merge branch 'master' of https://github.com/andreasbenn/ProjectTeacherConnect
+
+commit b78228b3e8eafbb8f3945ea442105c86e9d1b6aa
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Fri Nov 8 11:27:35 2019 +0100
+
+    Removed unused HTML
+
+commit 2023b7c5beef7fac864f379725d9f1ff12d98127
+Merge: fa42081 4f93bcd
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Fri Nov 8 11:25:54 2019 +0100
+
+    Merge pull request #13 from andreasbenn/stable
+    
+    Added booking current user + show bookings under My Page + added comm…
+
+commit 4f93bcd2e94b9bd6548e0029a1aabdf401c48fa4
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Fri Nov 8 11:24:23 2019 +0100
+
+    Added booking current user + show bookings under My Page + added comments + deleted redundant code
+
+commit fa42081a6b26d2129406654bac0ff71ee2e833b7
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Thu Nov 7 21:55:56 2019 +0100
+
+    Update andreasTestUser.js
+
+commit d62c5f387dca2bc600ff836065c271062c591b6f
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Wed Nov 6 13:46:40 2019 +0100
+
+    My Page
+
+commit b0deea691a578a0cae705193062a9f8bc690ad1a
+Merge: 9607bcb d070b6e
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Tue Nov 5 10:08:53 2019 +0100
+
+    Merge branch 'master' of https://github.com/andreasbenn/ProjectTeacherConnect
+
+commit 9607bcbb36b65060eb2b830331c300a0ebeede17
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Tue Nov 5 10:08:17 2019 +0100
+
+    new commit
+
+commit d070b6e8cfe97d822b112ccfec587b35d40fd681
+Merge: 23149cd 1c434ee
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Tue Nov 5 10:02:04 2019 +0100
+
+    Merge pull request #11 from andreasbenn/jep
+    
+    Merge pull request #10 from andreasbenn/master
+
+commit 1c434ee899f69ecf905b428748eb8b0366c12c8d
+Merge: 612793a 23149cd
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Tue Nov 5 09:59:37 2019 +0100
+
+    Merge pull request #10 from andreasbenn/master
+    
+    Merging out
+
+commit 23149cdbb898d1eebefca36bcec02f39fc0003aa
+Merge: 4e7819e b66b23b
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Tue Nov 5 09:27:30 2019 +0100
+
+    Merge pull request #9 from andreasbenn/andreas
+    
+    Added currentUser in needed html files, which allows you to print out…
+
+commit b66b23b94537bc6072c2f4d209c0bea136e5406a
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Tue Nov 5 09:21:39 2019 +0100
+
+    Added currentUser in needed html files, which allows you to print out its values + removed comment from bookings array (not used) + fixed localstorage to not replace array
+
+commit 4e7819e35f893a12bf525e30b23a2e5ecee434ac
+Merge: bfe3282 612793a
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Tue Nov 5 08:14:10 2019 +0100
+
+    Merge pull request #7 from andreasbenn/jep
+    
+    Jep
+
+commit 612793ab94f75625dedc3e338648a14f202e648f
+Author: Reuther <55132011+Reuther@users.noreply.github.com>
+Date:   Tue Nov 5 08:11:39 2019 +0100
+
+    Update topics.js
+
+commit b0a9fe627a58a0382f443ae9c5036900bfddf682
+Merge: c9d0e65 bfe3282
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Tue Nov 5 08:08:17 2019 +0100
+
+    Merge pull request #6 from andreasbenn/master
+    
+    Merged master to Jep
+
+commit bfe328222e8c69b662016718cd3cdb253ebbfcd8
+Merge: c90081b ee545ae
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Mon Nov 4 23:34:10 2019 +0100
+
+    Merge pull request #5 from andreasbenn/andreas
+    
+    Added  topics to bookings
+
+commit ee545ae4484358e9e5ef7c78fc727e006916090f
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Mon Nov 4 23:32:47 2019 +0100
+
+    Added  topics to bookings
+
+commit c90081b2a55020028aca209995561ef10b8d3291
+Merge: 010a004 c9d0e65
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Mon Nov 4 13:14:24 2019 +0100
+
+    Merge pull request #4 from andreasbenn/jep
+    
+    Fixed login
+
+commit c9d0e65a1a91a6b2bdd109d48068cf474f8568c1
+Author: Reuther <jere19ac@student.cbs.dk>
+Date:   Mon Nov 4 13:10:49 2019 +0100
+
+    Fixed login
+
+commit 010a0041ff7ebd7987a4e2e1fffdcfcd72b8c243
+Merge: 929787a 160ea28
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Mon Nov 4 12:08:34 2019 +0100
+
+    Merge pull request #3 from andreasbenn/jep
+    
+    onclick function changed
+
+commit 160ea28f86cf5c3c49434b8e0ec9c60eb3df772a
+Author: Reuther <jere19ac@student.cbs.dk>
+Date:   Mon Nov 4 12:02:16 2019 +0100
+
+    onclick function changed
+
+commit 929787aa6cbd46bc9b561864d47799ae88ca68f3
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Sun Nov 3 22:47:04 2019 +0100
+
+    Fixed bookings not saving in localstorage cause of onclick from multiple js files (topic overwrote it)
+
+commit 8a57277eff7e401c3103542782619d869291bb00
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Sun Nov 3 17:31:05 2019 +0100
+
+    fixed login
+
+commit db6aadc5ae384cba79ad9df135ee857b654a1ace
+Author: Reuther <55132011+Reuther@users.noreply.github.com>
+Date:   Sun Nov 3 16:59:33 2019 +0100
+
+    Update login.js
+    
+    Working
+
+commit 8322250569b54273514599b7db011c807d399661
+Author: Reuther <55132011+Reuther@users.noreply.github.com>
+Date:   Sun Nov 3 16:59:00 2019 +0100
+
+    Update ddLogin.js
+    
+    Working
+
+commit 43234a78712d59ea0d0eb2ba718a9f0f850a1da8
+Author: Reuther <55132011+Reuther@users.noreply.github.com>
+Date:   Sun Nov 3 16:58:02 2019 +0100
+
+    Update login.html
+    
+    Changed to working
+
+commit a224bd236b159b5ad684243e68b2de2c03912447
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Sun Nov 3 16:46:24 2019 +0100
+
+    New commit
+
+commit 6be62b806572c116a8de24b7c1e01399a4a12cc8
+Merge: 9dcfb62 b7f001b
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Sun Nov 3 15:47:00 2019 +0100
+
+    Merge pull request #2 from andreasbenn/soren
+    
+    opdateret login
+
+commit b7f001b91c905af66780bb2a1342418d5781981e
+Author: Søren Poulsen <patrone@Srens-MacBook-Pro.local>
+Date:   Sun Nov 3 15:40:33 2019 +0100
+
+    opdateret login
+
+commit 9dcfb62298dd78cc9ac15baefb70571e278a2637
+Merge: 06f4277 8147c0d
+Author: Andreas <55131949+andreasbenn@users.noreply.github.com>
+Date:   Sun Nov 3 15:28:03 2019 +0100
+
+    Merge pull request #1 from andreasbenn/jep
+    
+    Added topics to calendar
+
+commit 8147c0d7a1f5be02d804c1529734ef32ceadf557
+Author: Reuther <jere19ac@student.cbs.dk>
+Date:   Sun Nov 3 15:20:34 2019 +0100
+
+    Added topics to calendar
+
+commit 06f4277196e1281e448a8e9075178b57d2edef55
+Author: Reuther <jere19ac@student.cbs.dk>
+Date:   Sun Nov 3 12:09:49 2019 +0100
+
+    removed empty js files
+
+commit f67cf8fa11293bfd4317a8deb4caa06c063b1095
+Author: Reuther <jere19ac@student.cbs.dk>
+Date:   Sun Nov 3 12:08:47 2019 +0100
+
+    added topics
+
+commit 4b78e091241d4cec08cd10d30ae3dd29b62c5b43
+Author: OliverMichelsen <54838872+OliverMichelsen@users.noreply.github.com>
+Date:   Sun Nov 3 09:50:54 2019 +0100
+
+    Add files via upload
+
+commit c1d0d38431b91ab763cf031f98c29041f7f4cce4
+Author: OliverMichelsen <54838872+OliverMichelsen@users.noreply.github.com>
+Date:   Sun Nov 3 09:50:08 2019 +0100
+
+    Add files via upload
+
+commit c1beb6412fd219fd52c99d26f893dae2100dee56
+Author: Søren Poulsen <patrone@Srens-MacBook-Pro.local>
+Date:   Fri Nov 1 08:30:34 2019 +0100
+
+    tilføjet engelsk kommentar
+
+commit a3fcfe22b9810c58b9b656ec893eab2950d7ced0
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Thu Oct 31 13:49:24 2019 +0100
+
+    Tilføjet flere navne på filer
+
+commit d13849361ba8c49112869972c45bc38888dc9473
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Thu Oct 31 13:44:14 2019 +0100
+
+    Ny struktur for at få det hele til at hænge sammen
+
+commit 39528c56c5299cf1c2238bda8813175d6c1ae35e
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Thu Oct 31 13:29:56 2019 +0100
+
+    Tilføjet Olivers del
+
+commit f8b552a5cbf38fad0dd129b85499d992f6b60bae
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Tue Oct 29 21:28:44 2019 +0100
+
+    Added authors to every document
+
+commit 6aa7f8bac39f78fade32c1e9679bd8a40183921e
+Author: Andreas <anbe17aj@student.cbs.dk>
+Date:   Tue Oct 29 21:21:49 2019 +0100
+
+    Ny push
