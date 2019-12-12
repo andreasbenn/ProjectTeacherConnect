@@ -1,3 +1,21 @@
+commit 8aabfa01d30041b5bdd0d7b8039c79679d42f7da
+Author: Søren Poulsen <patrone@Srens-MacBook-Pro.local>
+Date:   Thu Dec 12 06:24:58 2019 +0100
+
+    Final Version
+
+commit dae828d6139ce02bdf3f9044b504e088fd7333a6
+Author: andreasbenn <anbe17aj@student.cbs.dk>
+Date:   Thu Dec 12 01:45:09 2019 +0100
+
+    Small changes so we can change format of references
+
+commit 3bb05c4427b6b574a4fec8121d6ee305f228aee5
+Author: andreasbenn <anbe17aj@student.cbs.dk>
+Date:   Thu Dec 12 01:23:24 2019 +0100
+
+    added git log
+
 commit 6fad59cf9fba8b05bb0f41a8e808f4abf4bbb5c1
 Author: andreasbenn <anbe17aj@student.cbs.dk>
 Date:   Thu Dec 12 01:21:25 2019 +0100
