@@ -132,6 +132,7 @@ function checkTopic () {
 // If the result is negative b is sorted before a, and if the result is positive, a is sorted before b.
 // It then pushes the sorted array into localstorage with JSON.stringify, and then parses it down again.
 // https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
+// ("How to sort an array of integers correctly" 2009)
 
 function sortTopics () {
     for (i = 0; i<courseList.length; i++){

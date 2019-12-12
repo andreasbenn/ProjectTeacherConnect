@@ -15,21 +15,24 @@ var currentProgram = JSON.parse(localStorage.getItem("currentProgram"));
 var buttons = document.getElementsByClassName('day');
 var submitBtn = document.getElementById("submitBtn");
 
+//("JavaScript Date" s.d.) - obtained information about the Date references.
+
+
 // -------------- //
 // @author: Oliver Langkjær Michelsen
 // Inspiration for calendar - it is important to know that the calendar is made with inspiration from the following youtube video.
 // The calendar represented in the video is a calendar and not a date picker. The code beyond the functions regarding 'date' methods, is purely created by the developers and not found in this video. (inspiration goes up till line #118)
-// https://www.youtube.com/watch?v=B6a068z8Rkk
+// (Iltechs, 2019)
 
 var dt = new Date();
 // To start of with we create a variable name 'dt' which use the javascript method 'new Date' which is used for creating an object constructor function. This variable will now be used in creating the calendar. the variable is because of the () declared to as a function
-// https://stackoverflow.com/questions/1646698/what-is-the-new-keyword-in-javascript
+// ("What is the 'new' keyword in JavaScript" 2009)
 
 function renderDate() {<!-- The class name "content" does not have any relevance for our js file, and is only used for creating overview of the div section. -->
 
     dt.setDate(1);
 // set.Date is a javascript function we use so the date is equal to the weekday. We use the parameter (1) because (0) is equal to the first day of the last month, and we want to get the first day of this month.
-// https://www.w3schools.com/jsref/jsref_setdate.asp
+// ("JavaScript setDate" s.d)
     var day = dt.getDay();
 
     // this is consoled log, so we can see how many dates from last month we have.
@@ -59,7 +62,7 @@ console.log(dt.getDay());
     var months = ["January","February","March","April","May", "June","July","August","September","October","November","December"];
 
 // We here use a object constructor function, which prints the date to our paragraph in html.
-// https://www.geeksforgeeks.org/javascript-date-todatestring-function/
+// ""JaveScript | date.toDateString" s.d)/
     document.getElementById("date_str").innerHTML = 1 + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear();
 
     //document.getElementById("date_str").innerHTML = this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear();
@@ -434,6 +437,8 @@ console.log(booking)
 
 // Old code which does the same as above, but more hardcoded and not objectorientated.
 
+//("How to Create Dynamic Select Box using JavaScript" s.d.)
+
 /*  if (courseField.options[courseField.selectedIndex].value == "Ind"){
       var opt1 = document.createElement('option');
       var opt2 = document.createElement('option');
@@ -583,6 +588,7 @@ function s4() {
 
 /*
 //tried but didn't work
+("jQuery | event.target" s.d)
 $(document).click(function(event) {
     var text = $(event.target).text();
     console.log((text))

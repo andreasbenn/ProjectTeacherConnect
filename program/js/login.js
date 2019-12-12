@@ -32,7 +32,7 @@ loginButton.onclick = function loginFunction (e) {
             //Push userName to current local storage
             currentLogIn.push(existingStudent[i]);
             alert("Login has been verified");
-            // https://www.w3schools.com/howto/howto_js_redirect_webpage.asp
+            // ("How TO - Redirect" s.d)
             document.location.href = "home.html";
             var currentStudentString = JSON.stringify(currentLogIn);
             localStorage.setItem('currentStudent', currentStudentString);
@@ -52,7 +52,7 @@ loginButton.onclick = function loginFunction (e) {
 // Then we add an eventListener and that should run a function (event)
 // If the event is the enter key (keyCode 13) then it should click the button that we have described in HTML
 // In HTML we have declared that it should run our loginFunction onclick
-// Inspiration found on W3SCHOOLS - https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
+// Inspiration found on W3SCHOOLS - ("How to - Trigger" s.d)
 var input = document.getElementById("password");
 
 input.addEventListener("keydown",function(event) {
