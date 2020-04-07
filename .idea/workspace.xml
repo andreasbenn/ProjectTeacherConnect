@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="690191d0-51fa-4c6e-9b5d-40ff687c939f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZjKrCAjV8DtSINzlf8qUTvHIpc" />
+  <component name="ProjectViewState">
+    <option name="foldersAlwaysOnTop" value="false" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../PTC_Login/PTC_Ny - Copy/PTC/PTC-Frontend/js/login.js" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\langk\OneDrive\Skrivebord\PTC_Ny_-_Copy\PTC_Ny - Copy\PTC\PTC-Frontend\js\modules" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bruger\Documents\HA-IT\1. og 2. semester\Programmering og udvikling af små systemer og databaser\PTC\PTC-Frontend\views" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PTC/PTC-Frontend/views/login.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.login.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="690191d0-51fa-4c6e-9b5d-40ff687c939f" name="Default Changelist" comment="" />
+      <created>1585347259430</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585347259430</updated>
+      <workItem from="1585347260632" duration="7977000" />
+      <workItem from="1585393737180" duration="5853000" />
+      <workItem from="1585505117650" duration="1477000" />
+      <workItem from="1585556384686" duration="5732000" />
+      <workItem from="1585562204441" duration="16000" />
+      <workItem from="1585562326992" duration="37000" />
+      <workItem from="1585562382621" duration="14217000" />
+      <workItem from="1585662699313" duration="91000" />
+      <workItem from="1585842467315" duration="166000" />
+      <workItem from="1585842794779" duration="116000" />
+      <workItem from="1585843028661" duration="12948000" />
+      <workItem from="1585941854563" duration="245000" />
+      <workItem from="1585942120303" duration="21000" />
+      <workItem from="1585942161197" duration="12000" />
+      <workItem from="1585942277892" duration="38000" />
+      <workItem from="1585942370501" duration="4500000" />
+      <workItem from="1585946903438" duration="1824000" />
+      <workItem from="1585948779294" duration="53000" />
+      <workItem from="1585948995409" duration="3669000" />
+      <workItem from="1586001909415" duration="3231000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1585946435426">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/-3840.-1075.2560.1440/0.0.1536.864@0.0.1536.864" timestamp="1585946435426" />
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1585942397485" />
+    <state x="-6" y="0" width="781" height="870" key="dock-window-1" timestamp="1586001932861">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="-6" y="0" width="781" height="870" key="dock-window-1/-3840.-1075.2560.1440/0.0.1536.864@0.0.1536.864" timestamp="1586001932861" />
+    <state x="425" y="197" key="run.anything.popup" timestamp="1585575288072">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="425" y="197" key="run.anything.popup/-3840.-1075.2560.1440/0.0.1536.864@0.0.1536.864" timestamp="1585575288072" />
+  </component>
+</project>

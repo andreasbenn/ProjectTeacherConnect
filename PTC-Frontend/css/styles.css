@@ -1,0 +1,113 @@
+ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: dimgrey;
+}
+
+li {
+    float: left;
+    position: relative;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+li a:hover {
+    background-color: #111;
+}
+
+.contactInfo{
+    list-style-type: none;
+    display: block;
+    color: black;
+    text-align: left;
+    left: 0;
+}
+
+.personalInfo{
+    list-style-type: none;
+    display: block;
+    color: black;
+    text-align: left;
+    padding: 14px 16px;
+    float: left;
+    left: 0;
+}
+
+.myBookings{
+    list-style-type: none;
+    display: block;
+    color: black;
+    text-align: left;
+    padding: 14px 16px;
+    float: right;
+    right: 0;
+}
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 60px;
+    overflow-x: hidden;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.columnPrograms {
+    float: left;
+    width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.rowPrograms:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.columnPrograms {
+    float: left;
+}
+
+.left, .right {
+    width: 25%;
+}
+
+.middle {
+    width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    .columnPrograms {
+        width: 100%;
+    }
+}
+
+.ul2{
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
+
+.lu2{
+    display: list-item;
+}

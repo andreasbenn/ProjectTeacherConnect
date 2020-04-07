@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+
+<body>
+<h1 align="center">Login Page</h1>
+
+<div class="login-page">
+    <div class="form">
+
+        <p>Sign in with your CBS student mail below</p>
+        <form id="login" class="login-form">
+            <input type="text" placeholder="CBS email" name="email" id="email"/>
+            <input type="password" placeholder="password" name="password" id="password"/>
+            <input type="submit" value="login" name="login" id="loginButton"/>
+            <!--       I'm adding an onclick so that our loginFunction works with the eventlistener. our event listener triggers this button and runs our loginfunction-->
+
+            <br/><br/><br/>
+            <!--            <p>Don't have an acount? Create one below</p>-->
+            <!--        <form class="register-form">-->
+            <!--            <input type="text" placeholder="Name" id="createName"/>-->
+            <!--            <input type="text" placeholder="Username" id="createUserName"/>-->
+            <!--            <input type="password" placeholder="Password" id="createPassword"/>-->
+            <!--            <input type="password" placeholder="Repeat password" id="createRepeatPassword"/>-->
+            <!--            <input type="button" value="submit" name="submit" id="submitButton"/>-->
+        </form>
+
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="module" src="../js/login.js"></script>
+
+</body>
+
+</html>

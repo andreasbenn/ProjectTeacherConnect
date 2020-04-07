@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calender</title>
+    <link type="text/css" rel="stylesheet" href="/css/calendar.css">
+    <link type="text/css" rel="stylesheet" href="/css/styles.css">
+
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="myPage.html">My page</a></li>
+        <li><a href="testMakeBooking.html">Make a booking</a></li>
+        <li><a href="/login" id="logoutBtn">Sign out</a></li>
+    </ul>
+</head>
+
+<!--https://www.w3schools.com/jsref/event_onload.asp-->
+<body onload="renderDate()">
+
+<!-- The class name "app" does not have any relevance for our js file, and is only used in our HTML sheet, so we can use CSS styles on the div.-->
+<div class="app">
+
+    <!-- We have here created an select id with an onChance, the javascript function will therefor be executed, when the user clicks on one of the options.-->
+    <!--https://www.w3schools.com/jsref/event_onchange.asp-->
+    <!-- We create two parameters, 's1' and 's2' that represents course and teacher-->
+
+    <!-- This is an empty class, which we in our javaScript file push a select tag into, and options -->
+    <div class="coursesMenu">
+
+    </div>
+
+    <!-- This is an empty class, which we in our javaScript file push a select tag into, and options -->
+    <div class="teachersMenu">
+
+    </div>
+
+    <!--
+    <div class="tid">
+        <br/>
+        <input type="radio" class="user_rating" value="13.00-13.15"/>13.00-13.15
+        <br/>
+        <input type="radio" class="user_rating" value="13.15-13.30"/>13.15-13.30
+        <br/>
+        <input type="radio" class="user_rating" value="13.30-13.45"/>13.30-13.45
+    </div>
+-->
+    <div id="headline_message">
+        <p>Topic</p>
+        <input id="topic1" type="button" value=""/>
+        <input id="topic2" type="button" value=""/>
+        <input id="topic3" type="button" value=""/>
+        <br/>
+        <input id="Topic" type="search" value=""/>
+    </div>
+
+    <br/>
+
+</div>
+
+<!-- Classes are here made to encapsulate the different divs that the calendar contains.-->
+<div class = "wrapper">
+
+    <!--The wrapper contains the user interface, and is only represented i the css file, for giving a user friendly display. The wrapper is wrapped around the whole public-->
+
+    <div class = "calendar">
+        <!-- The 'calendar' class is also represented in the css, but the only thing represented in this class is the calendar itself. The panel -->
+        <div class="month">
+            <!--This class represents the month division which is above the weekends division -->
+            <div class = "prev" onclick = "moveDate('prev')">
+                <!--This is a onclick function that uses the span element below to execute when either the prev or next button is clicked on. -->
+                <span>&#10094</span>
+                <!-- a symbol in HTML-->
+            </div>
+            <div>
+                <h2 id="month"></h2>
+                <!-- gets its innerHTML from l.93 in javascript-->
+                <br>
+                <p id="date_str"></p>
+                <!--is the paragraph placed under the month-->
+            </div>
+            <div class= "next" onclick="moveDate('next')">
+                <span>&#10095</span>
+                <!--next names next div in calendar -->
+            </div>
+        </div>
+        <div class="weekends">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+        </div>
+        <!--The div made for the weekends-->
+        <div class="days" id = "daysTest"></div>
+
+        <div id="panel">
+            <!--We create different inputs for the teachers office hours, and give them a value we can refer to in javascript, and furthermore use in our localstorage.-->
+            <h3 id = headline>Valg af Tidspunkt</h3>
+            <form name="time">
+                <!-- Radio buttons  -->
+                <input type="radio" class="time1" value="13.00-13.15"/>13.00-13.15</input>
+                <br/>
+                <br/>
+                <input type="radio" class="time1" value="13.15-13.30"/>13.15-13.30</input>
+                <br/>
+                <br/>
+                <input type="radio" class="time1" value="13.30-13.45"/>13.30-13.45</input>
+                <br/>
+                <br/>
+                <input type="radio" class="time1" value="13.45-14.00"/>13.45-14.00</input>
+                <br/>
+                <br/>
+                <input type="submit" id="submitBtn" value="Submit">
+            </form>
+            <!--We use the radio buttons inside the HTML form, so we can use or form inputs inside it. -->
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+<%- include('layouts/script'); -%>
+</html>
