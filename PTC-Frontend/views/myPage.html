@@ -9,8 +9,8 @@
 
     <li><a href="home.html">Home</a></li>
     <li><a href="myPage.html">My page</a></li>
-    <li><a href="testMakeBooking.html">Make a booking</a></li>
-    <li><a href="/login" id="logoutBtn">Sign out</a></li>
+    <li><a href="makeBooking.html">Make a booking</a></li>
+    <li><a href="login.html" id="logoutBtn">Sign out</a></li>
 </head>
 <body>
 
@@ -21,28 +21,30 @@
         <div id="testID"></div>
 
         <h3>Full name:</h3>
-        <div id="userFullName"></div>
+        <input type="text" id="userFullName">
         <br/>
 
         <h3>Phone number:</h3>
-        <div id="userPhoneNumber"></div>
+        <input type="text" id="userPhoneNumber">
         <br/>
 
         <h3>Email address:</h3>
-        <div id="userEmail"></div>
+        <input type="text" id="userEmail">
         <br/>
 
         <h3>Address:</h3>
-        <div id="userAddress"></div>
+        <input type="text" id="userAddress">
         <br/>
 
         <h3>Student ID:</h3>
-        <div id="userStudentID"></div>
+        <input type="tex" id="userStudentID">
         <br/>
 
         <h3>Program:</h3>
-        <div id="userProgram"></div>
+        <input type="text" id="userProgram">
         <br/>
+        <br/>
+        <input type="submit" id="updateInformation" value="Save new information">
 
     </div>
 </div>
@@ -56,8 +58,11 @@
 
     </div>
 </div>
+
+</body>
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="module" src="../js/myPage.js"></script>
-</body>
+<script src="../js/logout.js"></script>
 
 </html>

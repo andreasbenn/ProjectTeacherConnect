@@ -1,7 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="690191d0-51fa-4c6e-9b5d-40ff687c939f" name="Default Changelist" comment="" />
+    <list default="true" id="690191d0-51fa-4c6e-9b5d-40ff687c939f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Course.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Course.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Teacher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/modules/teachers.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/modules/teachers.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/myPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/myPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/views/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/views/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/views/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/views/makeBooking.html" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/views/makeBooking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/views/myPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/views/myPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/views/testMakeBooking.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/lib/read.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/lib/types/json.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/lib/types/raw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/lib/types/text.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/lib/types/urlencoded.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/History.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/express.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/middleware/init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/middleware/query.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/request.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/response.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/router/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/router/route.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/view.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/fsevents-a5f6fa4e/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/fsevents-a5f6fa4e/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/fsevents-a5f6fa4e/fsevents.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/fsevents-a5f6fa4e/fsevents.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/fsevents-a5f6fa4e/fsevents.node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.staging/fsevents-a5f6fa4e/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +67,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZjKrCAjV8DtSINzlf8qUTvHIpc" />
   <component name="ProjectViewState">
     <option name="foldersAlwaysOnTop" value="false" />
@@ -25,18 +79,35 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../PTC_Login/PTC_Ny - Copy/PTC/PTC-Frontend/js/login.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ProjectTeacherConnect_Jeppe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Andreas\WebstormProjects\ProjectTeacherConnect_Andreas\PTC-Frontend\js" />
       <recent name="C:\Users\langk\OneDrive\Skrivebord\PTC_Ny_-_Copy\PTC_Ny - Copy\PTC\PTC-Frontend\js\modules" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\WebstormProjects\ProjectTeacherConnect_Andreas\PTC-Frontend\js\modules" />
+      <recent name="C:\Users\andre\WebstormProjects\ProjectTeacherConnect_Andreas\PTC-Frontend\js\classes" />
+      <recent name="C:\Users\andre\WebstormProjects\ProjectTeacherConnect_Andreas\PTC-Backend\models" />
       <recent name="C:\Users\Bruger\Documents\HA-IT\1. og 2. semester\Programmering og udvikling af små systemer og databaser\PTC\PTC-Frontend\views" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PTC/PTC-Frontend/views/login.html" useBuiltInWebServerPort="true">
@@ -47,18 +118,6 @@
         <item itemvalue="JavaScript Debug.login.html" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -90,11 +149,32 @@
       <workItem from="1585948779294" duration="53000" />
       <workItem from="1585948995409" duration="3669000" />
       <workItem from="1586001909415" duration="3231000" />
+      <workItem from="1586242617656" duration="1288000" />
+      <workItem from="1586412926580" duration="6000" />
+      <workItem from="1586761130108" duration="1874000" />
+      <workItem from="1586796663720" duration="6977000" />
+      <workItem from="1586883988852" duration="2379000" />
+      <workItem from="1587027750749" duration="10031000" />
+      <workItem from="1587195272190" duration="5767000" />
+      <workItem from="1587201294356" duration="3564000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1585946435426">

@@ -1,4 +1,4 @@
-import Teacher from "../classes/teacherClass";
+import Teacher from "../classes/teacherClass.js";
 
 export function formatTeachers(teachers){
     let allTeachers = [];

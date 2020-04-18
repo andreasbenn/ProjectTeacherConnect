@@ -3,59 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Calender</title>
-    <link type="text/css" rel="stylesheet" href="/css/calendar.css">
-    <link type="text/css" rel="stylesheet" href="/css/styles.css">
+    <link type="text/css" rel="stylesheet" href="../css/calendar.css">
+    <link type="text/css" rel="stylesheet" href="../css/styles.css">
 
     <ul>
         <li><a href="home.html">Home</a></li>
         <li><a href="myPage.html">My page</a></li>
-        <li><a href="testMakeBooking.html">Make a booking</a></li>
-        <li><a href="/login" id="logoutBtn">Sign out</a></li>
+        <li><a href="makeBooking.html">Make a booking</a></li>
+        <li><a href="login.html" id="logoutBtn">Sign out</a></li>
     </ul>
 </head>
 
 <!--https://www.w3schools.com/jsref/event_onload.asp-->
 <body onload="renderDate()">
 
-<!-- The class name "app" does not have any relevance for our js file, and is only used in our HTML sheet, so we can use CSS styles on the div.-->
-<div class="app">
+<div class="coursesMenu">
+    <select id="t1" class="optionCourses">
+    </select>
 
-    <!-- We have here created an select id with an onChance, the javascript function will therefor be executed, when the user clicks on one of the options.-->
-    <!--https://www.w3schools.com/jsref/event_onchange.asp-->
-    <!-- We create two parameters, 's1' and 's2' that represents course and teacher-->
-
-    <!-- This is an empty class, which we in our javaScript file push a select tag into, and options -->
-    <div class="coursesMenu">
-
-    </div>
-
-    <!-- This is an empty class, which we in our javaScript file push a select tag into, and options -->
-    <div class="teachersMenu">
-
-    </div>
-
-    <!--
-    <div class="tid">
-        <br/>
-        <input type="radio" class="user_rating" value="13.00-13.15"/>13.00-13.15
-        <br/>
-        <input type="radio" class="user_rating" value="13.15-13.30"/>13.15-13.30
-        <br/>
-        <input type="radio" class="user_rating" value="13.30-13.45"/>13.30-13.45
-    </div>
--->
-    <div id="headline_message">
-        <p>Topic</p>
-        <input id="topic1" type="button" value=""/>
-        <input id="topic2" type="button" value=""/>
-        <input id="topic3" type="button" value=""/>
-        <br/>
-        <input id="Topic" type="search" value=""/>
-    </div>
-
-    <br/>
 
 </div>
+
+<div class="teachersMenu">
+    <select id ="t2" class="optionTeachers">
+    </select>
+</div>
+
+<div class ="topicsMenu">
+    <p class="buttonTopics">
+    </p>
+
+</div>
+<br><br><input id="Topic" type="search" value=""/>
+<br><br><br>
+
+<!-- The class name "app" does not have any relevance for our js file, and is only used in our HTML sheet, so we can use CSS styles on the div.-->
+<div class="app">
 
 <!-- Classes are here made to encapsulate the different divs that the calendar contains.-->
 <div class = "wrapper">
@@ -121,7 +104,17 @@
 
 </div>
 
+</div>
+
+<input type="submit" value="Confirm booking" name="confirmBooking" id="confirmButton">
+
+
 </body>
 
-<%- include('layouts/script'); -%>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="module" src="../js/calendar.js"></script>
+<script src="../js/actualCalendar.js"></script>
+<script src="../js/logout.js"></script>
+
+
 </html>

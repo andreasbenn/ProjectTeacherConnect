@@ -13,27 +13,33 @@ const Teacher = mongoose.model('Teacher',TeacherSchema);
 
 module.exports = Teacher;
 
-Teacher.create({
-    fullName: 'Jan Anders Sørensen',
-    email: 'jan.anders.sørensen@gmail.com',
-    course: 'VØS',},
-    (error,Teacher)=>{
-        console.log(error,Teacher)
-    });
+function fillDBTeacher() {
+    Teacher.create({
+            fullName: 'Jan Anders Sørensen',
+            email: 'jan.anders.sørensen@gmail.com',
+            course: 'VØS',
+        },
+        (error, Teacher) => {
+            console.log(error, Teacher)
+        });
 
-Teacher.create({
-        fullName: 'Henrik Thorn',
-        email: 'Henrikthorn@cbs.dk',
-        course: 'Pro',},
-    (error,Teacher)=>{
-        console.log(error,Teacher)
-    });
+    Teacher.create({
+            fullName: 'Henrik Thorn',
+            email: 'Henrikthorn@cbs.dk',
+            course: 'Pro',
+        },
+        (error, Teacher) => {
+            console.log(error, Teacher)
+        });
 
-Teacher.create({
-        fullName: 'Nicolai Frost Jacobsen ',
-        email: 'nicolai.frost@gmail.com',
-        course: 'Pro',},
-    (error,Teacher)=>{
-        console.log(error,Teacher)
-    });
+    Teacher.create({
+            fullName: 'Nicolai Frost Jacobsen ',
+            email: 'nicolai.frost@gmail.com',
+            course: 'Pro',
+        },
+        (error, Teacher) => {
+            console.log(error, Teacher)
+        });
+}
 
+//fillDBTeacher();
