@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 
 const dateOptions = {discriminatorKey: 'date', collection: 'date'};
 const dateSchema = new Schema({
-    date: String
+    date: String,
 });
 
 const Date = mongoose.model('Date', dateSchema);
@@ -22,6 +22,7 @@ function fillDBDate() {
 }
 
 //fillDBDate();
+
 /*
 async function updateDBDate() {
     await Date.updateOne({date: "Updated date"}, {date: "New date"})

@@ -2,55 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="690191d0-51fa-4c6e-9b5d-40ff687c939f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/newBooking.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/newBooking.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTC-Backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Course.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Course.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Teacher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Booking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Date.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Date.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Topic.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Topic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/actualCalendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/actualCalendar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/calendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/modules/teachers.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/modules/teachers.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/myPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/myPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/views/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/views/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/views/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTC-Frontend/views/makeBooking.html" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/views/makeBooking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/views/myPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/views/myPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/views/testMakeBooking.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/HISTORY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/lib/read.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/lib/types/json.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/lib/types/raw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/lib/types/text.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/lib/types/urlencoded.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/body-parser-4bc284ca/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/History.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/Readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/application.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/express.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/middleware/init.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/middleware/query.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/request.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/response.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/router/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/router/layer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/router/route.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/lib/view.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/express-80294301/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/fsevents-a5f6fa4e/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/fsevents-a5f6fa4e/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/fsevents-a5f6fa4e/fsevents.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/fsevents-a5f6fa4e/fsevents.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/fsevents-a5f6fa4e/fsevents.node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/fsevents-a5f6fa4e/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +41,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ProjectTeacherConnect_Jeppe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -157,6 +117,7 @@
       <workItem from="1587027750749" duration="10031000" />
       <workItem from="1587195272190" duration="5767000" />
       <workItem from="1587201294356" duration="3564000" />
+      <workItem from="1587205369868" duration="6070000" />
     </task>
     <servers />
   </component>

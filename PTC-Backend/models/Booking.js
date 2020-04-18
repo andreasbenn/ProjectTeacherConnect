@@ -14,13 +14,16 @@ const BookingSchema = new Schema({
 const Booking = mongoose.model('Booking',BookingSchema);
 
 module.exports = Booking;
-/*
-Booking.create({
-    course: "Virkso",
-    teacher: "Hej",
-    topic: "med",
-    date: "dig",
-    studentID: "1234",
-});
 
- */
+function fillDBBooking() {
+    Booking.create({
+        course: "Virkso",
+        teacher: "Hej",
+        topic: "med",
+        date: "dig",
+        studentID: "1234",
+    });
+}
+
+//fillDBBooking();
+

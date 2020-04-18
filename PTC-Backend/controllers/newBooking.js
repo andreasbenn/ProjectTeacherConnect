@@ -1,4 +1,6 @@
 const Booking = require('../models/Booking');
+const Topic = require('../models/Topic');
+
 module.exports =
     async function (req,res) {
         var booking = JSON.parse(req.body.booking);

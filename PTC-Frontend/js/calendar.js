@@ -6,20 +6,22 @@ import Booking from "./classes/bookingClass.js";
 
 var currentWebToken = JSON.parse(localStorage.getItem('token'));
 
+// https://stackoverflow.com/questions/16805306/jquery-return-ajax-result-into-outside-variable/16805366
+var currentStudent = function() {
+    var tempStudent = null;
     $.ajax({
         url: "http://localhost:3000/user/getUserData",
         method: 'POST',
         datatype: "json",
         async: false,
         data: ({currentWebToken}),
-        success: function(response) {
-            var currentStudent = users.formatUser(response)
-            console.log(currentStudent)
+        success: function (response) {
+            tempStudent = users.formatUser(response)
         },
     });
-
+    return tempStudent
+}();
 console.log(currentStudent)
-
 
 var newBooking = new Booking();
 //Denne linje skal tilpasses til det som Oliver laver
@@ -140,7 +142,6 @@ $("#confirmButton").click((e) => {
         datatype: "json",
         data: ({booking}),
         success: function (response) {
-
 
         }
     })

@@ -10,7 +10,8 @@ var dt = new Date();
 // To start of with we create a variable name 'dt' which use the javascript method 'new Date' which is used for creating an object constructor function. This variable will now be used in creating the calendar. the variable is because of the () declared to as a function
 // ("What is the 'new' keyword in JavaScript" 2009)
 
-function renderDate() {<!-- The class name "content" does not have any relevance for our js file, and is only used for creating overview of the div section. -->
+function renderDate() {
+    // The class name "content" does not have any relevance for our js file, and is only used for creating overview of the div section.
 
     dt.setDate(1);
 // set.Date is a javascript function we use so the date is equal to the weekday. We use the parameter (1) because (0) is equal to the first day of the last month, and we want to get the first day of this month.
