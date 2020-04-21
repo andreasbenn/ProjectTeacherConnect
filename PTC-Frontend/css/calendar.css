@@ -13,24 +13,19 @@
 /* width and height is set to 100. That means that the viewport height and width is the whole document. Except the navbar, set in the header.*/
 /*align-items centers the elements in the middle vertically, and justify-content sets the elements horizontal in the middle.*/
 /* */
-.wrapper{
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    background-color: grey;
-    justify-content: center;
-    align-items: center;
-}
 
 /* The box-shadow makes the black lines around the calendar.  */
 /* We sets the position relative. This means that the position is relative to the other elements in the HTML. */
 /* the 10% is 10% from the relative position. */
 .calendar{
+    position: absolute;
+    left: 0%;
+    margin-right: -100%;
+    top: 100%;
+    text-align: center;
     width: 600px;
     background-color: white;
     box-shadow: 1px 1px 10px 3px rgba(1,1,1,1);
-    position: relative;
-    top: 10%;
 }
 
 /* space-between sets the month in the midle of the table.
@@ -121,28 +116,29 @@ div.next:hover{
 
 /* This div is the div above the calendar, with the course and the teacher.*/
 div.app{
-    width: 30vw;
-    height: 30vh;;
+    position: absolute;
+    left: 0%;
+    margin-right: -100%;
+    width: 600px;
+    height: 200px;
     background-color: lightgray;
     justify-content: center;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 10px;
     margin-top: 10px;
-    position: fixed;
     left: 35%;
 }
 
 #panel{
-    width: 20vw;
-    height: 35vh;
-    background-color: lightgray;
+    width: 400px;
+    height: 220px;
+    left: 17.5%;
+    margin-right: -100%;
+    background-color: cornflowerblue;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    right: 5%;
-    bottom: 30%;
+    position: absolute;
     display: none;
-    margin: 10px
 }
 /* The display is none, so when the the div day is clicked the block will be displayed*/
 

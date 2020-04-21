@@ -1,16 +1,18 @@
-<!-- Andreas -->
-
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>My Page</title>
 
-    <li><a href="home.html">Home</a></li>
-    <li><a href="myPage.html">My page</a></li>
-    <li><a href="makeBooking.html">Make a booking</a></li>
-    <li><a href="login.html" id="logoutBtn">Sign out</a></li>
+    <link type="text/css" rel="stylesheet" href="../css/styles.css">
+    <link type="text/css" rel="stylesheet" href="../css/myPage.css">
+
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="myPage.html">My page</a></li>
+        <li><a href="makeBooking.html">Make a booking</a></li>
+        <li><a href="login.html" id="logoutBtn">Sign out</a></li>
+    </ul>
 </head>
 <body>
 
@@ -55,7 +57,9 @@
         <h2><u>Bookings</u></h2>
 
         <h3>My current bookings:</h3>
-        <div class="bookings"></div>
+        <form class="allBookings" id="currentUserBookings"></form>
+        <br/>
+        <input type="submit" id="removeBookings" value="Slet valgte bookings">
 
     </div>
 </div>

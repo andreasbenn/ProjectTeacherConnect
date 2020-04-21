@@ -16,12 +16,3 @@ export function formatUser(user) {
     return student;
 }
 
-/*
-export function formatUsers() {
-    let allUsers = [];
-    allUsers.push("This is a test")
-    return allUsers;
-}
-
-
- */

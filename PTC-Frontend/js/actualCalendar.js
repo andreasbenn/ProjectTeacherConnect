@@ -69,15 +69,8 @@ function renderDate() {
 // ""JaveScript | date.toDateString" s.d)/
     document.getElementById("date_str").innerHTML = 1 + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear();
 
-    //document.getElementById("date_str").innerHTML = this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear();
-
 // We use our dt variable new date to get the month.
     document.getElementById("month").innerHTML = months[dt.getMonth()];
-
-    /* for(var d = 1; d <= endDate; d++) {
-         if (d <= 31) console.log(d);
-     }
- */
 
     cells = "";
 

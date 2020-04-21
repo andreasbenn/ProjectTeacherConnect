@@ -1,0 +1,48 @@
+.contactInfo{
+    list-style-type: none;
+    display: block;
+    color: black;
+    text-align: left;
+    left: 0;
+}
+
+.personalInfo{
+    list-style-type: none;
+    display: block;
+    color: black;
+    text-align: left;
+    padding: 16px 16px;
+    float: left;
+    left: 0;
+}
+
+.myBookings{
+    list-style-type: none;
+    display: block;
+    color: black;
+    text-align: left;
+    padding: 14px 16px;
+    float: right;
+    right: 0;
+}
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 60px;
+    overflow-x: hidden;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.bookings {
+    border: 1px solid gray;
+}

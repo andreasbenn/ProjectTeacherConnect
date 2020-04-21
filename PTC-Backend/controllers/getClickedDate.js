@@ -7,7 +7,6 @@ module.exports =
         var studentId = req.body.studentId;
         await Date.findOneAndUpdate({student_id: studentId}, {date: selectedDate, time: selectedTime} )
         console.log('linje 7' + studentId)
-
-       // let date = await Date.find({date: selectedDate})
+           
         res.json({selectedDate, selectedTime});
     };

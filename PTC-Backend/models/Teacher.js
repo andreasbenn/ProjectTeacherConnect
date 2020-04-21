@@ -25,7 +25,7 @@ function fillDBTeacher() {
 
     Teacher.create({
             fullName: 'Henrik Thorn',
-            email: 'Henrikthorn@cbs.dk',
+            email: 'henrik.thorn@gmail.com',
             course: 'Pro',
         },
         (error, Teacher) => {
@@ -33,9 +33,17 @@ function fillDBTeacher() {
         });
 
     Teacher.create({
-            fullName: 'Nicolai Frost Jacobsen ',
+            fullName: 'Nicolai Frost Jacobsen',
             email: 'nicolai.frost@gmail.com',
             course: 'Pro',
+        },
+        (error, Teacher) => {
+            console.log(error, Teacher)
+        });
+    Teacher.create({
+            fullName: 'Bo Bensen',
+            email: 'bo.bensen@gmail.com',
+            course: 'Mik',
         },
         (error, Teacher) => {
             console.log(error, Teacher)

@@ -15,6 +15,8 @@ const getUserIdController = require('./controllers/getUserId')
 const getUsersController = require('./controllers/getUsers');
 const userLoginController = require('./controllers/userLogin');
 const userUpdateInformationController = require('./controllers/userUpdateInformation');
+const userRemoveBookingsController = require('./controllers/userRemoveBookings');
+const getUserBookingsController = require('./controllers/getUserBookings');
 const userLogoutController = require('./controllers/userLogout');
 const getUserDataController = require('./controllers/getUserData');
 const Teacher = require('./models/Teacher');
@@ -53,6 +55,8 @@ app.post('/user/getUserDate',getUsersDateController)
 app.get('/user/date', getDatesController);
 app.post('/user/date', getClickedDateController);
 app.post('/user/updateInformation', userUpdateInformationController);
+app.post('/user/getUserBookings', getUserBookingsController);
+app.post('/user/removeBookings', userRemoveBookingsController);
 app.post('/user/test', getUserIdController);
 app.get('/user/logout', userLogoutController);
 app.post('/course/getCourses', getCoursesController);
