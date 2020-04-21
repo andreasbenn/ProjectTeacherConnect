@@ -6,6 +6,27 @@
 // The calendar represented in the video is a calendar and not a date picker. The code beyond the functions regarding 'date' methods, is purely created by the developers and not found in this video. (inspiration goes up till line #118)
 // (Iltechs, 2019)
 
+var one = 0;
+var two = 0;
+var currentWebToken = JSON.parse(localStorage.getItem('token'));
+
+// https://stackoverflow.com/questions/16805306/jquery-return-ajax-result-into-outside-variable/16805366
+var currentStudentId = function() {
+    var tempStudent = null;
+    $.ajax({
+        url: "http://localhost:3000/user/test",
+        method: 'POST',
+        datatype: "json",
+        async: false,
+        data: ({currentWebToken}),
+        success: function (response) {
+            studentId = response
+        },
+    });
+    return studentId
+}();
+console.log(currentStudentId)
+
 var dt = new Date();
 // To start of with we create a variable name 'dt' which use the javascript method 'new Date' which is used for creating an object constructor function. This variable will now be used in creating the calendar. the variable is because of the () declared to as a function
 // ("What is the 'new' keyword in JavaScript" 2009)
@@ -84,6 +105,8 @@ function renderDate() {
 
 // Here we use innerHTML to print the cells we have declared above, in the user interface.
     document.getElementsByClassName("days")[0].innerHTML = cells;
+    one++;
+    console.log( "første tæller" + one)
     addDateChecker();
 }
 
@@ -104,23 +127,30 @@ function moveDate(para) {
 };
 
 function addDateChecker() {
-
+    var dateOfBooking;
+    var timeOfBooking;
         $('.day').click(function () {
+            document.getElementById("panel").style.display = "block";
+            dateOfBooking = document.getElementById("date_str").innerHTML = this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear();
+            document.getElementById('time').reset();
+            });
+    $('.time1').click(function () {
+        var checkbox = document.getElementsByClassName('time1');
+        for (i = 0; i < checkbox.length; i++){
+            if(checkbox[i].checked){
+                timeOfBooking = checkbox[i].value;
+            }
+        }
+        $.ajax({
+            url: "http://localhost:3000/user/date",
+            method: 'POST',
+            datatype: "json",
+            data: ({date: dateOfBooking, time: timeOfBooking, studentId: currentStudentId}),
+            success: function (response) {
+                console.log("Der er lavet en booking d. " + response.selectedDate + "til tidspunktet: " + response.selectedTime)
+            },
+        })
+        })
 
-            var dateOfBooking = document.getElementById("date_str").innerHTML = this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear();
 
-            console.log(dateOfBooking)
-
-            $.ajax({
-                url: "http://localhost:3000/user/date",
-                method: 'POST',
-                datatype: "json",
-                data: ({date: dateOfBooking}),
-                success: function (response) {
-                    console.log(response)
-                        localStorage.setItem("date", dateOfBooking);
-                },
-            })
-
-        });
 }

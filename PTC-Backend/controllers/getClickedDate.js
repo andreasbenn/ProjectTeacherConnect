@@ -1,9 +1,13 @@
 const Date = require('../models/Date');
+
 module.exports =
-    function(req, res){
+   async function(req, res){
         var selectedDate = req.body.date;
-        Date.create({
-            date: selectedDate
-        })
-        res.json({msg:"Du har registreret en booking d." + selectedDate})
+        var selectedTime = req.body.time;
+        var studentId = req.body.studentId;
+        await Date.findOneAndUpdate({student_id: studentId}, {date: selectedDate, time: selectedTime} )
+        console.log('linje 7' + studentId)
+
+       // let date = await Date.find({date: selectedDate})
+        res.json({selectedDate, selectedTime});
     };

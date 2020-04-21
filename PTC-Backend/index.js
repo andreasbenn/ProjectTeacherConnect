@@ -10,8 +10,11 @@ const getSelectedCourseController = require('./controllers/getSelectedCourse');
 const getTopicController = require('./controllers/getTopic');
 const newBookingController = require('./controllers/newBooking');
 const getDatesController = require('./controllers/getDates');
+const getUsersDateController = require('./controllers/getUserDate')
+const getUserIdController = require('./controllers/getUserId')
 const getUsersController = require('./controllers/getUsers');
 const userLoginController = require('./controllers/userLogin');
+const userUpdateInformationController = require('./controllers/userUpdateInformation');
 const userLogoutController = require('./controllers/userLogout');
 const getUserDataController = require('./controllers/getUserData');
 const Teacher = require('./models/Teacher');
@@ -46,8 +49,11 @@ app.get('/user/getUsers', getUsersController);
 app.post('/user/getUserData', getUserDataController);
 app.post('/user/login', userLoginController);
 app.post('/course/getCourses', getCoursesController);
+app.post('/user/getUserDate',getUsersDateController)
 app.get('/user/date', getDatesController);
 app.post('/user/date', getClickedDateController);
+app.post('/user/updateInformation', userUpdateInformationController);
+app.post('/user/test', getUserIdController);
 app.get('/user/logout', userLogoutController);
 app.post('/course/getCourses', getCoursesController);
 app.post('/course/selectedCourse', getSelectedCourseController);

@@ -12,6 +12,7 @@ module.exports =
             teacher: booking.teacher,
             topic: booking.topic,
             date: booking.date,
+            time: booking.time,
             studentID: booking.studentID,
         })
 

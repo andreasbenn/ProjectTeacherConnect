@@ -17,35 +17,35 @@
 <!--https://www.w3schools.com/jsref/event_onload.asp-->
 <body onload="renderDate()">
 
-<div class="coursesMenu">
-    <select id="t1" class="optionCourses">
-    </select>
-
-
-</div>
-
-<div class="teachersMenu">
-    <select id ="t2" class="optionTeachers">
-    </select>
-</div>
-
-<div class ="topicsMenu">
-    <p class="buttonTopics">
-    </p>
-
-</div>
-<br><br><input id="Topic" type="search" value=""/>
-<br><br><br>
 
 <!-- The class name "app" does not have any relevance for our js file, and is only used in our HTML sheet, so we can use CSS styles on the div.-->
 <div class="app">
 
+    <div class="coursesMenu">
+        <select id="t1" class="optionCourses">
+        </select>
+
+
+    </div>
+
+    <div class="teachersMenu">
+        <select id ="t2" class="optionTeachers">
+        </select>
+    </div>
+
+    <div class ="topicsMenu">
+        <p class="buttonTopics">
+        </p>
+
+    </div>
+    <br><br><input id="Topic" type="search" value=""/>
 <!-- Classes are here made to encapsulate the different divs that the calendar contains.-->
 <div class = "wrapper">
 
     <!--The wrapper contains the user interface, and is only represented i the css file, for giving a user friendly display. The wrapper is wrapped around the whole public-->
 
     <div class = "calendar">
+
         <!-- The 'calendar' class is also represented in the css, but the only thing represented in this class is the calendar itself. The panel -->
         <div class="month">
             <!--This class represents the month division which is above the weekends division -->
@@ -81,7 +81,7 @@
         <div id="panel">
             <!--We create different inputs for the teachers office hours, and give them a value we can refer to in javascript, and furthermore use in our localstorage.-->
             <h3 id = headline>Valg af Tidspunkt</h3>
-            <form name="time">
+            <form class ="time" name="time" id="time">
                 <!-- Radio buttons  -->
                 <input type="radio" class="time1" value="13.00-13.15"/>13.00-13.15</input>
                 <br/>
@@ -106,7 +106,7 @@
 
 </div>
 
-<input type="submit" value="Confirm booking" name="confirmBooking" id="confirmButton">
+
 
 
 </body>

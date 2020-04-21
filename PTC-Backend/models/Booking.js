@@ -8,6 +8,7 @@ const BookingSchema = new Schema({
     teacher: String,
     topic: String,
     date: String,
+    time: String,
     studentID: String,
 });
 
@@ -21,6 +22,7 @@ function fillDBBooking() {
         teacher: "Hej",
         topic: "med",
         date: "dig",
+        time: "nu",
         studentID: "1234",
     });
 }
