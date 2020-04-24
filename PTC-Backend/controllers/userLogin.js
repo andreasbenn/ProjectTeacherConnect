@@ -20,10 +20,8 @@ module.exports =
                         "secret",
                         {expiresIn:"1h"},
                         );
-                    res.json({token,msg: "Juhu", success: true, user: user[0]})
+                    res.json({token,msg: "Juhu", success: true})
                 } else res.json({msg: "Øvbøv- du har skrevet forkert password", success: false})
             })
-        } else if (user.length > 0 && user[0].password != inputPassword) {
-            res.json({msg: "Øvbøv- du har skrevet forkert password", success: false})
         }
 };

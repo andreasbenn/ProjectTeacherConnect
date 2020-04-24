@@ -12,7 +12,6 @@ const newBookingController = require('./controllers/newBooking');
 const getDatesController = require('./controllers/getDates');
 const getUsersDateController = require('./controllers/getUserDate')
 const getUserIdController = require('./controllers/getUserId')
-const getUsersController = require('./controllers/getUsers');
 const userLoginController = require('./controllers/userLogin');
 const userUpdateInformationController = require('./controllers/userUpdateInformation');
 const userRemoveBookingsController = require('./controllers/userRemoveBookings');
@@ -47,7 +46,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 // App and get requests through controllers
-app.get('/user/getUsers', getUsersController);
 app.post('/user/getUserData', getUserDataController);
 app.post('/user/login', userLoginController);
 app.post('/course/getCourses', getCoursesController);

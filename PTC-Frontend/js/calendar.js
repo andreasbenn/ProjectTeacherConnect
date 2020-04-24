@@ -31,8 +31,8 @@ var currentProgram = currentStudent.program;
 console.log(currentProgram);
 var courseTable = "";
 var selectedCourse = "";
-var selectedTeacher = "";
 var teacherTable = "";
+var selectedTeacher = "";
 var topicTable = "";
 var enteredTopic = document.getElementById("Topic");
 var enteredDate = "";
@@ -95,7 +95,6 @@ $("#t2").change( function () {
     topicTable = "";
     selectedTeacher = $("#t2").val();
     newBooking.teacher = selectedTeacher;
-    console.log(newBooking);
     $.ajax({
         url: "http://localhost:3000/topic",
         method: 'POST',
@@ -164,7 +163,7 @@ $("#submitBtn").click((e) => {
             })
             alert("Tak for bookingen- du kan se alle dine gemte bookings inde under Mypage")
             window.location.href = 'myPage.html';
-        }, 500
+        }, 200
     );
 
 

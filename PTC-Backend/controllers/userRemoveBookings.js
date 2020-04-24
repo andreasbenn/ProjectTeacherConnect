@@ -8,5 +8,4 @@ module.exports =
             await Booking.remove({_id: bookingsToRemove[i]})
         }
 
-        res.json(bookingsToRemove);
     };

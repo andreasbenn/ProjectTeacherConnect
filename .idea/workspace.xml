@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="690191d0-51fa-4c6e-9b5d-40ff687c939f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/getClickedDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/getClickedDate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/getUsers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/newBooking.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/newBooking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/userLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/userLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/userRemoveBookings.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/userRemoveBookings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTC-Backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Teacher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/css/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/css/calendar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/actualCalendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/actualCalendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/modules/courses.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/modules/courses.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/modules/users.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/modules/users.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/myPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/myPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/views/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/views/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/views/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/views/makeBooking.html" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/views/makeBooking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/views/myPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/views/myPage.html" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +59,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ProjectTeacherConnect-ny" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -62,18 +75,6 @@
       <recent name="C:\Users\Andreas\WebstormProjects\ProjectTeacherConnect_Andreas\PTC-Frontend\js" />
       <recent name="C:\Users\langk\OneDrive\Skrivebord\PTC_Ny_-_Copy\PTC_Ny - Copy\PTC\PTC-Frontend\js\modules" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PTC/PTC-Frontend/views/login.html" useBuiltInWebServerPort="true">
@@ -129,32 +130,39 @@
       <workItem from="1587449101593" duration="11744000" />
       <workItem from="1587461038792" duration="579000" />
       <workItem from="1587461959338" duration="7177000" />
+      <workItem from="1587641574564" duration="30000" />
+      <workItem from="1587641606953" duration="1036000" />
+      <workItem from="1587647817321" duration="2048000" />
+      <workItem from="1587708320601" duration="4793000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="686" y="225" key="FileChooserDialogImpl" timestamp="1587461333860">
+    <state x="1170" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587708534994">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1170" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.-4.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1587708534994" />
+    <state x="686" y="225" key="FileChooserDialogImpl" timestamp="1587641602631">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="549" y="187" key="FileChooserDialogImpl/-3840.-1075.2560.1440/0.0.1536.864@0.0.1536.864" timestamp="1585946435426" />
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1585942397485" />
-    <state x="686" y="225" key="FileChooserDialogImpl/1920.-4.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1587461333860" />
+    <state x="686" y="225" key="FileChooserDialogImpl/1920.-4.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1587641602631" />
     <state x="-6" y="0" width="781" height="870" key="dock-window-1" timestamp="1586001932861">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

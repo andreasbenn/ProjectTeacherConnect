@@ -40,6 +40,7 @@ $('#updateInformation').click(function () {
             success: function (response) {
                 tokenForData();
                 console.log(response)
+                alert("Du har nu opdateret dine personlige oplysninger");
             },
         })
     }
@@ -58,7 +59,10 @@ function showCurrentUserBookings() {
             var currentUserBookings = response;
             var booking = "";
             for(var i = 0; i < currentUserBookings.length; i++){
-
+                if(currentUserBookings[i].topic == undefined){
+                    currentUserBookings[i].topic = "Not a specific one";
+                }
+console.log(currentUserBookings[i].topic)
                 booking += "<div><input type='radio' class='bookings' id ='" + currentUserBookings[i]._id + "'>" +"<br/> <b>" + 'Course: ' + "</b>" + currentUserBookings[i].course + "<br/> <b>" +'Teacher: ' + "</b>" + currentUserBookings[i].teacher + "<br/> <b>" + 'Topic: ' + "</b>" + currentUserBookings[i].topic + "<br/> <b>" + 'Date: ' + "</b>" + currentUserBookings[i].date + "<br/> <b>" + 'Time: ' + "</b>" + currentUserBookings[i].time + "<br/> </input></div>";
             }
 
@@ -86,7 +90,12 @@ $('#removeBookings').click(function(){
         datatype: "json",
         data: ({checkedBookings: JSON.stringify(allCheckedBookings)}),
         success: function () {
-            alert("De valgte bookings er nu slettet.")
+            if(allCheckedBookings.length == 0){
+                alert("Du har ikke valgt nogle bookings du ønsker at slette");
+            }
+            else{
+                alert("De valgte bookings er nu slettet.")
+            }
             location.reload();
         },
     })
