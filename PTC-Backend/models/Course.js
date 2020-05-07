@@ -1,16 +1,19 @@
-const express = require ('express')
-const app = new express();
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const courseOptions = {discriminatorKey: 'course', collection: 'course'};
+
+// A CourseSchema is created, and the attributes that needs to be fulfilled is added to the schema.
+// The group is using MongoDB, and a course could therefore be created without one of the attributes.
 const CourseSchema = new Schema({
     courseName: String,
     courseValue: String,
     courseProgram: String,
 });
 
+// A model is made for the course, in the database.
 const Course = mongoose.model('Course',CourseSchema);
 
+// The module is exported so it can be used in other js files.
 module.exports = Course;
 
 function fillDBCourse() {
@@ -42,4 +45,6 @@ function fillDBCourse() {
         });
 }
 
+// The courses are created. The first to courses belongs to HA(it) and the last one belongs to HA(fil), and will dynamically be used through the user experience.
+// Call this function if you need to create the data in the database.
 //fillDBCourse();

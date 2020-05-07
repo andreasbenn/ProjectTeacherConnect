@@ -1,18 +1,21 @@
-const express = require ('express');
-const app = new express();
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+// Defining what the database should be named (properties)
 const topicOptions = {discriminatorKey: 'topic', collection: 'topic'};
+
+// Creates a new schema for the database, similar to a class in JS.
 const TopicSchema = new Schema({
     topicName: String,
     course: String,
     popCounter: Number,
 });
 
+// Creates a variable that refers to the database. We do that to export it and import in index.js for Topic.js to execute.
 const Topic = mongoose.model('Topic',TopicSchema);
 
 module.exports = Topic;
 
+// Function to fill the database with objects that are being used in the program.
 function fillDBTopic() {
     Topic.create({
             topicName: 'Priselasticitet',
@@ -65,4 +68,5 @@ function fillDBTopic() {
         });
 };
 
+// Call this function if you need to create the data in the database.
 //fillDBTopic();

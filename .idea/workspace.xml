@@ -22,15 +22,40 @@
     <list default="true" id="690191d0-51fa-4c6e-9b5d-40ff687c939f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/getClickedDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/getClickedDate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/getUsers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/getCourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/getCourses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/getDates.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/getDates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/getSelectedCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/getSelectedCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/getTopic.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/getTopic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/getUserBookings.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/getUserBookings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/getUserData.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/getUserData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/getUserDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/getUserDate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/getUserId.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/getUserId.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/newBooking.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/newBooking.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/userLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/userLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/userLogout.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/userLogout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/userRemoveBookings.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/userRemoveBookings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/userUpdateInformation.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/userUpdateInformation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTC-Backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Booking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Course.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Course.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Date.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Date.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Teacher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Topic.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Topic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/actualCalendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/actualCalendar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/calendar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/logout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/middleware/valUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/middleware/valUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/modules/courses.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/modules/courses.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/modules/teachers.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/modules/teachers.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/modules/topics.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/modules/topics.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/modules/users.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/modules/users.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/myPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/myPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/views/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/views/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTC-Frontend/views/makeBooking.html" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/views/makeBooking.html" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +84,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ProjectTeacherConnectOliver" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -75,6 +100,18 @@
       <recent name="C:\Users\Andreas\WebstormProjects\ProjectTeacherConnect_Andreas\PTC-Frontend\js" />
       <recent name="C:\Users\langk\OneDrive\Skrivebord\PTC_Ny_-_Copy\PTC_Ny - Copy\PTC\PTC-Frontend\js\modules" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PTC/PTC-Frontend/views/login.html" useBuiltInWebServerPort="true">
@@ -134,23 +171,33 @@
       <workItem from="1587641606953" duration="1036000" />
       <workItem from="1587647817321" duration="2048000" />
       <workItem from="1587708320601" duration="4793000" />
+      <workItem from="1587801672953" duration="2599000" />
+      <workItem from="1587886301790" duration="244000" />
+      <workItem from="1588020656495" duration="9713000" />
+      <workItem from="1588195332384" duration="604000" />
+      <workItem from="1588591655405" duration="4225000" />
+      <workItem from="1588671482848" duration="3354000" />
+      <workItem from="1588687402352" duration="3231000" />
+      <workItem from="1588752349227" duration="8081000" />
+      <workItem from="1588832595298" duration="5772000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1170" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587708534994">

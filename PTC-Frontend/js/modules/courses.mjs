@@ -1,18 +1,18 @@
-import Course from '../classes/courseClass.js';
-//mjs-file is the standard file to use, when implementing modules in javascript from Node
-//This function goes through the inputted array, and changes alle the index's to an instance of the class User.
+// mjs-file is the standard file to use, when implementing modules in javascript from Node
 
+import Course from '../classes/courseClass.js';
+
+// This class takes an object and makes it a new instance of the class Courses.
 export function formatCourses(courses){
     let allCourses = [];
+
     for(let i=0; i< courses.length; i++){
+
         var courseObject = new Course();
+
+        // Extend merges 2 objects into the first defined, so in this case courses[i] gets merged into courseObject
         $.extend(courseObject, courses[i]);
         allCourses.push(courseObject)
     }
     return allCourses;
-}
-export function formatCourse(course) {
-    var courseObject = new Course();
-    $.extend(courseObject, course);
-    return courseObject;
 }

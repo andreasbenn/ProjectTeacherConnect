@@ -21,6 +21,7 @@ const getUserDataController = require('./controllers/getUserData');
 const Teacher = require('./models/Teacher');
 const Topic = require('./models/Topic');
 const Booking = require('./models/Booking');
+const Test = require('./models/Test');
 
 //Cors policy burde virke nu
 app.use(function(req, res, next) {

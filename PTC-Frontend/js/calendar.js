@@ -38,7 +38,6 @@ var enteredTopic = document.getElementById("Topic");
 var enteredDate = "";
 var enteredTime = "";
 
-
 $.ajax({
     url: "http://localhost:3000/course/getCourses",
     method: 'POST',
@@ -90,6 +89,7 @@ $("#t1").change( function () {
 
     });
 });
+
 $("#t2").change( function () {
     teacherTable = "";
     topicTable = "";
@@ -134,38 +134,34 @@ $("#submitBtn").click((e) => {
     e.preventDefault();
     newBooking.topic = enteredTopic.value;
     console.log(currentStudent.StudentID)
-    $.ajax({
-        url: "http://localhost:3000/user/getUserDate",
-        method: 'POST',
-        data: ({studentId: currentStudent.StudentID}),
-        success: function (response) {
-            console.log(response);
-            enteredDate = response.dateOfBooking;
-            enteredTime = response.timeOfBooking;
+    async function submitBooking() {
+        await $.ajax({
+            url: "http://localhost:3000/user/getUserDate",
+            method: 'POST',
+            data: ({studentId: currentStudent.StudentID}),
+            success: function (response) {
+                console.log(response);
+                enteredDate = response.dateOfBooking;
+                enteredTime = response.timeOfBooking;
+            }
+        })
+        newBooking.date = enteredDate;
+        newBooking.time = enteredTime
+        console.log(newBooking);
+        var booking = JSON.stringify(newBooking)
+        $.ajax({
+            url: "http://localhost:3000/booking/newBooking",
+            method: 'POST',
+            datatype: "json",
+            data: ({booking}),
+            success: function (response) {
+                console.log(response);
+            }
+        })
+        alert("Tak for bookingen- du kan se alle dine gemte bookings inde under Mypage")
+        window.location.href = 'myPage.html';
         }
-    })
-    setTimeout(
-        function () {
-            newBooking.date = enteredDate;
-            newBooking.time = enteredTime
-            console.log(newBooking);
-            var booking = JSON.stringify(newBooking)
-            $.ajax({
-                url: "http://localhost:3000/booking/newBooking",
-                method: 'POST',
-                datatype: "json",
-                data: ({booking}),
-                success: function (response) {
-                    console.log(response);
-
-                }
-
-            })
-            alert("Tak for bookingen- du kan se alle dine gemte bookings inde under Mypage")
-            window.location.href = 'myPage.html';
-        }, 200
-    );
-
-
+        submitBooking();
 });
+
 //course: newBooking.course, teacher: newBooking.teacher, topic: newBooking.topic, date: newBooking.date, studentID: newBooking.studentID

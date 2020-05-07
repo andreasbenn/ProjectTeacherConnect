@@ -1,7 +1,5 @@
 //("JavaScript Date" s.d.) - obtained information about the Date references.
 
-// -------------- //
-// @author: Oliver Langkjær Michelsen
 // Inspiration for calendar - it is important to know that the calendar is made with inspiration from the following youtube video.
 // The calendar represented in the video is a calendar and not a date picker. The code beyond the functions regarding 'date' methods, is purely created by the developers and not found in this video. (inspiration goes up till line #118)
 // (Iltechs, 2019)
@@ -96,15 +94,13 @@ function renderDate() {
         }
     }
 
-// Here we use innerHTML to print the cells we have declared above, in the user interface.
+    // Here we use innerHTML to print the cells we have declared above, in the user interface.
     document.getElementsByClassName("days")[0].innerHTML = cells;
     one++;
     console.log( "første tæller" + one)
+    // add onclick functions to every day with addDateChecker();
     addDateChecker();
 }
-
-// -------------- //
-// @author: Oliver Langkjær Michelsen
 
 // This is the function that executes when the onclick prev or next is clicked on. We either multiply or substract one month COMMENT PARA!!!!!
 function moveDate(para) {
@@ -119,31 +115,41 @@ function moveDate(para) {
     // We use the renderDate function in here, because the moveDate function needs to have this reference because the other attributed from the calendar is declared inside this function. And eventhough the tuborg klamme had continued, we have not declared an onclick function in the prevDate and nextDate object constructor.
 };
 
+// Function to allow the user to specify a specific time for the selected date.
 function addDateChecker() {
+    // temp variables to store selected values in.
     var dateOfBooking;
     var timeOfBooking;
+
+        // This jquery function adds an onclick function to the class that saves the selected date on the calendar.
+        // # = id, . = class
         $('.day').click(function () {
+            // shows the panel which has the time selecter.
             document.getElementById("panel").style.display = "block";
+            // saves the information from the selected date into the temp variable.
             dateOfBooking = document.getElementById("date_str").innerHTML = this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear();
+            // resets the times selected when you click on a date. So if the user clicked on a new date it would clear ticked off times.
+            // https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset
             document.getElementById('time').reset();
             });
-    $('.time1').click(function () {
-        var checkbox = document.getElementsByClassName('time1');
-        for (i = 0; i < checkbox.length; i++){
-            if(checkbox[i].checked){
-                timeOfBooking = checkbox[i].value;
+        // Onclick function to save the selected time for the booking.
+        $('.time1').click(function () {
+            var checkbox = document.getElementsByClassName('time1');
+            for (i = 0; i < checkbox.length; i++){
+                if(checkbox[i].checked){
+                    timeOfBooking = checkbox[i].value;
+                }
             }
-        }
-        $.ajax({
-            url: "http://localhost:3000/user/date",
-            method: 'POST',
-            datatype: "json",
-            data: ({date: dateOfBooking, time: timeOfBooking, studentId: currentStudentId}),
-            success: function (response) {
-                console.log("Der er lavet en booking d. " + response.selectedDate + "til tidspunktet: " + response.selectedTime)
-            },
+            // ajax call to send the selected date and time of the booking to the API, so it can save it in the database.
+            // We do this because we're using 2 different js files for the calendar, and we need this information in 'calendar.js'.
+            $.ajax({
+                url: "http://localhost:3000/user/date",
+                method: 'POST',
+                datatype: "json",
+                data: ({date: dateOfBooking, time: timeOfBooking, studentId: currentStudentId}),
+                success: function (response) {
+                    console.log("Der er lavet en booking d. " + response.selectedDate + "til tidspunktet: " + response.selectedTime)
+                },
+            })
         })
-        })
-
-
 }

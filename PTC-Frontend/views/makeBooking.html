@@ -22,23 +22,35 @@
 <div class="app">
 
     <div class="coursesMenu">
+        <p><b>Course:</b></p>
         <select id="t1" class="optionCourses">
         </select>
-
-
     </div>
 
+    <br/>
+
     <div class="teachersMenu">
+        <p><b>Teacher:</b></p>
         <select id ="t2" class="optionTeachers">
         </select>
     </div>
 
-    <div class ="topicsMenu">
-        <p class="buttonTopics">
-        </p>
+    <br/>
 
+    <div class ="topicsMenu">
+        <p><b>Topic:</b></p>
+        <p class="buttonTopics">
+            <input type='button' class='topics' value='topic 1'/></input>
+            <input type='button' class='topics' value='topic 2'/></input>
+            <input type='button' class='topics' value='topic 3'/></input>
+        </p>
     </div>
-    <br><br><input id="Topic" type="search" value=""/>
+
+    <div>
+        <p><b>Type your own topic:</b></p>
+        <input id="Topic" type="search" value=""/>
+    </div>
+
 <!-- Classes are here made to encapsulate the different divs that the calendar contains.-->
 <div class = "wrapper">
 
@@ -106,15 +118,11 @@
 
 </div>
 
-
-
-
 </body>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="../js/actualCalendar.js"></script>
 <script type="module" src="../js/calendar.js"></script>
 <script src="../js/logout.js"></script>
-
 
 </html>

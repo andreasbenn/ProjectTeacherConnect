@@ -1,10 +1,11 @@
-const express = require ('express')
-const app = new express();
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+// Needed for password encryption
 const bcrypt = require('bcrypt');
+// Defining what the database should be named (properties)
 const userOptions = {discriminatorKey: 'user', collection: 'user'};
 
+// Creates a new schema for the database, similar to a class in JS.
 const UserSchema = new Schema({
     StudentID: Number,
     fullName: String,
@@ -15,18 +16,24 @@ const UserSchema = new Schema({
     program: String
 });
 
+// This function adds a password encryption to the users in the database.
 UserSchema.pre('save',function (next) {
     const user = this;
 
+    // bcrypt.hash hashes the user password into the function so it encrypts it with bcrypt.
+    // https://www.npmjs.com/package/bcrypt
     bcrypt.hash(user.password,10,(error,hash)=>{
         user.password = hash;
         next()
     })
 });
 
+// Creates a variable that refers to the database. We do that to export it and import in index.js for Topic.js to execute.
 const User = mongoose.model('User',UserSchema);
+
 module.exports = User;
 
+// Function to fill the database with objects that are being used in the program.
 function fillDBUsers () {
     User.create({
             StudentID: 1,
@@ -90,4 +97,5 @@ function fillDBUsers () {
         })
 }
 
+// Call this function if you need to create the data in the database.
 //fillDBUsers();
