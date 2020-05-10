@@ -1,13 +1,18 @@
 const Date = require('../models/Date');
+const User = require('../models/User');
+const jwt = require('jsonwebtoken');
 
 module.exports =
     async function(req, res){
 
-        // We make a variable which takes the studentId from the the frontend. This is done by using the functionality of the bodyparser.
-        var studentId = req.body.studentId;
+        // We take the encoded token from frontend, and decode it, so its stands the same way as it does in the database.
+        var decodedToken = jwt.decode(req.body.student);
+
+        // We make a currentUser and checks if the decoded token exist as an userId in the database. (Lim,2019, p.56)
+        var currentUser = await User.findById(decodedToken.userId)
 
         // We find the dates that belongs to the User.
-        let currentDate = await Date.find({student_id: studentId})
+        let currentDate = await Date.find({student_id: currentUser.StudentID})
 
         // These variables takes the Date Objects from the database, and adds the data from the frontend to the empty strings in the database.
         //*The Date Objects from the database is empty, so the date and time can be added to the correct User.

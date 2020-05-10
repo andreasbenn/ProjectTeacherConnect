@@ -6,7 +6,7 @@ module.exports =
     async function(req, res){
 
         // jwt.decode decodes the input(a token), which here has an ID of the user.
-        var decodedToken = jwt.decode(req.body.currentWebToken);
+        var decodedToken = jwt.decode(req.body.student);
 
         // Finds the user of the token.
         var currentUser = await User.findById(decodedToken.userId)

@@ -12,6 +12,7 @@ module.exports =
         for(var i = 0; i < bookingsToRemove.length; i++){
 
             // .deleteOne takes the parameter and searches for that in the database and deletes the document.
+            // https://docs.mongodb.com/manual/reference/method/db.collection.deleteOne/
             await Booking.deleteOne({_id: bookingsToRemove[i]})
             removedBookingCounter++;
         }

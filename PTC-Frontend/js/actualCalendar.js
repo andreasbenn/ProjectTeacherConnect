@@ -6,6 +6,7 @@
 
 var one = 0;
 var two = 0;
+/*
 var currentWebToken = JSON.parse(localStorage.getItem('token'));
 
 // https://stackoverflow.com/questions/16805306/jquery-return-ajax-result-into-outside-variable/16805366
@@ -24,6 +25,8 @@ var currentStudentId = function() {
     return studentId
 }();
 console.log(currentStudentId)
+
+ */
 
 var dt = new Date();
 // To start of with we create a variable name 'dt' which use the javascript method 'new Date' which is used for creating an object constructor function. This variable will now be used in creating the calendar. the variable is because of the () declared to as a function
@@ -120,6 +123,7 @@ function addDateChecker() {
     // temp variables to store selected values in.
     var dateOfBooking;
     var timeOfBooking;
+    var currentWebToken = JSON.parse(localStorage.getItem('token'))
 
         // This jquery function adds an onclick function to the class that saves the selected date on the calendar.
         // # = id, . = class
@@ -146,7 +150,7 @@ function addDateChecker() {
                 url: "http://localhost:3000/user/date",
                 method: 'POST',
                 datatype: "json",
-                data: ({date: dateOfBooking, time: timeOfBooking, studentId: currentStudentId}),
+                data: ({date: dateOfBooking, time: timeOfBooking, student: currentWebToken}),
                 success: function (response) {
                     console.log("Der er lavet en booking d. " + response.selectedDate + "til tidspunktet: " + response.selectedTime)
                 },

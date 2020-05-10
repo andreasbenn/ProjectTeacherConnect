@@ -7,7 +7,7 @@ module.exports =
     async function(req, res){
 
         // We take the encoded token from frontend, and decode it, so its stands the same way as it does in the database.
-        var decodedToken = jwt.decode(req.body.currentWebToken);
+        var decodedToken = jwt.decode(req.body.student);
 
         // We make a currentUser and checks if the decoded token exist as an userId in the database. (Lim,2019, p.56)
         var currentUser = await User.findById(decodedToken.userId)

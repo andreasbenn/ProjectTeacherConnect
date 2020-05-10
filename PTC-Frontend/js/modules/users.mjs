@@ -3,7 +3,7 @@
 import User from '../classes/userClass.js';
 
 // This function goes through the inputted array, and changes all the index's to an instance of the class User.(frontend class)
-//***mangler link
+// https://api.jquery.com/jQuery.extend/
 export function formatUsers(users) {
     let allUsers = [];
 

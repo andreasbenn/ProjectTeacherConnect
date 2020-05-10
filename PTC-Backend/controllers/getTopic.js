@@ -16,7 +16,8 @@ module.exports =
         // We use the find method to find the documents where course has a value = coursevalue
         let topic = await Topic.find({course: courseValue});
 
-        //*** comments missing. link missing.
+        // Function to sort the array of topics after their popcounter.
+        // https://www.bitdegree.org/learn/javascript-array-sort
         topic.sort(function (a,b) {
             return b.popCounter - a.popCounter});
         sortedTopics.push(topic[0], topic[1], topic[2]);

@@ -7,7 +7,8 @@ module.exports =
 
         // jwt.decode decodes the input(a token), which here has an ID of the user.
         // req.body as that is where the data from the frontend ajax calls are.
-        var decodedToken = jwt.decode(req.body.currentWebToken);
+        var decodedToken = jwt.decode(req.body.student);
+
         var updatedUser = JSON.parse(req.body.newInformation);
 
         // User.findOneAndUpdate takes the first parameter and finds the document we want to update in the database, and the 2nd parameter it takes the values and updates the document.

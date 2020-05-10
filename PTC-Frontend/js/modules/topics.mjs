@@ -3,6 +3,7 @@
 import Topic from "../classes/topicClass.js";
 
 // This function goes through the inputted array, and changes all the index's to an instance of the class Topic.(frontend class)
+// https://api.jquery.com/jQuery.extend/
 export function formatTopics(topics){
     let allTopics = [];
 

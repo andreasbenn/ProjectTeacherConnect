@@ -21,9 +21,9 @@ const getUserDataController = require('./controllers/getUserData');
 const Teacher = require('./models/Teacher');
 const Topic = require('./models/Topic');
 const Booking = require('./models/Booking');
-const Test = require('./models/Test');
+const Test = require('./models/TestEmbeddedDocument');
 
-//Cors policy burde virke nu
+// Fixes problems with cors policy.
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "http://localhost:63342"); // update to match the domain you will make the request from
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");

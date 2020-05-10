@@ -1,5 +1,3 @@
-import User from "./classes/userClass.js";
-
 function tokenForData() {
     // currentWebToken is an encrypted token in the localStorage. If you decrypt it it will be an ID in the database of an user.
     var currentWebToken = JSON.parse(localStorage.getItem('token'))
@@ -10,7 +8,7 @@ function tokenForData() {
         method: 'POST',
         datatype: "json",
         // {} as we don't want it as a string in the backend because the database does not contain " "s.
-        data: ({currentWebToken}),
+        data: ({student: currentWebToken}),
         success: function (response) {
             // Fills the MyPage with the current logged users information.
             document.getElementById("userFullName").value = response.fullName;
@@ -46,7 +44,7 @@ $('#updateInformation').click(function () {
             datatype: "json",
 
             // newInformation / currentWebToken assigns that name to the values we pass as data.
-            data: ({newInformation: JSON.stringify(updatedUser), currentWebToken: currentWebToken}),
+            data: ({newInformation: JSON.stringify(updatedUser), student: currentWebToken}),
             success: function (response) {
                 // We call tokenForData, to get the function that gets the information from the database back, as we just updated it.
                 tokenForData();
@@ -66,7 +64,7 @@ function showCurrentUserBookings() {
         url: "http://localhost:3000/user/getUserBookings",
         method: 'POST',
         datatype: "json",
-        data: ({currentWebToken}),
+        data: ({student: currentWebToken}),
         success: function (response) {
             console.log(response)
             // saves the response (array) equal to an object we can use here in the frontend.

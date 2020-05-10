@@ -2,7 +2,8 @@
 
 import Course from '../classes/courseClass.js';
 
-// This class takes an object and makes it a new instance of the class Courses.
+// This class takes an object and makes it a new instance of the class Courses through extend.
+// https://api.jquery.com/jQuery.extend/
 export function formatCourses(courses){
     let allCourses = [];
 

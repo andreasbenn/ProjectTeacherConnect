@@ -1,5 +1,6 @@
 const User = require('../models/User');
 // bcrypt is used to encrypt passwords.
+// Lim, G. (2019). Beginning Node.js, Express & MongoDB Development.
 const bcrypt = require('bcrypt');
 // jsonwebtoken is used to create and use access tokens.
 const jwt = require('jsonwebtoken');
@@ -27,6 +28,7 @@ module.exports =
                 if (same) {
 
                     // Creates a token with jwt.sign that is used to store in localStorage to identify the current logged user.
+                    // https://www.youtube.com/watch?v=7nafaH9SddU
                    const token = jwt.sign({
                         userId: user[0]._id
                     },
