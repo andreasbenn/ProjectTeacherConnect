@@ -19,29 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="690191d0-51fa-4c6e-9b5d-40ff687c939f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Backend/controllers/userUpdateInformation.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/controllers/userUpdateInformation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Booking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Course.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Course.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Date.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Date.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Teacher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/TestEmbeddedDocument.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/TestEmbeddedDocument.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/Topic.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/Topic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Backend/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Backend/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/actualCalendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/actualCalendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/calendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/deprecated.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/homeside.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/homeside.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/logout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/modules/teachers.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/modules/teachers.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/modules/users.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/modules/users.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTC-Frontend/js/myPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/PTC-Frontend/js/myPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="690191d0-51fa-4c6e-9b5d-40ff687c939f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +152,7 @@
       <workItem from="1589108137402" duration="7944000" />
       <workItem from="1589120167231" duration="1599000" />
       <workItem from="1589122862765" duration="3258000" />
-      <workItem from="1589184740595" duration="5072000" />
+      <workItem from="1589184740595" duration="5493000" />
     </task>
     <servers />
   </component>
