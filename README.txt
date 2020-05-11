@@ -14,3 +14,5 @@ For at køre programmet skal følgende foretages.
 Brugeroplysninger til demo;
 CBS email: test@cbs.dk
 password: 1234
+
+*Det skal noteres at der har været 2 commits med mange ændrede filer/deletions. Dette er sket grundet nogle packages der blev installeret/uninstallret for at prøve at få nodemon til automatisk at åbne browseren med vores loginside ved npm start.*
