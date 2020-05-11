@@ -1,6 +1,6 @@
 // mjs-file is the standard file to use, when implementing modules in javascript from Node
 
-import User from '../classes/userClass.js';
+import User from "../classes/userClass.js";
 
 // This function goes through the inputted array, and changes all the index's to an instance of the class User.(frontend class)
 // https://api.jquery.com/jQuery.extend/

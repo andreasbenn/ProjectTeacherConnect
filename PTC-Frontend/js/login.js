@@ -13,7 +13,7 @@ $("#login").submit((e) => {
 
         $.ajax({
             url: "http://localhost:3000/user/login",
-            method: 'POST',
+            method: "POST",
             datatype: "json",
             data: inputData,
             success: function (response) {
@@ -27,7 +27,7 @@ $("#login").submit((e) => {
                     localStorage.setItem("token",JSON.stringify(token));
 
                     // This code returns the client to the specific html site.
-                    window.location.href = 'home.html';
+                    window.location.href = "home.html";
 
                 // The else statement is called when success:false;
                 } else {

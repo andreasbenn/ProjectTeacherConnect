@@ -16,4 +16,6 @@ module.exports =
         await User.findOneAndUpdate({_id: decodedToken.userId}, {fullName: updatedUser.fullName, email: updatedUser.email, phoneNumber: updatedUser.phoneNumber, address: updatedUser.address});
 
         await console.log(updatedUser)
+
+        res.json("Success");
     };

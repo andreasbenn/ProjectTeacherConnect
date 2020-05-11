@@ -1,7 +1,7 @@
-import * as courses from './modules/courses.mjs';
-import * as users from './modules/users.mjs';
-import * as teachers from './modules/teachers.mjs';
-import * as topics from './modules/topics.mjs';
+import * as courses from "./modules/courses.mjs";
+import * as users from "./modules/users.mjs";
+import * as teachers from "./modules/teachers.mjs";
+import * as topics from "./modules/topics.mjs";
 import Booking from "./classes/bookingClass.js";
 
 // Creating new variable to fill it's properties throughout the booking process.
@@ -24,7 +24,7 @@ function getCourses() {
 
     $.ajax({
         url: "http://localhost:3000/course/getCourses",
-        method: 'POST',
+        method: "POST",
         datatype: "json",
         data: ({student: currentWebToken}),
         success: function (response) {
@@ -70,7 +70,7 @@ $("#t1").change( function () {
     // jQuery AJAX call that sends the selected course to API, so we can get it's teachers from the database.
     $.ajax({
         url: "http://localhost:3000/course/selectedCourse",
-        method: 'POST',
+        method: "POST",
         datatype: "json",
         data: ({selectedCourse: selectedCourse}),
         success: function (response) {
@@ -111,7 +111,7 @@ $("#t2").change( function () {
     // This jQuery AJAX call will send the selected course, and find all topics for that course so we can display the 3 most popular ones.
     $.ajax({
         url: "http://localhost:3000/topic",
-        method: 'POST',
+        method: "POST",
         datatype: "json",
         data: ({selectedCourse: selectedCourse}),
         success: function (response) {
@@ -161,12 +161,12 @@ $("#submitBtn").click((e) => {
 
     // This function is an async function, since it contains 2 AJAX calls, where the 2nd ones 'data', is dependent of the first calls' success function.
     async function submitBooking() {
-        var currentWebToken = JSON.parse(localStorage.getItem('token'));
+        var currentWebToken = JSON.parse(localStorage.getItem("token"));
 
         // AJAX call that gets the chosen date and time for the booking. This is stored in the database as the information could only be retrieved from actualCalendar.js.
         await $.ajax({
             url: "http://localhost:3000/user/getUserDate",
-            method: 'POST',
+            method: "POST",
             data: ({student: currentWebToken}),
             success: function (response) {
                 console.log(response);
@@ -185,19 +185,17 @@ $("#submitBtn").click((e) => {
         // AJAX call that sends the booking object to the backend, so it can be stored in the database.
         $.ajax({
             url: "http://localhost:3000/booking/newBooking",
-            method: 'POST',
+            method: "POST",
             datatype: "json",
             data: ({booking: booking, student: currentWebToken}),
             success: function (response) {
                 console.log(response);
             }
         })
-        alert("Tak for bookingen- du kan se alle dine gemte bookings inde under Mypage");
+        alert("Tak for bookingen - du kan se alle dine gemte bookings under My page");
 
         // Redirects the user to myPage after booking is successful. Here the user can see his/her bookings.
-        window.location.href = 'myPage.html';
+        window.location.href = "myPage.html";
         }
         submitBooking();
 });
-
-//course: newBooking.course, teacher: newBooking.teacher, topic: newBooking.topic, date: newBooking.date, studentID: newBooking.studentID

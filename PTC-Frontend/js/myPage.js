@@ -1,11 +1,11 @@
 function tokenForData() {
     // currentWebToken is an encrypted token in the localStorage. If you decrypt it it will be an ID in the database of an user.
-    var currentWebToken = JSON.parse(localStorage.getItem('token'))
+    var currentWebToken = JSON.parse(localStorage.getItem("token"))
 
     // ajax call to post the current logged user to the API and get the users information from the database.
     $.ajax({
         url: "http://localhost:3000/user/getUserData",
-        method: 'POST',
+        method: "POST",
         datatype: "json",
         // {} as we don't want it as a string in the backend because the database does not contain " "s.
         data: ({student: currentWebToken}),
@@ -25,8 +25,8 @@ tokenForData();
 
 // This jquery function adds an onclick function to an id that allows the user to update his or her information in the database.
 // # = id, . = class
-$('#updateInformation').click(function () {
-        var currentWebToken = JSON.parse(localStorage.getItem('token'));
+$("#updateInformation").click(function () {
+        var currentWebToken = JSON.parse(localStorage.getItem("token"));
 
         // The user is only allowed to change 4 attributes of his or her user. So we create an object with those 4 current information(after they have been possibly changed, unchanged values will stay the same)
         var updatedUser = {
@@ -40,7 +40,7 @@ $('#updateInformation').click(function () {
         // ajax call to send the current logged user and the new updated information to the API so it can update it in the database.
         $.ajax({
             url: "http://localhost:3000/user/updateInformation",
-            method: 'POST',
+            method: "POST",
             datatype: "json",
 
             // newInformation / currentWebToken assigns that name to the values we pass as data.
@@ -50,6 +50,7 @@ $('#updateInformation').click(function () {
                 tokenForData();
                 console.log(response)
                 alert("Du har nu opdateret dine personlige oplysninger");
+                window.location.href = "myPage.html";
             },
         })
     }
@@ -57,12 +58,12 @@ $('#updateInformation').click(function () {
 
 // This function shows the current logged users registered bookings in the database.
 function showCurrentUserBookings() {
-    var currentWebToken = JSON.parse(localStorage.getItem('token'))
+    var currentWebToken = JSON.parse(localStorage.getItem("token"))
 
     // ajax call to get all the bookings that the current logged user have made. It also creates the elements on the HTML page.
     $.ajax({
         url: "http://localhost:3000/user/getUserBookings",
-        method: 'POST',
+        method: "POST",
         datatype: "json",
         data: ({student: currentWebToken}),
         success: function (response) {
@@ -73,8 +74,14 @@ function showCurrentUserBookings() {
             // empty string that we can use additional assign to so we can create HTML objects from JS.
             var booking = "";
 
+            if(currentUserBookings[0] === undefined){
+                booking += "<div><p><b>" +  "No booking registered" + "</b></p></div>"
+            }
+            console.log(currentUserBookings[0]);
+
             for(var i = 0; i < currentUserBookings.length; i++){
-                if(currentUserBookings[i].topic == undefined){
+
+                if(currentUserBookings[i] !== undefined && currentUserBookings[i].topic === undefined){
                     currentUserBookings[i].topic = "Not a specific one";
                 }
                 console.log(currentUserBookings[i].topic)
@@ -93,10 +100,10 @@ showCurrentUserBookings();
 
 // This jquery function adds an onclick function to an id that allows the user to remove bookings registered in his or her name in the database.
 // # = id, . = class
-$('#removeBookings').click(function(){
+$("#removeBookings").click(function(){
     var allCheckedBookings = []
     // [0] because we have a form that inside has an 'array' that has multiple objects in it.
-    var checkbox = document.getElementsByClassName('allBookings')[0];
+    var checkbox = document.getElementsByClassName("allBookings")[0];
 
     // Runs through and sees if the checkbox on that booking is checked.
     for (var i = 0; i < checkbox.length; i++){
@@ -108,7 +115,7 @@ $('#removeBookings').click(function(){
     // ajax call to send the checked booking id's (the ids are booking id's in the database) to the API which allows us from there to delete them from the database.
     $.ajax({
         url: "http://localhost:3000/user/removeBookings",
-        method: 'POST',
+        method: "POST",
         datatype: "json",
         data: ({checkedBookings: JSON.stringify(allCheckedBookings)}),
         success: function (response) {
@@ -122,7 +129,7 @@ $('#removeBookings').click(function(){
 
             // location.reload to reload the page with the new updated bookings for the current logged user.
             // https://www.w3schools.com/jsref/met_loc_reload.asp
-            location.reload();
+            window.location.href = "myPage.html";
         },
     })
 

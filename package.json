@@ -21,6 +21,9 @@
     "uniqid": "^5.2.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "concurrently": "^5.2.0",
+    "http-server": "^0.12.3",
+    "nodemon": "^2.0.2",
+    "sleep-ms": "^2.0.1"
   }
 }

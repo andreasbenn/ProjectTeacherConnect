@@ -16,57 +16,61 @@ const Topic = mongoose.model('Topic',TopicSchema);
 module.exports = Topic;
 
 // Function to fill the database with objects that are being used in the program.
-function fillDBTopic() {
-    Topic.create({
-            topicName: 'Priselasticitet',
-            course: 'VØS',
-            popCounter: 0,
-        },
-        (error, Topic) => {
-            console.log(error, Topic)
-        });
+async function fillDBTopic() {
+    var allTopics = await Topic.find({});
+    console.log(allTopics[0])
+    if (allTopics[0] === undefined) {
+        Topic.create({
+                topicName: 'Priselasticitet',
+                course: 'VØS',
+                popCounter: 0,
+            },
+            (error, Topic) => {
+                console.log(error, Topic)
+            });
 
-    Topic.create({
-            topicName: 'MR=MC',
-            course: 'VØS',
-            popCounter: 0,
-        },
-        (error, Topic) => {
-            console.log(error, Topic)
-        });
-    Topic.create({
-            topicName: 'Fuldkommen Konkurrence',
-            course: 'VØS',
-            popCounter: 0,
-        },
-        (error, Topic) => {
-            console.log(error, Topic)
-        });
-    Topic.create({
-            topicName: 'Arrays',
-            course: 'Pro',
-            popCounter: 0,
-        },
-        (error, Topic) => {
-            console.log(error, Topic)
-        });
-    Topic.create({
-            topicName: 'Nested for loop',
-            course: 'Pro',
-            popCounter: 0,
-        },
-        (error, Topic) => {
-            console.log(error, Topic)
-        });
-    Topic.create({
-            topicName: 'Scoping',
-            course: 'Pro',
-            popCounter: 0,
-        },
-        (error, Topic) => {
-            console.log(error, Topic)
-        });
-};
+        Topic.create({
+                topicName: 'MR=MC',
+                course: 'VØS',
+                popCounter: 0,
+            },
+            (error, Topic) => {
+                console.log(error, Topic)
+            });
+        Topic.create({
+                topicName: 'Fuldkommen Konkurrence',
+                course: 'VØS',
+                popCounter: 0,
+            },
+            (error, Topic) => {
+                console.log(error, Topic)
+            });
+        Topic.create({
+                topicName: 'Arrays',
+                course: 'Pro',
+                popCounter: 0,
+            },
+            (error, Topic) => {
+                console.log(error, Topic)
+            });
+        Topic.create({
+                topicName: 'Nested for loop',
+                course: 'Pro',
+                popCounter: 0,
+            },
+            (error, Topic) => {
+                console.log(error, Topic)
+            });
+        Topic.create({
+                topicName: 'Scoping',
+                course: 'Pro',
+                popCounter: 0,
+            },
+            (error, Topic) => {
+                console.log(error, Topic)
+            });
+    }
+}
 
-// Call this function if you need to create the data in the database.
-//fillDBTopic();
+// Calls the function to check if the database needs to be filled with data. If so, it fills.
+fillDBTopic();

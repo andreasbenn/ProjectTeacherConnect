@@ -20,17 +20,21 @@ const Booking = mongoose.model('Booking',BookingSchema);
 module.exports = Booking;
 
 // The module is exported so it can be used in other js files.
-function fillDBBooking() {
-    Booking.create({
-        course: "Virkso",
-        teacher: "Hej",
-        topic: "med",
-        date: "dig",
-        studentID: "1234",
-    });
+async function fillDBBooking() {
+    var allBookings = await Booking.find({});
+    console.log(allBookings[0])
+    if(allBookings[0] === undefined) {
+        Booking.create({
+            course: "Virkso",
+            teacher: "Hej",
+            topic: "med",
+            date: "dig",
+            studentID: "1234",
+        });
+    }
 }
 
-// This creation is a test used in the start of the project, and the code is now constructed dynamically by user interaction which forces API calls via a three tier model.
-//fillDBBooking();
+// Calls the function to check if the database needs to be filled with data. If so, it fills.
+fillDBBooking();
 
 

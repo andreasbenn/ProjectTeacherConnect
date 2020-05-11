@@ -78,4 +78,5 @@ function fillEmbeddedCourse() {
      */
 }
 
+// Calls the function to check if the database needs to be filled with data. If so, it fills.
 //fillEmbeddedCourse();

@@ -16,7 +16,10 @@ const Teacher = mongoose.model('Teacher',TeacherSchema);
 module.exports = Teacher;
 
 // Function to fill the database with objects that are being used in the program.
-function fillDBTeacher() {
+async function fillDBTeacher() {
+    var allTeachers = await Teacher.find({});
+    console.log(allTeachers[0])
+    if (allTeachers[0] === undefined) {
         Teacher.create({
                 fullName: 'Jan Anders Sørensen',
                 email: 'jan.anders.sørensen@gmail.com',
@@ -52,6 +55,7 @@ function fillDBTeacher() {
                 console.log(error, Teacher)
             });
     }
+}
 
-// Call this function if you need to create the data in the database.
-//fillDBTeacher();
+// Calls the function to check if the database needs to be filled with data. If so, it fills.
+fillDBTeacher();

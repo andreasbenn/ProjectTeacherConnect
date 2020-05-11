@@ -5,17 +5,17 @@ document.getElementById("logoutBtn").onclick = function(e) {
 
     $.ajax({
         url: "http://localhost:3000/user/logout",
-        method: 'GET',
+        method: "GET",
         success: function () {
 
             // .removeItem() is a javascript method (Mozilla, Storage RemoveItem)
             //https://developer.mozilla.org/en-US/docs/Web/API/Storage/removeItem
-            localStorage.removeItem('token');
+            localStorage.removeItem("token");
 
-            alert('You have been logged out')
+            alert("You have been logged out")
 
             // This code returns the client to the specific html site.
-            window.location.href = 'login.html';
+            window.location.href = "login.html";
 
         }
     });

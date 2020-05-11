@@ -54,6 +54,7 @@ app.post('/user/getUserDate',getUsersDateController)
 app.get('/user/date', getDatesController);
 app.post('/user/date', getClickedDateController);
 app.post('/user/updateInformation', userUpdateInformationController);
+app.get('/user/updateInformation', getUserDataController);
 app.post('/user/getUserBookings', getUserBookingsController);
 app.post('/user/removeBookings', userRemoveBookingsController);
 app.post('/user/test', getUserIdController);

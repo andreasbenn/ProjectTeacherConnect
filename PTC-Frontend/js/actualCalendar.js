@@ -6,27 +6,6 @@
 
 var one = 0;
 var two = 0;
-/*
-var currentWebToken = JSON.parse(localStorage.getItem('token'));
-
-// https://stackoverflow.com/questions/16805306/jquery-return-ajax-result-into-outside-variable/16805366
-var currentStudentId = function() {
-    var tempStudent = null;
-    $.ajax({
-        url: "http://localhost:3000/user/test",
-        method: 'POST',
-        datatype: "json",
-        async: false,
-        data: ({currentWebToken}),
-        success: function (response) {
-            studentId = response
-        },
-    });
-    return studentId
-}();
-console.log(currentStudentId)
-
- */
 
 var dt = new Date();
 // To start of with we create a variable name 'dt' which use the javascript method 'new Date' which is used for creating an object constructor function. This variable will now be used in creating the calendar. the variable is because of the () declared to as a function
@@ -107,11 +86,11 @@ function renderDate() {
 
 // This is the function that executes when the onclick prev or next is clicked on. We either multiply or substract one month COMMENT PARA!!!!!
 function moveDate(para) {
-    if (para == 'prev') {
+    if (para == "prev") {
         dt.setMonth(dt.getMonth() - 1);
         renderDate();
     } else {
-        (para == 'next')
+        (para == "next")
         dt.setMonth(dt.getMonth() + 1);
     }
     renderDate();
@@ -123,22 +102,22 @@ function addDateChecker() {
     // temp variables to store selected values in.
     var dateOfBooking;
     var timeOfBooking;
-    var currentWebToken = JSON.parse(localStorage.getItem('token'))
+    var currentWebToken = JSON.parse(localStorage.getItem("token"))
 
         // This jquery function adds an onclick function to the class that saves the selected date on the calendar.
         // # = id, . = class
-        $('.day').click(function () {
+        $(".day").click(function () {
             // shows the panel which has the time selecter.
             document.getElementById("panel").style.display = "block";
             // saves the information from the selected date into the temp variable.
             dateOfBooking = document.getElementById("date_str").innerHTML = this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear();
             // resets the times selected when you click on a date. So if the user clicked on a new date it would clear ticked off times.
             // https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset
-            document.getElementById('time').reset();
+            document.getElementById("time").reset();
             });
         // Onclick function to save the selected time for the booking.
-        $('.time1').click(function () {
-            var checkbox = document.getElementsByClassName('time1');
+        $(".time1").click(function () {
+            var checkbox = document.getElementsByClassName("time1");
             for (i = 0; i < checkbox.length; i++){
                 if(checkbox[i].checked){
                     timeOfBooking = checkbox[i].value;
@@ -148,11 +127,11 @@ function addDateChecker() {
             // We do this because we're using 2 different js files for the calendar, and we need this information in 'calendar.js'.
             $.ajax({
                 url: "http://localhost:3000/user/date",
-                method: 'POST',
+                method: "POST",
                 datatype: "json",
                 data: ({date: dateOfBooking, time: timeOfBooking, student: currentWebToken}),
                 success: function (response) {
-                    console.log("Der er lavet en booking d. " + response.selectedDate + "til tidspunktet: " + response.selectedTime)
+                    console.log("Der er lavet en booking d. " + response.selectedDate + " til tidspunktet: " + response.selectedTime)
                 },
             })
         })

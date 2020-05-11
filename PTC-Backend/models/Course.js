@@ -16,35 +16,38 @@ const Course = mongoose.model('Course',CourseSchema);
 // The module is exported so it can be used in other js files.
 module.exports = Course;
 
-function fillDBCourse() {
-    Course.create({
-            courseName: "Virksomheders økonomiske styring",
-            courseValue: "VØS",
-            courseProgram: "HA(it)"
-        },
-        (error, Course) => {
-            console.log(error, Course)
-        });
+async function fillDBCourse() {
+    var allCourses = await Course.find({});
+    console.log(allCourses[0])
+    if (allCourses[0] === undefined) {
+        Course.create({
+                courseName: "Virksomheders økonomiske styring",
+                courseValue: "VØS",
+                courseProgram: "HA(it)"
+            },
+            (error, Course) => {
+                console.log(error, Course)
+            });
 
-    Course.create({
-            courseName: "Programmering og udvikling af små systemer og databaser",
-            courseValue: "Pro",
-            courseProgram: "HA(it)"
-        },
-        (error, Course) => {
-            console.log(error, Course)
-        });
+        Course.create({
+                courseName: "Programmering og udvikling af små systemer og databaser",
+                courseValue: "Pro",
+                courseProgram: "HA(it)"
+            },
+            (error, Course) => {
+                console.log(error, Course)
+            });
 
-    Course.create({
-            courseName: "Mikroøkonomi",
-            courseValue: "Mik",
-            courseProgram: "HA(fil)"
-        },
-        (error, Course) => {
-            console.log(error, Course)
-        });
+        Course.create({
+                courseName: "Mikroøkonomi",
+                courseValue: "Mik",
+                courseProgram: "HA(fil)"
+            },
+            (error, Course) => {
+                console.log(error, Course)
+            });
+    }
 }
 
-// The courses are created. The first to courses belongs to HA(it) and the last one belongs to HA(fil), and will dynamically be used through the user experience.
-// Call this function if you need to create the data in the database.
-//fillDBCourse();
+// Calls the function to check if the database needs to be filled with data. If so, it fills.
+fillDBCourse();

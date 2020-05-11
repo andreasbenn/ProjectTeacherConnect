@@ -34,68 +34,72 @@ const User = mongoose.model('User',UserSchema);
 module.exports = User;
 
 // Function to fill the database with objects that are being used in the program.
-function fillDBUsers () {
-    User.create({
-            StudentID: 1,
-            fullName: 'Oliver Langkjær Michelsen',
-            email: 'olmi19ab@student.cbs.dk',
-            password: '1234',
-            phoneNumber: 12345678,
-            address: 'Engholmen 20, 1. tv',
-            program: 'HA(fil)'
-        },
-        (error, User) => {
-            console.log(error, User)
-        });
-    User.create({
-            StudentID: 2,
-            fullName: 'Jeppe Hornshøj Reuther',
-            email: 'jere19ac@student.cbs.dk',
-            password: '1234',
-            phoneNumber: 23880118,
-            address: 'Gammeltoftsgade 8, 4. th',
-            program: 'HA(it)'
-        },
-        (error, User) => {
-            console.log(error, User)
-        });
-    User.create({
-            StudentID: 3,
-            fullName: 'Andreas Emanuel Bennecke',
-            email: 'anbe17aj@student.cbs.dk',
-            password: '1234',
-            phoneNumber: 87654321,
-            address: 'Amalienborg Plads',
-            program: 'HA(it)'
-        },
-        (error, User) => {
-            console.log(error, User)
-        });
-    User.create({
-            StudentID: 4,
-            fullName: 'Aksel Toftgaard Pedersen',
-            email: 'akpe19ab@student.cbs.dk',
-            password: '1234',
-            phoneNumber: 87654321,
-            address: 'Rådhuspladsen',
-            program: 'HA(it)'
-        },
-        (error, User) => {
-            console.log(error, User)
-        });
-    User.create({
-            StudentID: 5,
-            fullName: 'test',
-            email: 'dk',
-            password: '1',
-            phoneNumber: 7189,
-            address: 'Gen',
-            program: 'HA(it)'
-        },
-        (error, User) => {
-            console.log(error, User)
-        })
+async function fillDBUsers () {
+    var allUsers = await User.find({});
+    console.log(allUsers[0])
+    if (allUsers[0] === undefined) {
+        User.create({
+                StudentID: 1,
+                fullName: 'Oliver Langkjær Michelsen',
+                email: 'olmi19ab@student.cbs.dk',
+                password: '1234',
+                phoneNumber: 12345678,
+                address: 'Engholmen 20, 1. tv',
+                program: 'HA(fil)'
+            },
+            (error, User) => {
+                console.log(error, User)
+            });
+        User.create({
+                StudentID: 2,
+                fullName: 'Jeppe Hornshøj Reuther',
+                email: 'jere19ac@student.cbs.dk',
+                password: '1234',
+                phoneNumber: 12345678,
+                address: 'Gammeltoftsgade 8, 4. th',
+                program: 'HA(it)'
+            },
+            (error, User) => {
+                console.log(error, User)
+            });
+        User.create({
+                StudentID: 3,
+                fullName: 'Andreas Emanuel Bennecke',
+                email: 'anbe17aj@student.cbs.dk',
+                password: '1234',
+                phoneNumber: 12345678,
+                address: 'Amalienborg Plads',
+                program: 'HA(it)'
+            },
+            (error, User) => {
+                console.log(error, User)
+            });
+        User.create({
+                StudentID: 4,
+                fullName: 'Aksel Toftgaard Pedersen',
+                email: 'akpe19ab@student.cbs.dk',
+                password: '1234',
+                phoneNumber: 12345678,
+                address: 'Rådhuspladsen',
+                program: 'HA(it)'
+            },
+            (error, User) => {
+                console.log(error, User)
+            });
+        User.create({
+                StudentID: 5,
+                fullName: 'test',
+                email: 'test@cbs.dk',
+                password: '1234',
+                phoneNumber: 12345678,
+                address: 'Solbjerg Pl. 3',
+                program: 'HA(it)'
+            },
+            (error, User) => {
+                console.log(error, User)
+            })
+    }
 }
 
-// Call this function if you need to create the data in the database.
-//fillDBUsers();
+// Calls the function to check if the database needs to be filled with data. If so, it fills.
+fillDBUsers();

@@ -1,3 +1,5 @@
+// mjs-file is the standard file to use, when implementing modules in javascript from Node
+
 import Teacher from "../classes/teacherClass.js";
 
 // This class takes an object and makes it a new instance of the class Teacher through extend.
