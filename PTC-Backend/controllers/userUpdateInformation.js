@@ -12,7 +12,7 @@ module.exports =
         var updatedUser = JSON.parse(req.body.newInformation);
 
         // User.findOneAndUpdate takes the first parameter and finds the document we want to update in the database, and the 2nd parameter it takes the values and updates the document.
-        // https://mongoosejs.com/docs/tutorials/findoneandupdate.html
+        // (n.d.). Mongoose V5.9.13: Mongoose Tutorials: How To Use `findOneAndUpdate()` In Mongoose. MongoDB. Retrieved from https://mongoosejs.com/docs/tutorials/findoneandupdate.html
         await User.findOneAndUpdate({_id: decodedToken.userId}, {fullName: updatedUser.fullName, email: updatedUser.email, phoneNumber: updatedUser.phoneNumber, address: updatedUser.address});
 
         await console.log(updatedUser)

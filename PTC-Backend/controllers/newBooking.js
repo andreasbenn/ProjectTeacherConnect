@@ -57,7 +57,7 @@ module.exports =
                         topicExists = true;
                         console.log(topicArray[i].topicName);
                         // Finds and updates the topic selected and adds +1 to the popcounter.
-                        // https://mongoosejs.com/docs/tutorials/findoneandupdate.html
+                        // // (n.d.). Mongoose V5.9.13: Mongoose Tutorials: How To Use `findOneAndUpdate()` In Mongoose. MongoDB. Retrieved from https://mongoosejs.com/docs/tutorials/findoneandupdate.html
                         await Topic.findOneAndUpdate({_id: topicArray[i]._id}, {popCounter: topicArray[i].popCounter + 1})
                     }
                 }

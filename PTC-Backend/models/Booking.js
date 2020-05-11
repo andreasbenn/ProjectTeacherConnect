@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const bookingOptions = {discriminatorKey: 'booking', collection: 'booking'};
 
 // A BookingSchema is created, and the attributes that needs to be fulfilled is added to the schema.
 // The group is using MongoDB, and a booking could therefore be created without one of the attributes.
+// Lim, G. p. 52 (2019). Beginning Node.js, Express & MongoDB Development.
 const BookingSchema = new Schema({
     course: String,
     teacher: String,

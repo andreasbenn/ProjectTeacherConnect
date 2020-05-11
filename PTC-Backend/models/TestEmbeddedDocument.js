@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const embeddedCourseOptions = {discriminatorKey: 'embeddedCourse', collection: 'embeddedCourse'};
 
-// https://docs.mongodb.com/manual/tutorial/model-embedded-one-to-many-relationships-between-documents/
+// (n.d.). Model One-to-Many Relationships With Embedded Documents — MongoDB Manual. mongoDB. Retrieved from https://docs.mongodb.com/manual/tutorial/model-embedded-one-to-many-relationships-between-documents/
 const EmbeddedCourseSchema = new Schema({
     courseName: String,
     courseValue: String,

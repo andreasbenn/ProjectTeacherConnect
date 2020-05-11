@@ -9,7 +9,7 @@ document.getElementById("logoutBtn").onclick = function(e) {
         success: function () {
 
             // .removeItem() is a javascript method (Mozilla, Storage RemoveItem)
-            //https://developer.mozilla.org/en-US/docs/Web/API/Storage/removeItem
+            // (n.d.). Storage.removeItem(). mozilla. Retrieved from https://developer.mozilla.org/en-US/docs/Web/API/Storage/removeItem
             localStorage.removeItem("token");
 
             alert("You have been logged out")

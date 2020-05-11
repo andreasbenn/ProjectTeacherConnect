@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const courseOptions = {discriminatorKey: 'course', collection: 'course'};
 
 // A CourseSchema is created, and the attributes that needs to be fulfilled is added to the schema.
 // The group is using MongoDB, and a course could therefore be created without one of the attributes.

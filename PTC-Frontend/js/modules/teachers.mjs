@@ -3,7 +3,6 @@
 import Teacher from "../classes/teacherClass.js";
 
 // This class takes an object and makes it a new instance of the class Teacher through extend.
-// https://api.jquery.com/jQuery.extend/
 export function formatTeachers(teachers){
     let allTeachers = [];
 

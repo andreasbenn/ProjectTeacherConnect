@@ -7,6 +7,7 @@ $("#login").submit((e) => {
     e.preventDefault();
 
     // We create a variable which takes the userinput from the form, and serialize the data so it is possible to send it to the backend in the API call.
+    // (n.d.). JQuery Serialize() Method. w3schools.com. Retrieved from https://www.w3schools.com/jquery/ajax_serialize.asp
     var inputData = $("#login").serialize();
 
     console.log(inputData);

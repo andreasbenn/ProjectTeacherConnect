@@ -126,9 +126,6 @@ $("#removeBookings").click(function(){
             else{
                 alert("De valgte bookings er nu slettet.")
             }
-
-            // location.reload to reload the page with the new updated bookings for the current logged user.
-            // https://www.w3schools.com/jsref/met_loc_reload.asp
             window.location.href = "myPage.html";
         },
     })

@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-// Defining what the database should be named (properties)
-const topicOptions = {discriminatorKey: 'topic', collection: 'topic'};
 
 // Creates a new schema for the database, similar to a class in JS.
 const TopicSchema = new Schema({

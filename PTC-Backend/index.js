@@ -1,17 +1,14 @@
 const express = require('express');
 const app = express();
 const bodyParser = require ('body-parser');
-const path = require('path');
 const mongoose = require ('mongoose');
-const expressSession = require('express-session');
 const getClickedDateController = require('./controllers/getClickedDate');
 const getCoursesController = require('./controllers/getCourses');
 const getSelectedCourseController = require('./controllers/getSelectedCourse');
 const getTopicController = require('./controllers/getTopic');
 const newBookingController = require('./controllers/newBooking');
 const getDatesController = require('./controllers/getDates');
-const getUsersDateController = require('./controllers/getUserDate')
-const getUserIdController = require('./controllers/getUserId')
+const getUsersDateController = require('./controllers/getUserDate');
 const userLoginController = require('./controllers/userLogin');
 const userUpdateInformationController = require('./controllers/userUpdateInformation');
 const userRemoveBookingsController = require('./controllers/userRemoveBookings');
@@ -30,19 +27,13 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use(expressSession({
-    secret: 'keyboard cat'
-}));
-
-// secret gør at den er krypteret og dermed ikke som bliver delt med browseren.
 mongoose.connect('mongodb://localhost/ptc_db', {useNewUrlParser: true });
 const port = 3000;
 app.listen(port, ()=>{
     console.log("App listening on port" + port);
 });
 
-//Den her får hele lortet til at virke
-app.use(express.static(__dirname));
+//body parser is used to parse incoming request (Lim G, .83 2019).
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
@@ -57,7 +48,6 @@ app.post('/user/updateInformation', userUpdateInformationController);
 app.get('/user/updateInformation', getUserDataController);
 app.post('/user/getUserBookings', getUserBookingsController);
 app.post('/user/removeBookings', userRemoveBookingsController);
-app.post('/user/test', getUserIdController);
 app.get('/user/logout', userLogoutController);
 app.post('/course/getCourses', getCoursesController);
 app.post('/course/selectedCourse', getSelectedCourseController);

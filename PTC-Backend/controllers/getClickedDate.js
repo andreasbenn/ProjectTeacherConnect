@@ -11,6 +11,7 @@ module.exports =
    async function(req, res){
 
         // jwt.decode decodes the input(a token), which here has an ID of the user.
+        //(n.d.). Jsonwebtoken - Usage. Npm. Retrieved from https://www.npmjs.com/package/jsonwebtoken
         var decodedToken = jwt.decode(req.body.student);
 
         // Saves the object of the current user(user of the token).

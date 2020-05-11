@@ -1,2 +1,0 @@
-localStorage.getItem("user")
-

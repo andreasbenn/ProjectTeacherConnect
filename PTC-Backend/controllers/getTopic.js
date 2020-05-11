@@ -17,7 +17,9 @@ module.exports =
         let topic = await Topic.find({course: courseValue});
 
         // Function to sort the array of topics after their popcounter.
-        // https://www.bitdegree.org/learn/javascript-array-sort
+        // (2019) array.sort |BitDegree. BitDegree Learn. Retrieved from https://www.bitdegree.org/learn/javascript-array-sort
+
+        //How to sort an array of integers correctly, (2009, July), [Blog comment], Stackoverflow Retrieved 20 November, 2019, from https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
         topic.sort(function (a,b) {
             return b.popCounter - a.popCounter});
         sortedTopics.push(topic[0], topic[1], topic[2]);

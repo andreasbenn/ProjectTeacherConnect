@@ -112,7 +112,7 @@ function addDateChecker() {
             // saves the information from the selected date into the temp variable.
             dateOfBooking = document.getElementById("date_str").innerHTML = this.id + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear();
             // resets the times selected when you click on a date. So if the user clicked on a new date it would clear ticked off times.
-            // https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset
+            // (n.d.). HTMLFormElement.reset(). mozilla. Retrieved from https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset
             document.getElementById("time").reset();
             });
         // Onclick function to save the selected time for the booking.
@@ -124,6 +124,7 @@ function addDateChecker() {
                 }
             }
             // ajax call to send the selected date and time of the booking to the API, so it can save it in the database.
+            // (n.d.). JQuery.ajax() | JQuery API Documentation. jQuery. Retrieved from https://api.jquery.com/jquery.ajax/
             // We do this because we're using 2 different js files for the calendar, and we need this information in 'calendar.js'.
             $.ajax({
                 url: "http://localhost:3000/user/date",

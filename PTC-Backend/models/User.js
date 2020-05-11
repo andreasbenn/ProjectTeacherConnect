@@ -2,8 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 // Needed for password encryption
 const bcrypt = require('bcrypt');
-// Defining what the database should be named (properties)
-const userOptions = {discriminatorKey: 'user', collection: 'user'};
 
 // Creates a new schema for the database, similar to a class in JS.
 const UserSchema = new Schema({
@@ -21,7 +19,7 @@ UserSchema.pre('save',function (next) {
     const user = this;
 
     // bcrypt.hash hashes the user password into the function so it encrypts it with bcrypt.
-    // https://www.npmjs.com/package/bcrypt
+    // // Lim, G. p. 98 (2019). Beginning Node.js, Express & MongoDB Development.
     bcrypt.hash(user.password,10,(error,hash)=>{
         user.password = hash;
         next()

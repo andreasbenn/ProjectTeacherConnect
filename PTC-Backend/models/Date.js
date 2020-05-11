@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const dateOptions = {discriminatorKey: 'date', collection: 'date'};
 
 // A dateSchema is created, and the attributes that needs to be fulfilled is added to the schema.
 // The group is using MongoDB, and a booking could therefore be created without one of the attributes.
