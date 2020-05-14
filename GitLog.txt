@@ -1,3 +1,9 @@
+commit 6984a39a8baea1cccfb2ae56396aad3bc212963d
+Author: andreasbenn <anbe17aj@student.cbs.dk>
+Date:   Thu May 14 19:27:17 2020 +0200
+
+    added github link to readme
+
 commit e4fe23841cf8b61deb88135714e9aa648450071a
 Author: Reuther <55132011+Reuther@users.noreply.github.com>
 Date:   Mon May 11 20:58:06 2020 +0200
