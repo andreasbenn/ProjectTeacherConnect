@@ -1,4 +1,4 @@
-ProjectTeacherConnect - 
+ProjectTeacherConnect - https://github.com/andreasbenn/ProjectTeacherConnect
 
 For at køre programmet skal følgende foretages.
 
